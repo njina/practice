@@ -1,0 +1,17 @@
+/* rwd_02_mob.css */
+
+/* design data: 320px - vw 320px 동일 */
+@media screen and (max-width:639px) {
+
+
+  #viewBox {height: 120px; height: 37.5vw; 
+            min-height: 7.5rem;
+            max-height: 405px; max-height: 25.3125rem;
+          }
+
+  #noticeBox {height: 150px; height: 46.875vw;
+              min-height: 150px; min-heith: 9.375rem; 
+              max-height: 225px; max-height: 14.0625rem;}
+
+/* @media end */
+}

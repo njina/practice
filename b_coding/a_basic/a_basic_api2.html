@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<!-- a_basic_api2.html -->
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--[if IE]>
+        <script src="./ie/html5shiv/dist/html5shiv.min.js"></script>
+    <![endif]-->
+    <title>시멘틱 구조 이해하기</title>
+    <!--- css -->
+    <style></style>
+</head>
+
+<body>
+    <!-- layout -->
+
+    <div>
+      <p>div는 의미가 없는 단순한 영역을 나타나게 하는 박스의 의미를 가진다.</p>
+      <p>span요소는 의미가 없는 단순한 내용의 그룹. div와는 조금 다른 의미다.</p>
+    </div>
+    <p>시멘틱 구조는 각 영역별로 그 의미를 가지고 쓰이도록 처리된 영역</p>
+    <p>hedear, nav, section, article, aside, main, footer, figure</p>
+   
+    <header>
+      <h1>영역을 나타내는 의미를 구조</h1>
+      <h2>시멘틱 구조에 대해서 알아보자</h2>
+      <p> 
+       <strong>header</strong> : 웹페이지의 상단에 존재, 웹의 로고,h1을 담으면서, 전체 웹페이지 구조를 파악하는 nav영역을 함께 포함시키는 기능을 가진다.
+      </p>
+       <nav>
+        <h2>navigation</h2>
+        <p>
+          <strong>nav</strong> : 웹페이지 내부에서 클릭하면 해당하는 페이지로 이동하게 만들어주는 링크들의 집합. navigation 요소를 담아놓은 영역
+        </p>
+    </nav>
+    </header> 
+
+    <main>
+      <section>
+        <h2>하나의 대표 내용을 보여주는 영역</h2>
+        <p>
+          <strong>section</strong> : 하나의 대표 영역을 보여주는 영역으로, 다른 내용과 연계가 되어있다. 이 뜻이 뭐냐, 배너를 클릭하면 그 부분을 상세페이지로 넘어가는 걸 뜻한다. 본문. ex) 광고 배너
+        </p>
+      </section>  
+
+      <article>
+        <h2>별도의 독립영역으로 설정되어도 문제 없는 영역</h2>
+        <p>
+          <strong>article</strong> : section과 유사한 기능을 가진 영역. 본문 내용 또는 다른 내용과 연계가 되지 않아도 별도의 독립영역으로 설정되어도 문제 없는 영역. 이 부분이 section 태그와 다른점. ex)게시판 안내문, 신문기사, 공고
+        </p>
+        <figure>
+          <p>
+            <strong>figure</strong> : figure는 이미지 요소를 담아서 관리하는 영역. figcaption 요소와 함께 사용하게 되어있다. imgset 요소도 때에 따라서 사용한다(반응형할 때 추가 설명 예정.) 
+          </p>
+          <figcaption>이미지 제목. 전시장에 그림이 걸려있으면 그 그림에 대한 설명</figcaption>
+          <img src="./download.jpg" alt="figure 담는 방법 설명하기 위한 내용">
+        </figure>
+      </article>
+
+      <aside>
+        <p>
+          <strong>aside</strong> : another 영역을 지징하는 것. 사이트의 구성요소에 없어도 전혀 문제 되지 않는 영역. 그래도 있으면 도움이 되는 영역. ex)쇼핑몰에 옆에 보면 최근 본 상품 영역 같은 거. 없어도 문제는 없지만 있으면  편리함.
+        </p>
+      </aside>
+    </main>
+
+    <footer>
+      <h2>footer 입니다.</h2>
+      <p>
+        <strong>footer</strong> : 이름으로만 보면 하단에 존재한다는 의미를 가지고 있지만, 실제로는 하단에만 존재하는 건 아니다. <br />
+        footer는 회사 혹은 사이트의 정보를 담고 있는 영역을 말한다. ex)주소, 전화번호, 사이트 제작연도, 지침, 소비자 관련 정보 등, 패밀리 사이트 <br />
+        정보가 보이지 않는다고해도 회사 또는 사이트에 대한 내용을 반드시 존재해야한다.
+      </p>
+    </footer>
+
+    <p>
+      <strong>main</strong> : section과 article의 영역을 정리해서 더 큰 영역으로 담는 곳. 그런데 아직 대부분의 사이트에서는 완벽하게 지원하지 못하고 있는 것이 현실. 익스플로러는 거의 안 되고 있는 실정. 
+    </p>
+
+
+<!-- **id/class 기능 정의 
+      id: 하나의 페이지에서 한 번의 이름만 등록 가능 -> 큰 범위의 틀, 중요한 핵심 기능. input에서는 필수.
+      이름 짓는 방법: 2단어 이상 4단어 이하로 구성. camelCase 기법으로 사용 권장.
+
+      class: 하나의 페이지에서 여러번의 이름이 재사용 가능. 중첩 가능. 
+      이름 짓는 방법: 2단어 이상 4단어 이하. snake_case 기법(=언더바 기법)으로 사용 권장.
+
+      이름을 사용할 때에는 첫글자로 숫자 사용 불가. 영문 소문자 첫글자로. 특수문자 사용 불가(_, -, $ 예외).
+
+    *box_wrap  *Box  *_area
+
+    **시멘틱구조를 사용시에는 반드시 h1~h6 제목이 따라 들어와야한다.
+-->
+
+
+    <!-- script -->
+    <script></script>
+</body>
+
+</html>

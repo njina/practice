@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<!-- a_basic_layout_01.html -->
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <!-- [if IE]>
+        <script src="./ie/html5shiv/dist/html5shiv.min.js"></script>
+     <![endif]-->
+    <title>Layout 연습하기1</title>
+  
+     <!-- css -->
+    <style>
+      @charset="uft-8"; 
+
+      /* reset.css */
+      html, body {width: 100%; height: 100%;}
+      html, body, h1, h2, h3, h4, h5, h6, 
+      p, pre, div, img, ul, ol, li, dl, dt, dd {margin: 0; padding: 0;}
+      ul, ol, li {list-style: none;}
+      header, article, section, aside, nav, footer, main, figure {display: block;}
+
+      /* design */
+      #wrap {margin: 200px auto; width:600px; height:auto;}
+     
+      #headBox {width: 100%; height: 100px; background-color: #ccc;}
+        #headBox > h1 {float: left; width: 100px; height: 100px; background-color: salmon}
+        #navBox {float:right; margin-top: 50px; width: 400px; height: 50px; background-color: red;}
+
+      #sectionBox {width: 100%; height: auto;}
+        .section_child {float: left; width: 70%; height: 150px;}
+        .article_area {background-color: darkgreen;}
+        .container_area {background-color: darkblue;}
+        .aside_area {float: right; margin-top: -150px; width: 30%; height: 300px; background-color: lightgreen;}
+        .pan {clear: both; width: 100%; height: 10px; background-color: #777;}
+     
+      #footBox {width: 100%; height: 100px; background-color: lightblue;}
+
+
+
+    </style>
+  </head>
+
+  <body>
+    <!-- layout -->
+    <div id="wrap">
+
+      <!-- #headBox -->
+      <header id="headBox">
+        <h1>h1</h1>
+        <nav id="navBox">nagivation</nav>
+      </header> 
+      <!-- // #headBox -->
+
+      <!-- #sectionBox -->
+      <section id="sectionBox">
+        <article class="article_area section_child">4444</article>
+        <article class="container_area section_child">5555</article>
+        <aside class="aside_area section_child">33333</aside>
+
+        <div class="pan"></div>
+        
+    
+
+     </section>
+      <!-- // #sectionBox -->   
+
+      <!-- #footBox -->
+      <footer id="footBox">eee</footer>
+      <!-- // #footBox -->
+    </div>
+
+  <!-- script -->
+  <script></script>
+  </body>
+
+
+</html>

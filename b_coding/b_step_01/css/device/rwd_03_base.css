@@ -1,0 +1,19 @@
+@charset "uft-8";
+
+/* rwd_03_base.css */
+/* design data - mob기준*/
+
+ #wrap {width: 100%; height: auto; margin: auto;}
+ #headBox {width: 100%; height: 40px;  padding: 4px 12px; box-sizing: border-box; background-color: #333;}
+ .head_part_01 {float: left; width: 100px; height: 30px; background-color: #33B88F;}
+ .head_part_02 {float: left; width: 24px; height: 25px; margin-left: 137px; background-color: #33B88F;}
+ .head_part_03 {float: left; width: 30px; height: 25px; margin-left: 5px; background-color: #33B88F;}
+
+ #viewBox {width: 100%; height: 440px; background-color: #bbaa77;}
+
+ #contentBox {width: 1005; height: 480px; padding: 16px; box-sizing: border-box; background-color: #547d77;}
+  .content_part {width: 192px; height: 156px; background-color: #33B88F;}
+
+ #noticeBox {width: 1005; height: 480px; background-color: #957de9;}
+
+ #footBox {width: 100%; height: 40px; background-color: #333;}

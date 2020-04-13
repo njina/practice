@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+
+  <!-- script 기초 맛보기 -->
+  <script>
+    //var j,i;    //변수를 선언한다.고 말한다
+    var j;
+    var i;
+    var a;
+
+    j = 0;    //앞으로 j라는 건 0을 뜻한다.
+    console.log(j);    //변수는 문자가 아니므로 따옴표 없이 작성해야한다
+
+    j = 10;   //앞서 선언한 변수를 변경할 수도 있다.
+    console.log(j);
+
+    i = ('abc');
+    console.log(i);
+
+    i = j;
+    console.log(i);
+
+    j = 100;
+    console.log(i);
+
+    console.log(a);   //결과값: undefined 선언을 했지만 값을 부여한 적이 없기때문에
+
+    a =  null;
+    console.log(a);
+
+    var b = 999;    //선언과 동시에 값을 줄 수도 있다.
+    console.log(b);   //아예 변수 선언한 적도 없는거랏서 브라우저에서 보면 오류뜸.
+
+    c = 'k';
+    console.log(c);   //이와 같은 건 쓰지말 것
+
+    //var -> const, let 으로 변화해가는 추세이다. 근데 익스플로러가 새로운 걸 인식 못해서 var를... 사용...
+
+  </script>
+
+</body>
+</html>

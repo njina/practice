@@ -1,0 +1,20 @@
+/* test_03_result.css */
+
+.navi_wrap {width: 600px; height: 50px; margin: auto; margin-bottom: 500px; padding: 5px; box-sizing: border-box; background-color: #888;}
+
+.gnb {float: left; width: 500px; height: 40px; background-color: #fff;}
+.gnb> ul {position: relative; width: 100%; height: auto;}
+.gnb> ul:before {content
+  : " "; z-index: -1; display: block; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(100,0,100,0.5);}
+.gnb> ul:after {content: " "; display: block; clear: both;}
+.gnb> ul> li {float: left; width: 25%; height: auto;}
+
+.gnb dl {width: 100%; height: auto; line-height: 50px;}
+.gnb dt {width: 100%; height: 50px; text-align: center;}
+.gnb dd {/*display: none;*/ width: 100%; height: auto; text-align: left; text-indent: 0.5rem; }
+.gnb dd> ul {width: 100%; height: auto; font-size: 0.875rem;}
+.gnb dd> ul> li {width: 100%; height: 50px;}
+
+.gnb:hover dd {display: block;}
+
+.unb {float: right; width: 80px; height: 40px; background-color: #fff;}

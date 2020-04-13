@@ -1,0 +1,30 @@
+/* a_basic_table.css */
+
+table, thead, tbody, tfoot, tr, th, td {border: 1px solid #acf; border-spacing: 0; border-collapse: collapse; text-align: center;}
+
+table {width: 500px; height: auto;}
+
+thead, tfoot {width: 100%; }
+
+tbody {width: 100%;}
+
+/* 글자들은 th는 기본이 가운데 정렬, td는 왼쪽 정렬
+table의 사이즈를 입력하면 tr에게 사이즈를 안 줘도 알아서 균등분배를 한다.*/
+/* thead, tfoot, tbody에 너비값, 높이값 줘도 안 먹어. 배경컬러만 먹어.
+  영역에 대한 구분. */
+/* tr, td은 border 안 먹어. 너비값, 높이값 먹어. 배경 컬러 먹어.  */
+/* */
+
+tr {height: 100px;}
+
+/* 첫번째 열(세로)에만 속성을 먹이는 방법*/
+/* th:first-child, td:first-child {background-color: #aff;} */ /*방법1*/
+.t1 {color: #f06;} /*방법2*/
+.col1{width: 10%; background-color: #aaa;}
+.col2{width: 40%; background-color: #aaf;}
+.col3{width: 15%; background-color: #aab;}
+.col4{width: 35%; background-color: #aaa;} /*방법3-html에서 태그 추가*/
+
+
+ul {width: 500px; height: 500px;}
+li {float: left; width: 20px; height: 20px; border: 2px solid red; border-spacing: 0; border-collapse: collapse;}

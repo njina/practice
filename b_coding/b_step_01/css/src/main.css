@@ -1,0 +1,67 @@
+/* main.css */
+/* #wrap =========================================== */
+#wrap {width: 1200px; height: auto; min-height: 500px; margin: auto; background-color: #ccc;}
+
+/* #headBox =========================================== */
+#headBox {position:relative; z-index: 1000; width: 100%; height: 100px; padding: 10px; box-sizing: border-box; background-color: #abc;}
+  h1 {float: left; width: 140px; height: 80px; background-color: #fff;}
+  #gnb {float: right; width: 800px; height: 50px; margin-top: 20px; background-color: #fff;}
+  .menu {width: 100%; height: auto; min-height: 50px; /*background-color: #acf;*/}
+  .menu>li {float: left; width: 25%; height: auto; min-height: 50px; background-color: #acc;}
+  
+  .menu dl {width: 100%; height: auto; text-align: center;}
+  .menu dt {width: 100%; height: 50px; padding: 5px; box-sizing: border-box; font-weight: bold; font-size: 1.1rem;}
+  .menu dd {display: none; width: 100%; height: auto;}
+  .menu dd>ul {width: 100%; height: auto;}
+  .menu dd>ul li {width: 100%; height: 50px; padding: 5px; box-sizing: border-box;}
+ 
+  .menu a {display: block; width: 100%; height: 100%; background-color: #fff; line-height: 40px;}
+  .menu a:hover, 
+  .menu a:focus {background-color: #fa0;}  
+  /*hover는 마우스를 위에 올렸을 때의 반응, 
+  focus는 웹접근성 측면에서 탭 누르면 포커싱되는 거. 클릭의 형태가 아니라 그것을 클릭/내용 작성 하기 전 위치를 파악하는 기능. a, botton, input, text-area, select에 반드시 작성해야한다.*/
+
+  /* .menu:hover dd {display: block;} */ /* 서브메뉴가 한꺼번에 떨어지는 것 */
+  .menu li:hover dd {display: block;} /* 서브메뉴가 각각 떨어지는 것*/
+
+/* #viewBox =========================================== */
+#viewBox {position: relative; width: 100%; height: 300px; background-color: #abd;}
+  .view_area {width: 100%; height: 100%;}
+
+  /* .indicator ================== */
+  .indicator {position: absolute; bottom: 20px; left: 50%; margin-left: -200px; width: 400px; height: 30px;}
+  .indicator>ul {width: 100%; height: 100%; text-align: center;}
+  .indicator li {display: inline-block; width: 30px; height: 30px; margin-left: 20px;}
+  .indicator li:first-child {margin-left: 0;}
+  .indicator a {display: block; width: 100%; height: 100%; background-color: #f06; border-radius: 100%;}
+
+  /* .view_btn ================== */
+  .view_btn {position: absolute; top: 50%; left: 5%; margin-top: -25px; width: 90%; height: 0; background-color: #07a;}
+  .view_btn>button {width: 40px; height: 50px; background-color: #05a; color: #fff; font-weight: bold; border-radius: 20px;}
+    .next_btn {float: right;}
+    .prev_btn {float: left;}
+  
+  /* .view_list ================== */
+  .view_list {width: 100%; height: 100%; overflow: hidden;}
+  .view_list > ul {width: 400%; height: 100%; margin-left: -100%;}
+  .view_list > ul > li{float: left; width: 25%; height: 100%; padding: 30px; box-sizing: border-box;}
+    .ad_view_01 {background-color: #987}
+    .ad_view_02 {background-color: #986}
+    .ad_view_03 {background-color: #985}
+    .ad_view_04 {background-color: #984}
+
+
+
+/* #conBox =========================================== */
+#conBox {width: 100%; height: auto;}
+  .con_area {float: left; width: 33.333333%; height: 200px;}
+  .notice_gallery {background-color: #123;}
+  .info_news {background-color: #124;}
+  .location_link {background-color: #125;}
+
+/* #footBox =========================================== */
+#footBox {width: 100%; height: 100px; padding:10px; box-sizing: border-box;}
+  #footBox > h2 {float: left; width: 100px; margin-right: 40px; height: 80px; background-color: #fff;}
+  address {float: left; width: 760px; height: 80px; background-color: #fff;}
+  .sns {float: right; width: 240px; height: 80px; background-color: #fff;}
+

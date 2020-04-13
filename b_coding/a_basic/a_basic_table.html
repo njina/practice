@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<!-- a_basic_table.html -->
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <link rel="stylesheet" href="./css/base/reset.css">
+  <link rel="stylesheet" href="./css/base/common.css">
+  <link rel="stylesheet" href="./css/src/a_basic_table.css">
+
+  <!--[if IE]>
+    <script src="./ie/html5shiv/dist/html5shiv.min.js"></script>
+    <script src="./ie/pie/PIE.js"></script> 
+  <![endif]-->
+
+  <title>html 기본 구조 이해하기</title>
+</head>
+<body>
+  <h1>html 기본 구조 이해하기</h1>
+  <hr />
+  <h2>table 구조 내용 이해하기</h2>
+  <p>table 요소는 과거 웹페이지의 구조를 구성하는 데 필요한 요소였다.과거에!<br />
+  하지만 현재 웹페이지의 기본은 의미의 전달에 중점을 두고 있기에 table 구조는 사용하지 않는다.<br /> 
+  테이블 자체를 사용하지 않는다는 게 아니라, 웹페이지 구조를 짤 때 쓰지 않는다는 것.</p>
+  <p>table의 기능은 표형식으로 구성 되어있기 때문에, 주식, 경기표, 날씨표, 달력 등에 사용될 수 있다.</p>
+  <p>의미 전달을 놓고 봤을 때, 사용을 자제해야 하는 부분은 게시판(선생님 왈 list로 짜는 것을 권장)  </p>
+
+ <div class="wrap">
+  <!-- 행을 먼저 표기를 하고, 그 안에 들어가는 cell을 표기를 해서 그 갯수만큼 만들어서 만들더라 
+    한 층의 cell이 5개라면 나머지 층의 cell 도 5개여야한다. 
+    내용을 담는 요소는 td로 넣지만, 제목같은 경우는 th로 -->
+   <table>
+     <caption><span class="hidden">2022년 1월 1일</span>표 제목</caption>
+
+     <colgroup>
+       <col class="col1">
+       <col class="col2" span="2"> <!-- 두개의 열은 한번에 사용하겠다. -->
+       <!-- <col class="col3"> -->
+       <col class="col4">
+     </colgroup>
+
+     <thead>
+       <tr> <th colspan="2" class="t1">1</th> <th>3</th> </tr>
+     </thead>
+
+     <tbody>
+       <tr> <td rowspan="2" class="t1">1</td> <td>2</td> <td>3</td> </tr>
+       <tr>                       <td>2</td> <td>3</td> </tr>
+       <tr> <td class="t1">1</td> <td>2</td> <td>3</td> </tr>
+     </tbody>
+
+     <tfoot> <!--  tfoot은 생략할 수도 있다. -->
+       <tr> <td class="t1">1</td> <td>2</td> <td>3</td> </tr>
+     </tfoot>
+   </table>
+ </div>
+
+
+<div>
+  <ul>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+  </ul>
+</div>
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+@charset "utf-8";
+
+/* rwd_03_mob.css */
+/* design data : 320px */
+
+@media screen and (min-width:320px) and (max-width:479px) {
+
+  #wrap {}
+  #headBox {height: 60px; height: 18.75vw;
+            min-height: 60px; min-hiehgt: 5rem;}
+  .head_part_01 {width: 126px; width: 39.375vw;}
+  .head_part_02 {}
+  .head_part_03 {}
+ 
+  #viewBox {height: 660px; height: ;}
+  #contentBox {}
+  #noticeBox {}
+  #footBox {}
+
+
+/* end media*/
+}

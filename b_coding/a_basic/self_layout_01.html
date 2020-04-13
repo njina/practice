@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<!-- self_layout_01.html -->
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- [if IE]>
+      <script src="./ie/html5shiv/dist/html5shiv.min.js"></script>
+    <![endif]-->
+    <title>레이아웃 연습 1</title>
+
+    <!-- style -->
+    <style>
+      /* reset.css */
+      html, body {width: 100%; height: 100%;}
+      html, body, h1, h2, h3, h4, h5, h6,
+      p, pre, div, img, ul, ol, li, dl, dt, dd {margin: 0; padding: 0;}
+      ol, ul, li, dl {list-style: none;}
+
+      header, article, section, nav, aside, footer, main, figure {display: block;}
+
+      /* design */
+      #wrap {margin: 0 auto; width: 960px; height: 1200px;}
+      
+      /* headBox */
+      #headBox {padding: 10px; box-sizing: border-box; width: 100%; height: 120px; background-color: #f4f;}
+        #headBox > h1 {float: left; width: 150px; height: 100px; text-align: center; background-color: #fff;}
+        #navBox {float: right; text-align: center;}
+        .unb {margin-left: 280px; margin-bottom: 10px; width: 220px; height: 40px; background-color: #fff;}
+        .gnb {width: 500px; height: 50px; background-color: #fff;}
+
+      /* viewBox */
+      #viewBox {width: 100%; height: 450px; background-color: #f80; text-align: center;}
+    
+      /* contentBox */
+      #contentBox {width: 100%; height: 500px; text-align: center;}
+        .cont_list {float: left; width: 200px; height: 500px; background-color: #25e;}
+        .cont_list > ul {width: 100%;}
+        .cont_list > ul > li {height: 100px; background-color: #d5e;}
+        .cont_list > ul > .li_01 {margin: 20px 0px;}
+        .cont_list > ul > .li_02 {margin-bottom: 20px;}
+        .cont_list > ul > .li_03 {margin-bottom: 20px;}
+        
+        .lnb_list {float: left; width: 760px; height: 200px; background-color: #2c0}
+       
+        .lnb_content {float: left; width: 760px; height: 300px;}
+          .lnb_cont_01 {float: left; width: 50%; height: 100%; background-color: #c83;}
+          .lab_cont_02 {float: left; width: 50%; height: 100%; background-color: #c43;}
+
+      /* footBox */
+      #footBox {width: 100%; height: 130px; text-align: center; background-color: #777;}
+    </style>
+  </head>
+  
+  <body>
+    <!-- layout -->
+    <div id="wrap">
+      
+      <!-- headBox -->
+      <header id="headBox">
+        <h1>h1</h1>
+        <nav id="navBox">
+          <div class="unb">unb</div>
+          <div class="gnb">gnb</div>
+        </nav>
+      </header>
+
+      <!-- viewBox -->
+      <section id="viewBox">뷰박스</section>
+
+      <!-- contentBox -->
+      <section id="contentBox">
+        <div class="cont_list">
+          <ul>
+            <li class="li_01">목록1</li>
+            <li class="li_02">목록2</li>
+            <li class="li_03">목록3</li>
+            <li class="li_04">목록4</li>
+          </ul>
+        </div>
+        <div class="lnb_list">오른쪽 위</div>
+        <div class="lnb_content">
+          <div class="lnb_cont_01">왼</div>
+          <div class="lab_cont_02">오른</div>
+        </div>
+      </section>
+
+      <!-- footBox -->
+      <footer id="footBox">풋박스</footer>
+    </div>
+
+    <!-- script -->
+    <script></script>
+  </body>
+
+</html>

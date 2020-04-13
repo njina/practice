@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<!-- self_layout_02.html -->
+<!-- 삼성전자 홈페이지 따라 만들기 -->
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- [if IE] -->
+    <script src="./ie/html5shiv/dist/html5shiv.min.js"></script>
+  <!-- [endif] -->
+
+  <title>삼성전자 따라 레이아웃 그리기</title>
+
+  <!-- style -->
+  <style>
+    /* reset.css */
+    html, body {width: 100%; height: 100%;}
+    html, body, h1, h2, h3, h4, h5, h6,
+    p, pre, div, img, ul, ol, li, dl, dt, dd {margin: 0; padding: 0;}
+    ol, ul, li {list-style: none;}
+
+    /* design */
+    #wrap {margin: 0 auto; width: 1620px; height: auto;}
+   
+    #headerBox {width: 100%:; height: 70px; background-color: yellow;}
+      #gnb {margin-top: 18px; float: left; width: 500px; height: 36px; font-size: 12px;text-align: center; background-color: orange;}        
+      h1 {margin-top: 18px; margin-left: 210px; float: left; width: 200px; height: 36px; background-color: #ccc;}
+      #unb {margin-top: 18px; margin-left: 210px; float: left; width: 500px; height: 36px; background-color: #ccc;}
+
+    /* contentBox */
+    #contentBox {width: 100%; height: 2870px;}
+      .cont_01 {width: 100%; height: 620px; background-color: lightblue;}
+      .cont_02 {width: 100%; height: 430px; background-color: skyblue;}
+        .cont_02 > h2 {padding-top: 80px; width: 100%; height: 60px; text-align: center; background-color: red;}
+        .cont_02 > ul > li {float: left; width: 33.333333%; height: 290px;}  
+        .c_01 {background-color: orange;}
+        .c_02 {background-color: red;}
+        .c_03 {background-color: orange;}
+      .cont_03 {width: 100%; height: 1020px; background-color: blue;}
+      .cont_04 {width: 100%; height: 800px; background-color: darkblue;} 
+
+    #searchBox {width: 100%; height:390px; background-color: coral;}
+    #footBox {width: 100%; height: 540px; background-color: salmon;}
+
+  </style>
+</head>
+
+<body>
+  <!-- layout -->
+  <div id="wrap">
+    
+    <!-- headerBox -->
+    <header id="headerBox">
+      <nav id="gnb">gnb</nav>       
+      <h1>SAMSUNG</h1>
+      <nav id="unb">unb</nav> 
+    </header>
+
+      
+    <!-- contentBox -->
+    <section id="contentBox">
+      <div class="cont_01">광고</div>
+      <div class="cont_02">
+        <h2>Explore our Galaxy</h2>
+        <ul>
+          <li class="c_01">Galaxy Book</li>
+          <li class="c_02">Connected+</li>
+          <li class="c_03">Galaxy Studio</li>
+        </ul>
+      </div>
+      <div class="cont_03">새해에도 갤럭시</div>
+      <div class="cont_04">Explore #DoWhatYouCant</div>
+    </section>
+
+    <!-- searchBox -->
+    <section id="searchBox">searchBox</section>
+
+    <!-- footBox -->
+    <footer id="footBox">footBox</footer>
+</div>
+
+
+
+
+  <!-- script -->
+  <script></script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <title>test_02</title>
+
+  <link rel="stylesheet" href="../css/base/reset.css">
+
+  <style>
+    #wrap {position: relative; width: 800px; height: 600px; margin:auto; background-color: #ff00aa;}
+      .title_box {position: absolute; z-index: 300; top: 30%; left: 20px; width: 450px; height: 200px; padding: 0.5rem; text-transform: capitalize; background-color: rgba(200, 50, 200, 0.7);}
+      h1 {font-size: 1.5rem; color: #fff;}
+      p {font-size: 1rem; color: #fff;}
+  
+      .img2 {position: absolute; z-index: 200; bottom: 0; right: 220px; width: 250px; height: 400px; background-color: #5bb;}
+      .img2:last-child {position: absolute; z-index: 100; right: 20px; bottom: 0; width: 250px; height: 500px; background-color: #789;}
+
+
+      /*.img2 {position: absolute; bottom: 0; left: 50%; width: 250px; height: 400px; background-color: #5bb;}
+      .img2:last-child {position: absolute; bottom: 0; right: 20px; width: 250px; height:500px; background-color: #789;}*/
+
+  </style>
+
+</head>
+<body>
+  <div id="wrap">
+    <div class="title_box">
+      <h1>Title</h1>
+      <p>lorem ipsum dolor sit amet,
+      consectetur adipisicing elit. Errorr in consectetur vitae ex recusandae numquam, illum quos.</p>
+    </div>
+    <div class="img2"></div>
+    <div class="img2"></div>
+  </div>
+</body>
+</html>
