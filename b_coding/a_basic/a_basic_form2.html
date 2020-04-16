@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<!-- a_basic_form2.html -->
+<html lang=ko-KR>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	
+	<!-- link -->
+	<link rel="stylesheet" href="./css/base/reset.css">
+	<link rel="stylesheet" href="./css/base/common.css.css">
+	<link rel="stylesheet" href="./css/src/a_basic_form2.css">
+
+	<title>html form 상세 내용 이해하기</title>
+</head>
+<body>
+	<h1>html 구조 이해하기</h1>	
+	<hr />
+	<h2>form2</h2>
+	<div class="form_area">
+		<form action="#" method="POST">
+			<fieldset>
+				<legend>입력</legend>
+				<h3>이전부터 존재한 기능</h3>
+				
+				<label for="inputText">입력할 내용을 작성하세요</label>
+				<input type="text" id="inputText" name="inputText" value="" />
+				<br />
+				<label for="pwText">비밀번호를 작성하세요</label>
+				<input type="password" id="pwText" name="pwText" value="" />
+				<br />
+				<input type="hidden" id="hdText" name="hdText" value="" />
+				
+				<hr />
+				<h3>html5이후부터 추가된 기능</h3>
+				
+				<label for="searchArea">검색할 내용을 입력하세요</label>	
+				<input type="search" id="searchArea" name="searchArea" value="" / placeholder="검색할 내용을 입력하세요" required />
+				<br />
+
+				<label for="mailArea">이메일 주소를 입력하세요</label>
+				<input type="email" id="mailArea" name="mailArea" value="">
+				<br />
+
+				<label for="urlArea">웹페이지 주소를 입력하세요</label>
+				<input type="url" id="urlArea" name="urlArea" value="">
+				<br />
+
+				<label for="telArea">생년월일을 입력하세요</label> <!-- 굳이 전화번호가 아닌 숫자를 입력해도 된다. 전화번호, 생년월일-->
+				<input type="tel" id="telArea" name="telArea" value="">
+				
+			</fieldset>
+			<!-- ===================== -->
+
+			<fieldset>
+				<legend>체크1</legend>
+				<p>좋아하는 음식을 고르세요</p>
+				<ul>
+					<li>
+						<input type="checkbox" checked id="sel_01" value="치킨" name="food">
+						<label for="sel_01">치킨</label>
+					</li>
+					<li>
+						<input type="checkbox" id="sel_02" value="피자" name="food">
+						<label for="sel_02">피자</label>
+					</li>
+					<li>
+						<input type="checkbox" id="sel_03" value="족발" name="food">
+						<label for="sel_03">족발</label>
+					</li>
+					<li>
+						<input type="checkbox" id="sel_04" value="보쌈" name="food">
+						<label for="sel_04">보쌈</label>
+					</li>
+				</ul>	
+				<!-- 중복선택시 아래 처럼 변수 선언이 될 것임.
+					 var food = ["치킨", "피자", "보쌈";] 
+				-->
+			</fieldset>
+			<!-- ===================== -->
+
+			<fieldset>
+				<legend>체크2</legend>
+				<p>다음 중 마음에 드는 펭귄을 고르시오</p>
+				<ul>
+					<li>
+						<input type="radio" id="rsel_01" name="radioSel" value="펭수">
+						<label for="rsel_01">펭수</label>
+					</li>
+					<li>
+						<input type="radio" id="rsel_02" name="radioSel" value="남극펭 빼어날수">
+						<label for="rsel_02">남극펭 빼어날수</label>
+					</li>
+					<li>
+						<input type="radio" id="rsel_03" name="radioSel" value="자이언트 펭TV">
+						<label for="rsel_03">자이언트 펭TV</label>
+					</li>
+					<li>
+						<input type="radio" id="rsel_04" name="radioSel" value="하나뿐인 210">
+						<label for="rsel_04">하나뿐인 210</label>
+					</li>
+				</ul>
+
+			</fieldset>
+			<!-- ===================== -->
+
+			<fieldset>
+				<legend>버튼</legend>
+
+				<!-- submit,reset,image는 label 태그가 없어도 크게 상관이 없다. -->
+				<input type="submit" value="확인">  <!-- 브라우저마다 기본 value가 다르다.-->
+				<input type="reset" value="취소">
+				<input type="image" value="동의" src="./img/car.png" alt="버튼이미지설명" />
+				<br />
+				<label for="postLink">우편번호 검색</label>
+				<input type="button" id="postLink" value="우편번호">
+				<br />
+				<label for="dataFile">첨부자료</label>
+				<input type="file" id="dataFile" value="" />
+			</fieldset>
+			<!-- ===================== -->
+
+			<fieldset>
+				<legend>멀티/복합</legend>
+				<p>여러 줄의 내용을 입력하는 형태</p>
+				<label for="comment"></label>
+				<textarea name="" id="" cols="30" rows="10" readonly>계약서</textarea> <!-- cols:열(세로) rows:행(가로) -->
+		
+			</fieldset>
+			<!-- ===================== -->
+			
+			<fieldset>
+				<legend>HTML5 추가기능</legend>
+			</fieldset>
+			<!-- ===================== -->
+		</form>
+
+	</div>
+</body>
+</html>

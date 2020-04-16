@@ -1,21 +1,51 @@
 <!DOCTYPE html>
+<!-- a_basic_form.html -->
 <html lang="ko-KR">
 <head>
 	<meta charset="UTF-8">
+
+	<!-- link -->
+	<link rel="stylesheet" href="./css/base/reset.css">
+	<link rel="stylesheet" href="./css/base/common.css.css">
+	<link rel="stylesheet" href="./css/src/a_basic_form.css">
+
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
+	<title>form 이해하기</title>
 </head>
 <body>
 	<div class="wrap">
 		<h1>html 기초이해</h1>
 		<hr />
 		<h2>form 이해하기</h2>
-		<div class="form_01">
+		<div>
+			<p>form은 무언가를 체크하거나 여러 요소 중에 하나를 선택하거나 입력하는 데 사용하는 기능이다</p>
+			<p>양방향 통신이라고 불리기도 한다. <br /> 
+				백엔드 프로그램과 연동하여 사용하는 영역이기 때문에 개발자와 협업이 매우 중요하다!! 보안에도 매우 신경을 써야하는 부분이다! <br />
+				예를 들면, 개발자와 협업을 하기 때문에 id나 이름값이 같아야한다.</p>
+				
+			<h3>1차 기억해야할 순서</h3>
+				<ul>
+				<li>1.보안의 처리 방법을 어떻게 할 것이냐(<strong>post, get,</strong> delet, push, pull ... 한 12개 정도)</li>
+				<li>2.연결될 파일(서버파일) - id와 비밀번호를 입력하고 나서 로그인 버튼을 누르잖아. 데이터베이스와 사용자를 중매해주는 매개체를 서버파일이라고 한다. 예)php, jsp, asp ... </li>
+				<li>3.웹 표준에 맞게 절자체 맞게 정확하게 해야한다.</li>
+				<li>4.접근성 고려해야한다.</li>
+				<li>5.각 기능별 형태를 이해해야한다.(입력, 선택 및 체크, 버튼, 멀티, 기타 ...)</li>
+			</ul>
 
-			
+			<div class="form_01">
+
+				<form action="#" method="post">
+					<fieldset>
+						<legend>해당하는 영역의 제목</legend>
+						<label for="serachArea">검색할 내용을 입력하세요</label>
+						<input type="text" id="serachArea" name="search" value="" placeholder="내용을 입력하세요"/>
+						<input type="button" value="전송"/>
+					</fieldset>
+				</form>
+
+			</div>	
+
 		</div>
 	</div>
-	
-
 </body>
 </html>
