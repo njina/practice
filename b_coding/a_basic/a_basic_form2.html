@@ -7,7 +7,7 @@
 	
 	<!-- link -->
 	<link rel="stylesheet" href="./css/base/reset.css">
-	<link rel="stylesheet" href="./css/base/common.css.css">
+	<link rel="stylesheet" href="./css/base/common.css">
 	<link rel="stylesheet" href="./css/src/a_basic_form2.css">
 
 	<title>html form 상세 내용 이해하기</title>
@@ -122,17 +122,288 @@
 			<fieldset>
 				<legend>멀티/복합</legend>
 				<p>여러 줄의 내용을 입력하는 형태</p>
-				<label for="comment"></label>
-				<textarea name="" id="" cols="30" rows="10" readonly>계약서</textarea> <!-- cols:열(세로) rows:행(가로) -->
-		
+				<label for="comment" class="hidden">내용을 입력하세요</label>
+				<textarea name="" id="" cols="30" rows="10"></textarea> <!-- cols:열(세로) rows:행(가로) -->
+				<br />
+				<label for="optionSelect">상품의 추가 옵션을 선택하세요</label>
+				<select name="" id="optionSelect">
+					<option>옵션 선택</option>
+					<optgroup label="렌즈 부분">
+						<option value="lens">카메라 렌즈</option>
+						<option value="glass">안경 케이스</option>
+					</optgroup>
+					<optgroup label="기타">
+						<option value="parking">주차권</option>
+					</optgroup>
+				</select>
+				<br />
+				<button type="submit">확인</button>
+				<button type="reset">취소</button>
+				<button type="button">기능</button>
 			</fieldset>
 			<!-- ===================== -->
 			
 			<fieldset>
 				<legend>HTML5 추가기능</legend>
+				<p>아래의 기능들은 브라우저에 따라 작동하지 않을 수도 있다. 그러니 일단은 참고용으로만 알아두자</p>
+				<!-- email, tel, search, url 위에서 했으니까 빼고-->
+				<input type="time">
+				<input type="week">
+				<input type="date">
+				<input type="month">
+				<input type="datetime">
+
+				<input type="color">
+				<input type="number" min="1" max="20" step="1">
+				<input type="range" min="1" max="20" step="1">
+
+				<div class="area">
+					<input type="range" value="50" id="first">+
+					<input type="number" value="50" id="middle">=
+					<output for="first middle"></output>
+				</div>
 			</fieldset>
 			<!-- ===================== -->
 		</form>
+
+
+<!-- 호텔스 컴바인 따라서 만들어보기 -->
+		<hr />
+		<hr />
+		<h3>호텔스 컴바인 따라서 만들어보기</h3>
+		<br />
+		<form action="#" method="POST">
+			<label for="travleArea">여행지</label>
+			<input type="text" id="travleArea" value="">
+			<br />
+			<br />
+			<fieldset>	
+				<label for="checkIn">체크인</label>
+				<select name="checkIn" id="checkInMonth">
+					<option>-월</option>
+					<option value="2020년 4월">2020년 4월</option>
+					<option value="2020년 5월">2020년 5월</option>
+					<option value="2020년 6월">2020년 6월</option>
+					<option value="2020년 7월">2020년 7월</option>
+					<option value="2020년 8월">2020년 8월</option>
+					<option value="2020년 9월">2020년 9월</option>
+					<option value="2020년 10월">2020년 10월</option>
+					<option value="2020년 11월">2020년 11월</option>
+					<option value="2020년 12월">2020년 12월</option>
+					<option value="2020년 1월">2020년 1월</option>
+					<option value="2020년 2월">2020년 2월</option>
+					<option value="2020년 3월">2020년 3월</option>
+					<option value="2020년 4월">2020년 4월</option>
+				</select>
+				<select name="checkIn" id="checkInDate">
+					<option>-일</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+					<option value="10">10</option>
+					<option value="11">11</option>
+					<option value="12">12</option>
+					<option value="13">13</option>
+					<option value="14">14</option>
+					<option value="15">15</option>
+					<option value="16">16</option>
+					<option value="17">17</option>
+					<option value="18">18</option>
+					<option value="19">19</option>
+					<option value="20">20</option>
+					<option value="21">21</option>
+					<option value="22">22</option>
+					<option value="23">23</option>
+					<option value="24">24</option>
+					<option value="25">25</option>
+					<option value="26">26</option>
+					<option value="27">27</option>
+					<option value="28">28</option>
+					<option value="29">29</option>
+					<option value="30">30</option>
+					<option value="31">31</option>
+				</select>
+			
+			<br />
+			<br />
+		
+				<label for="checkOut">체크아웃</label>
+				<select name="checkOut" id="checkOutMonth">
+					<option>-월</option>
+					<option value="2020년 4월">2020년 4월</option>
+					<option value="2020년 5월">2020년 5월</option>
+					<option value="2020년 6월">2020년 6월</option>
+					<option value="2020년 7월">2020년 7월</option>
+					<option value="2020년 8월">2020년 8월</option>
+					<option value="2020년 9월">2020년 9월</option>
+					<option value="2020년 10월">2020년 10월</option>
+					<option value="2020년 11월">2020년 11월</option>
+					<option value="2020년 12월">2020년 12월</option>
+					<option value="2020년 1월">2020년 1월</option>
+					<option value="2020년 2월">2020년 2월</option>
+					<option value="2020년 3월">2020년 3월</option>
+					<option value="2020년 4월">2020년 4월</option>
+				</select>
+				
+				<select name="checkOut" id="checkOutDate">
+					<option>-일</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+					<option value="10">10</option>
+					<option value="11">11</option>
+					<option value="12">12</option>
+					<option value="13">13</option>
+					<option value="14">14</option>
+					<option value="15">15</option>
+					<option value="16">16</option>
+					<option value="17">17</option>
+					<option value="18">18</option>
+					<option value="19">19</option>
+					<option value="20">20</option>
+					<option value="21">21</option>
+					<option value="22">22</option>
+					<option value="23">23</option>
+					<option value="24">24</option>
+					<option value="25">25</option>
+					<option value="26">26</option>
+					<option value="27">27</option>
+					<option value="28">28</option>
+					<option value="29">29</option>
+					<option value="30">30</option>
+					<option value="31">31</option>
+				</select>
+		
+				<br />
+				<br />
+				<input type="checkbox" id="undefined" value="숙박일 미정">
+				<label for="undefined">숙박일 미정</label>
+			</fieldset>
+
+			<br />
+			<br />
+			<label for="personnel">인원</label>
+			<select name="" id="personnel">
+				<option value="성인1명">성인1명</option>
+				<option value="성인2명">성인2명</option>
+				<option value="가족">가족</option>
+				<option value="단체">단체</option>
+			</select>
+			<br />	
+			<br />	
+
+			<legend>호텔 등급</legend>
+			<ul>
+				<li>
+					<input type="checkbox" id="oneStar" value="별 한개">
+					<label for="oneStar">★</label><br />
+				</li>
+				<li>
+					<input type="checkbox" id="twoStar" value="별 두개">
+					<label for="twoStar">★★</label><br />
+				</li>
+				<li>
+					<input type="checkbox" id="threeStar" value="별 세개">
+					<label for="threeStar">★★★</label><br />
+				</li>
+				<li>
+					<input type="checkbox" id="fourStar" value="별 네개">
+					<label for="fourStar">★★★★</label><br />
+				</li>
+				<li>
+					<input type="checkbox" id="fiveStar" value="별 다섯개">
+					<label for="fiveStar">★★★★★</label><br />
+				</li>
+		</ul>
+		<br />
+		<legend>가격(1박당)</legend>
+		<ul>
+			<li>
+				<input type="checkbox" id="oneStar" value="최대 49999원">
+				<label for="oneStar">&#8361; 0 - &#8361; 49,999</label><br />
+			</li>
+			<li>
+				<input type="checkbox" id="twoStar" value="50000원부터 109999원까지">
+				<label for="twoStar">&#8361; 50,000 - &#8361; 109,999</label><br />
+			</li>
+			<li>
+				<input type="checkbox" id="threeStar" value="110000원부터 159999원까지">
+				<label for="threeStar">&#8361; 110,000 - &#8361; 159,999</label><br />
+			</li>
+			<li>
+				<input type="checkbox" id="fourStar" value="160000원부터 209999원까지">
+				<label for="fourStar">&#8361; 160,000 - &#8361; 209,999</label><br />
+			</li>
+			<li>
+				<input type="checkbox" id="fiveStar" value="210000원부터">
+				<label for="fiveStar">&#8361; 210,000부터</label><br />
+			</li>
+		</ul>
+		<br />
+		<legend>숙소 유형</legend>
+		<ul>
+			<li>
+				<input type="checkbox" id="hotel" value="호텔">
+				<label for="hotel">호텔</label><br />
+			</li>
+			<li>
+				<input type="checkbox" id="aprtment" value="아파트">
+				<label for="aprtment">아파트</label><br />
+			</li>
+			<li>
+				<input type="checkbox" id="hostel" value="호스텔">
+				<label for="hostel">호스텔</label><br />
+			</li>
+			<li>
+				<input type="checkbox" id="motel" value="모텔">
+				<label for="motel">모텔</label><br />
+			</li>
+			<li>
+				<input type="checkbox" id="bedAndBreakfast" value="베드와 브랙퍼스트">
+				<label for="bedAndBreakfast">베드 & 브랙퍼스트</label><br />
+			</li>
+		</ul>
+		<br />
+		<legend>고객 평점</legend>
+		<ul>
+			<li>
+				<input type="checkbox" id="gradeBest" value="최고 9점">
+				<label for="gradeBest">최고: 9</label><br />
+			</li>
+			<li>
+				<input type="checkbox" id="gradeVeryGood" value="매우 좋음 8점">
+				<label for="gradeVeryGood">매우 좋음: 8</label><br />
+			</li>
+			<li>
+				<input type="checkbox" id="gradeGood" value="좋음 7점">
+				<label for="gradeGood">좋음: 7</label><br />
+			</li>
+			<li>
+				<input type="checkbox" id="gradeNormal" value="무난함 6점">
+				<label for="gradeNormal">무난함 6</label><br />
+			</li>
+			<li>
+				<input type="checkbox" id="noGrade" value="평점 없음">
+				<label for="noGrade">평점 없음</label><br />
+			</li>
+		</ul>
+		<br />
+		<input type="submit" value="검색">
+
+	</form>
+
 
 	</div>
 </body>

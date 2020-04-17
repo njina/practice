@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<!-- a_basic_ex_result.html -->
+<html lang="ko-KR">
+<head>
+	<meta charset="UTF-8">
+	
+	<link rel="stylesheet" href="./css/base/reset.css">
+	<link rel="stylesheet" href="./css/base/common.css">
+	<link rel="stylesheet" href="./css/src/a_basic_ex_result.css">
+
+	<title>Document</title>
+</head>
+<body>
+	<div class="wrap">
+		<h1>호텔스 컴바인 </h1>
+
+		<div class="check">
+			<form action="" method="get">
+				<fieldset>
+					<legend>여행지 검색</legend>
+
+					<div class="location_field">
+						<h3><label for="fieldTour">여행지</label></h3>
+						<div class="search_bar">
+							<i aria-hidden="true"></i>
+							<input type="search" id="fieldTour" placeholder="도시 또는 호텔명을 검색해 보세요">
+						</div>
+					</div>
+				
+					<div class="check_in">
+						<h3><label for="">체크인</label></h3>
+						<div class="calendar">
+							<div class="btn">
+								<button type="button"><i aria-hidden="true"></i>달력</button>
+							</div>
+
+							<div class="month">
+								<label for="checkInMonth"></label>
+								<select name="checkInMonth" id="checkInMonth">
+									<option>-월</option>
+									<option value="2020년 4월">2020년 4월</option>
+									<option value="2020년 5월">2020년 5월</option>
+									<option value="2020년 6월">2020년 6월</option>
+									<option value="2020년 7월">2020년 7월</option>
+									<option value="2020년 8월">2020년 8월</option>
+									<option value="2020년 9월">2020년 9월</option>
+									<option value="2020년 10월">2020년 10월</option>
+									<option value="2020년 11월">2020년 11월</option>
+									<option value="2020년 12월">2020년 12월</option>
+								</select>
+							</div>
+							<div class="day">
+								<label for="chekInDay"></label>
+								<select name="chekInDay" id="chekInDay">
+									<option>-일</option>
+									<option value="1">1</option>
+									<option value="2">2</option>
+									<option value="3">3</option>
+									<option value="4">4</option>
+									<option value="5">5</option>
+									<option value="6">6</option>
+									<option value="7">7</option>
+									<option value="8">8</option>
+									<option value="9">9</option>
+									<option value="10">10</option>
+									<option value="11">11</option>
+									<option value="12">12</option>
+									<option value="13">13</option>
+									<option value="14">14</option>
+									<option value="15">15</option>
+									<option value="16">16</option>
+									<option value="17">17</option>
+								</select>
+							</div>
+						</div>
+					</div>
+				
+					<div class="check_out">
+						<h3><label for="">체크아웃</label></h3>
+						<div class="calendar">
+							<div class="btn">
+								<button type="button"><i aria-hidden="true"></i>달력</button>
+							</div>
+							
+							<div class="month">
+								<label for="checkOutMonth"></label>
+								<select name="checkOutMonth" id="checkOutMonth">
+									<option>-월</option>
+									<option value="2020년 4월">2020년 4월</option>
+									<option value="2020년 5월">2020년 5월</option>
+									<option value="2020년 6월">2020년 6월</option>
+									<option value="2020년 7월">2020년 7월</option>
+									<option value="2020년 8월">2020년 8월</option>
+									<option value="2020년 9월">2020년 9월</option>
+									<option value="2020년 10월">2020년 10월</option>
+									<option value="2020년 11월">2020년 11월</option>
+									<option value="2020년 12월">2020년 12월</option>
+								</select>
+							</div>
+							<div class="day">
+								<label for="chekOutDay"></label>
+								<select name="chekOutDay" id="chekOutDay">
+									<option>-일</option>
+									<option value="1">1</option>
+									<option value="2">2</option>
+									<option value="3">3</option>
+									<option value="4">4</option>
+									<option value="5">5</option>
+									<option value="6">6</option>
+									<option value="7">7</option>
+									<option value="8">8</option>
+									<option value="9">9</option>
+									<option value="10">10</option>
+									<option value="11">11</option>
+									<option value="12">12</option>
+									<option value="13">13</option>
+									<option value="14">14</option>
+									<option value="15">15</option>
+									<option value="16">16</option>
+									<option value="17">17</option>
+								</select>
+							</div>
+						</div>
+					</div>
+				
+					<div class="person_check">
+						<input type="checkbox" id="personCheck" name="personCheck" value="숙박일 미정 확인" class="hidden">
+						<label for="personCheck"><i aria-hidden="true">##</i>숙박일 미정</label>
+					</div>
+
+					<div class="person_count">
+						<h3>인원</h3>
+						<label for="personCount" class="hidden">인원 확인</label>
+						<input type="text" name="" id="personCount" class="hidden">
+						<dl>
+							<dt>인원선택</dt>
+							<dd>
+								<ul>
+									<li><a href="#" data-value="성인 1"><i aria-hidden="true"></i>성인 1명</a></li>
+									<li><a href="#" data-value="성인 2"><i aria-hidden="true"></i>성인 2명</a></li>
+									<li><a href="#" data-value="가족"><i aria-hidden="true"></i>가족</a></li>
+									<li><a href="#" data-value="단체"><i aria-hidden="true"></i>단체</a></li>
+								</ul>
+							</dd>
+						</dl>
+					</div>
+					<!-- 속성에서 data- 시작하는 형태의 속성은 개발자 기준으로 만든 속성으로, "data-"" 뒤에는 임의의 이름을 작성하여 사용한다. -->
+					<!-- select 요소는 디자인을 할 수 없는 요소이다. 드롭다운 메뉴의 form 내부 요소일 경우에는 별도의 요소로 기능 처리하여 값을 전달하도록 처리한다.(js로 제어) -->
+
+
+					<!-- more_option ================== -->
+					<div class="more_option">
+						<button type="button">추가검색 옵션</button>
+					
+						<fieldset class="more_area">
+							<legend>추가 예약 옵션 체크사항</legend>
+						</fieldset>
+					</div>
+					<!--// more_option ================== -->					
+
+					<div class="search_btn">
+						<button type="submit">검색</button>
+					</div>
+
+				</fieldset>
+			</form>
+		</div>
+	</div>
+</body>
+</html>
