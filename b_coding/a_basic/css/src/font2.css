@@ -1,0 +1,15 @@
+/* font2.css */
+
+p {font-family: gt; font-weight: 100; font-style: italic; font-size: 1.1rem;}
+
+.ellis {width: 400px; height: 50px; border: 3px solid #acf; 
+	overflow: hidden;
+	white-space: nowrap; /* white-space 의미없는 공백 */
+	text-overflow: ellipsis;
+}
+
+.overflow {width: 300px; height: 300px; margin: 10px  auto; background-color: #acc;
+overflow: hidden;}
+
+.overflow>span {display: block; width: 100%; height: 100%; background-color: #faa; overflow: visible; overflow-y: scroll;
+padding-right: 20px;}

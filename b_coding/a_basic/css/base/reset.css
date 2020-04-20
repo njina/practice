@@ -2,7 +2,7 @@
 
 /* reset.css */
 
-html, body {width: 100%; height: 100%; font-family: 'myriad pro', arial, '돋움', dotum, sans-serif;} /*영문서체 먼저. 서체명에 띄어쓰기가 있는 경우나 서체명이 한글일 경우 따옴표 안에 기재*/ 
+/* html, body {width: 100%; height: 100%; font-family: 'myriad pro', arial, '돋움', dotum, sans-serif;} 영문서체 먼저. 서체명에 띄어쓰기가 있는 경우나 서체명이 한글일 경우 따옴표 안에 기재  */
 html, body, h1, h2, h3, h4, h5, h6, p, pre,
 img, div, ol, ul, li, dl, dt, dd, figure, figcaption {margin: 0; padding: 0; border: 0; outline: 0;}
 
