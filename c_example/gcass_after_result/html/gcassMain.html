@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=3.0, minimum-scale=0.5">
+
+	 <!-- link -->
+	 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="../css/base/reset.css">
+	<link rel="stylesheet" href="../css/base/common.css">
+	<link rel="stylesheet" href="../css/gcass/main.css">
+
+	<!--[if IE]>
+		<script src="../ie/html5shiv/dist/html5shiv.min.js"></script>
+		<script src="../ie/pie/PIE.js"></script>
+		<script src="../ie/resond/dest/respond.min.js"></script>
+	<![endif]-->
+
+	<title>gcass</title>
+
+</head>
+<body>
+	<!-- layout -->
+	<div id="wrap" class="clearfix">
+
+		<!-- headBox =================================== -->
+		<header id="headBox">
+			<h1 class="hidden_wrap"><a href="#"><span>gcass</span></a></h1>
+			<nav id="gnbBox">
+				<h2 class="hidden"><span>gcass global navigation</span></h2>
+				<ul class="hidden_wrap">
+					<li><a href="#"><span>about</span></a></li>
+					<li><a href="#"><span>study</span></a></li>
+					<li><a href="#"><span>photo</span></a></li>
+					<li><a href="#"><span>blog</span></a></li>
+					<li><a href="#"><span>press</span></a></li>
+				</ul>
+			</nav>
+			<div class="qna hidden_wrap">
+				<a href="#"><abbr title="question and answer" class="hidden">QNA</abbr></a>
+			</div>
+		</header>
+		
+		<!-- lnbBox =================================== -->
+		<aside id="lnbBox">
+			<h2 class="hidden">보조 메뉴</h2>
+			<ul class="hidden_wrap">
+				<li><a href="#"><span>home</span></a></li>
+				<li><a href="#"><span>study</span></a></li>
+				<li><a href="#"><span>education</span></a></li>
+			</ul>
+		</aside>
+
+		<!-- viewBox =================================== -->
+		<section id="viewBox">
+			<h2 class="hidden">사이트광고</h2>
+			<div class="pattern_bg"></div>
+			<div class="con_text"></div>
+			<div class="con_image"></div>
+		</section>
+
+		<!-- footBox =================================== -->
+		<footer id="footBox">
+			<h2>사이트정보</h2>
+			<div class="company_about hidden_wrap">
+				<h3 class="hidden">회사 위치 및 소셜 네트워크</h3>
+				<div><a href="#"><span>회사위치</span></a></div>
+				<div><a href="#"><span>페이스북</span></a></div>
+			</div>
+			<div class="company_info">
+				<h3 class="hidden">회사 주소 및 카피라이트</h3>
+				<address>경기도 안양시 만안구 안양4동 676-91 안양메쎄타워 2층</address>
+				<p>copyright. 2013 anyang gcass. All right reserved.</p>
+			</div>
+			<div class="family_site">
+				<h3 class="hidden">회사 연관 사이트</h3>
+				<dl class="full">
+					<dt>제휴 사이트</dt>
+					<dd><a href="http://www.naver.com">http://www.naver.com</a></dd>
+					<dt>연관 사이트</dt>
+					<dd><a href="http://www.daum.net">http://www.daum.net</a></dd>
+				</dl>
+			</div>
+			<p class="site_comment">본 페이지는 학습용으로 제작되었습니다.</p>
+		</footer>
+	</div>
+
+	<!-- script -->
+	<script></script>
+</body>
+</html>
+
+
+중요포인트<br/>
+1. #sideBox가 시각적으로 위에 있더라도 코딩할 때는 #headBox를 제일 처음 작성한다.<br/>
+2. 그리고나서 #sideBox를 position:absoulte로 위치 조정 <br>
+3. background-image는 a 태그 안에 삽입한다.<br/>
