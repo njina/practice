@@ -1,0 +1,142 @@
+/* xidoMain.css */
+
+@charset "uft-8";
+
+#wrap{
+	width: 1920px; height: auto; min-height: 1000px; 
+	margin: auto; 
+	background-color: #aaa;}
+
+/* headBox ================================= */
+#headBox{width: 100%; height: auto; min-height: 100px; 
+	padding: 30px 18px; box-sizing: border-box;
+	background-color: #fff;
+	border-bottom: 2px solid #333;
+}
+h1 {float: left; width: 60px; height: 60px; 
+	background-color: #ff0066;}
+
+.gnb {float: right; width: 60px; height: 60px; 
+ 	background-color: #ff0066}
+
+
+/* viewBox ================================= */
+#viewBox{width: 100%; height: 1080px; min-height: 100px; 
+	padding: 150px 90px 90px; box-sizing: border-box;
+	background-color: #fff;
+}
+
+.view_area {width: 100%; height: 100%;
+	background-color: #ff0066;
+	}
+
+
+/* bestBox ================================= */
+#bestBox{
+	position: relative;
+	width: 100%; height: auto;
+	background-color: #fff;}
+
+.best_area {width: 1260px; height: auto; margin: auto;}
+	.best_area h2 {width: 430px; height: 60px; 
+		margin: auto;
+		text-transform: uppercase; text-align: center;}
+
+	.best_list ul {
+		width: 1260px; height: 560px;
+		margin: 100px 0 130px;}
+	.best_list li {
+		float: left; 
+		width: 380px; height: 100%;
+		margin-right: 60px;  
+		background-color: #ddd;}
+	.best_list li:last-child {margin-right: 0;}	
+	
+	.best_list .img {width: 100%; height: 250px; 
+		background-image: url('../../xido_img/jaredd-craig-HH4WBGNyltc-unsplash.jpg'); background-repeat: no-repeat; 
+		background-position: 50% 50%;
+		background-size: 100% auto;}
+	.best_list .text {width: 100%; height: 310px; padding: 52px 24px; box-sizing: border-box;}
+	.best_list .text .title {width: 180px; height: 30px; }
+	.best_list .text .cont {width: 100%; height: 70px; margin-top: 40px; margin-bottom: 40px;}
+	.best_list .text .btn {}
+	.best_list .text .btn ul {width: 320px; height: 50px;}
+	.best_list .text .btn li {float: left; width: 160px; height: 50px; background-color: #ff0066;}
+
+
+
+
+.more {float: right; width: 320px; height: 62px; background-color: aqua;}
+
+.view_indicator {
+	position: absolute; top: 30%; 
+	width: 1920px; height: auto;}
+.next {position: relative; 
+	float: right; 
+	width: 250px; height: 370px; 
+	background-color: #cfdada;}
+.next_btn {position: absolute; top: 30%; right: 40px;
+	width: 220px; height: 140px; background-color: #ff0066;}
+
+.prev {position: relative; 
+	float: left; 
+	width: 250px; height: 370px; 
+	background-color: #cfdada;}
+.prev_btn {position: absolute; top: 30%; left: 40px;
+	width: 220px; height: 140px; background-color: #ff0066;}
+
+/* graphicBox ================================= */
+#graphicBox{width: 100%; height: auto;}
+
+.graphic_intro {
+	position: relative;
+	width: 100%; height: 1080px; background-color: darkslategrey;}
+	.g_intro_title {
+		position: absolute; top: 122px; left: 270px; 
+		width: 730px; height: 230px; background-color: #fff;}
+	.g_indicator {
+		position: absolute; top: 590px; left: 430px;
+		width: 350px;height: 110px; 
+	background-color: #fff;}
+
+	.g_tool {position: absolute; left: 430px; bottom: 96px;
+		width: auto; height; auto;
+	}
+	.g_tool ul {width: 1750px; height: 250px; background-color: #fff;}
+	.g_tool li {float: left; width: 250px; height: 250px; background-color: aliceblue;}
+
+	.tool_name {
+		position: absolute; top: 340px; right: 150px;
+		width: 700px; height: 280px; background-color: antiquewhite;}
+
+
+.graphic_tip {width: 100%; height: 1080px; }
+	 .graphic_tip_area {width: 1340px; height: 100%; 
+		margin: auto;}
+	 .graphic_title {width: 100%; height: auto; margin-top: 100px; margin-bottom: 130px;}
+		.graphic_tip_area h2 {width: 430px; height: 60px; 
+		margin: auto;
+		text-transform: uppercase; text-align: center;}
+	 .graphic_tip_area p {width: 430px; height: 60px; 
+		margin: auto;
+		text-align: center;}
+
+	 .graphic_tip_area ul {width: 1340px; height: auto; margin: auto;}
+	 .graphic_tip_area li {float: left; width: 410px; height: 230px; 
+		margin-right: 50px; margin-bottom: 50px; background-color: #fff;}
+		.graphic_tip_area li:nth-child(3n) {margin-right: 0;}
+
+
+
+
+/* adverBox ================================= */
+#adverBox{width: 100%; height: 320px; background-color: #ff0066;}
+
+/* programBox ================================= */
+#programBox{width: 100%; height: auto; min-height: 100px; background-color: #cfdada;}
+
+/* infoBox ================================= */
+#infoBox{width: 100%; height: auto; min-height: 100px; background-color: #cfd;}
+
+/* footBox ================================= */
+#footBox{width: 100%; height: auto; min-height: 100px; background-color: #333;}

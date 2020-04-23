@@ -1,0 +1,23 @@
+/* common.css */
+
+/* hidden */
+.hidden, 
+.hidden_wrap a>span {display: block; 
+	position: absolute; z-index: -1; 
+	width: 0; height: 0; overflow: hidden;
+	border: 0; margin: 0;  padding: 0;}
+
+.full,
+.hidden_wrap a {display: block; width: 100%; height: 100%}
+
+/* clearfix: 자식요소에게 float 적용시 해당 클래스 부여 */
+/*content 큰 따옴표 안에 띄어쓰기 한칸 반드시*/
+.clearfix:after, .clearfix::after {content: " "; display: block; clear: both;} 
+
+/* font */
+.ggi{font-family: gt, sans-serif;}
+.serif{font-family: 'Noto Serif', serif;}
+.sans{font-family: 'Noto Sans KR', sans-serif;}
+
+/* 브라우저 높이에 따른 각 영역 높이 */
+.h_full  {width: 100%; height: 100%; min-height: 900px;}
