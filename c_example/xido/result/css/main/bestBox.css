@@ -1,0 +1,83 @@
+/* bestBox.css */
+/* best와 new 내용 */
+
+/* bestBox ======================= */
+#bestBox{
+	position: relative;
+	padding-top: 70px; padding-bottom: 90px; box-sizing: border-box;
+	background-color: #fff;}
+
+#bestBox h2 {
+	width: 100%; height: 80px; margin-bottom: 70px; 
+	font-size: 3.5rem; 
+	text-align: center; text-transform: uppercase;}
+
+.best_btn_area {
+		position: absolute; top: 50%; left: 0;
+		width: 100%; height: 0; 
+		background-color: rgba(200, 200, 200, 0.7);
+	}
+
+.best_btn_area button {
+	width: 13.6458333vw; height: 19.2708333vw;
+	min-width: 170px; min-height: 240px;
+	max-width: 2622px; max-height: 370px;
+	/* margin-top: -185px; */
+	transform: translateY(-50%); /*가운데(y값이 50%라서)를 기준으로 크기가 줄었다 늘었다*/
+	background-color: #777;}
+
+	.best_btn_area .next_btn{float: right}
+	.best_btn_area .prev_btn{float: left}
+
+#bestBox .part_area {
+		overflow: hidden;
+		width: 90%; max-width: 1260px; min-width: 980px; height: 560px;
+		margin: auto;}
+
+		#bestBox .part_wrap {width: 300%; height: 100%;}
+			#bestBox .part_wrap > ul {
+				float: left; width: 33.333333%; height: 100%; 
+				margin-right: 2%;}
+			
+			/* #bestBox .part_wrap .part_01 {background-color: #acc;} 
+			#bestBox .part_wrap .part_02 {background-color: #fac;}
+			#bestBox .part_wrap .part_03 {background-color: #fca;} */
+
+			#bestBox .part_wrap > ul > li {
+				position: relative;
+				float: left;
+				width: 29%; height: 98%;
+				margin-right: 5%;
+				background-color: #fff;
+				box-shadow: 0 0 5px rgba(51, 51, 51, 0.5);
+			}
+			#bestBox .part_wrap > ul > li:last-child {margin-right: 0;}
+
+			#bestBox .number {
+				position: absolute; left:0; right:0; margin:auto; top:220px;
+				width:60px; height: 60px; 
+				background-color: #ff0066;
+				color: #fff; text-align: center; line-height: 60px;	font-size: 2rem;	
+			}
+			#bestBox .img_bg {width: 100%; height: 254px; background-color: #a12;}
+			#bestBox dl {
+				width: 100%; height: auto; max-height: 306px;
+				padding: 50px 14px 30px; box-sizing: border-box;
+				text-transform: uppercase;			
+			}
+			#bestBox dt {width: 100%; height: 40px; margin-bottom: 20px; font-size: 1.375rem;}
+			#bestBox dd {width: 100%; height: auto;}
+			#bestBox dd:first-of-type {margin-bottom: 40px;}
+
+			#bestBox p {width: 100%; height: 24px; margin-bottom: 5px; font-size: 1rem;}
+			#bestBox p:last-child {margin-bottom: 0;}
+			#bestBox p > em {font-style: normal;}
+			#bestBox p > span {}
+			#bestBox dd > a {
+				display: block; 
+				float: left; /*float을 쓰면 display:block 안 해도 자동적용된다*/
+				width: 160px; height: 50px;
+				background-color: #ff0066; border-radius: 3.125rem;
+				color: #fff; text-align: center; line-height: 45px; font-size: 1.5625rem; font-weight: bold;
+			}
+				#bestBox dd > a:last-child{float:right;}

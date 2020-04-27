@@ -1,0 +1,43 @@
+/* headBox.css */
+/* 공통 header영역 */
+
+/* headBox ======================= */
+#headBox{
+	position: absolute; top: 0; left: 0; z-index: 1500;
+	width: 100%; height: 120px; 
+	padding: 30px 90px; 
+	/* padding: 1.875rem 4.6875vw; */
+	box-sizing: border-box;
+	background-color: #fff;
+	border-bottom: 1px solid #333;
+	box-shadow: 0 0 1rem rgba(51, 51, 51, 0.7);
+}
+
+h1 {float: left; width: 60px; height: 60px; background-color: #ff0066;}
+
+#gnbBox {float: right; width: 60px; height: 60px;}
+	.btn_area {width: 100%; height: 100%; background-color: #ff0066;}
+	.btn_area button {width: 100%; height: 100%;}
+	.gnb_menu {
+		display: none; 
+		position: absolute; right: 0; top: 100%;
+		width: 100%; height: auto; min-height: 700px;
+		padding:60px 10px; box-sizing: border-box;
+		background-color: #acc;
+		background-image: linear-gradient(#f06 10%,#26000f 12%);}
+		
+		.btn_area:hover + .gnb_menu {display: block;} 
+			/*  +  :바로 뒤에 오는 형제  */
+
+		.gnb_menu > h3 {float: left; width: 244px; height:350px; background-color: #ccc;}
+		.gnb_menu > .menu_area {
+			float: right; 
+			width: 65%; min-width: 980px; max-width: 1400px;
+			height: auto; min-height: 600px;	
+			background-color: #ccc;
+		}
+
+		@media screen and (max-width: 1280px) {
+			.gnb_menu > h3 {display: none;}
+			.gnb_menu > .menu_area {margin: auto; float:none;}
+		}

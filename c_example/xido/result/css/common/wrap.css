@@ -1,0 +1,10 @@
+@charset "utf-8";
+
+/* wrap.css */
+/* #wrap 전체 잡아주는 영역 */
+
+#wrap {
+	position: relative;
+	width: 100%; min-width: 1200px; 
+	height: 100%; min-height: 900px;
+	margin: auto;}
