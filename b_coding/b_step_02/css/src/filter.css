@@ -1,0 +1,29 @@
+@charset "utf-8";
+
+/* filter.css */
+/* filter 속성 이해하기 */
+
+h1 {}
+h2 {}
+
+.filter {width: 800px; height: auto; border: 1px solid #333;}
+.filter > div {
+	float: left;
+	width: 20rem; height: 20rem;
+	margin: 2rem; 
+	background-color:#ddd;
+	background-image: url(../../img/pengsoo\ \(1\).jpg);
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	background-size: auto 100%;
+}
+/* ie에서 지원 안됨. */
+.filter > div:nth-of-type(1) {filter:blur(10px);}
+.filter > div:nth-of-type(2) {filter:brightness(1.5);}
+.filter > div:nth-of-type(3) {filter:contrast(2)}
+.filter > div:nth-of-type(4) {box-shadow: 10px 10px 5px;}
+.filter > div:nth-of-type(5) {filter:drop-shadow(10px 10px 5px #ddf)}
+/* box-shadow는 박스의 크기만큼 그림자가 들어가는거고, 
+	filter:drop-shadow는 그림의 크기만큼 그림자가 들어간다. */
+.filter > div:nth-of-type(6) {filter:hue-rotate(180deg);}
+.filter > div:nth-of-type(7) {filter:hue-rotate(30deg) brightness(1.3) blur(3px);}

@@ -1,0 +1,44 @@
+@charset "utf-8";
+
+/* shadow.css */
+/* box-shadow,text-shadow 속성 이해하기 */
+
+.sample, 
+.sample_02 {
+	width: 800px; height: auto;
+	margin: auto; margin-bottom: 5rem;
+	border: 1px solid #777;}
+
+	.sample h2, 
+.sample_02 h2 {
+	padding: 0.5rem; background-color: #07f; color: #fff; font-weight: bold; text-align: center;}
+
+	.sample > ul {
+	width: 100%; 
+	padding: 1rem; box-sizing: border-box;}
+
+	.sample li {
+	float: left; 
+	width: 150px; height: 50px; 
+	margin: 1rem; 
+	background-color: #fca; border-radius: 0.5rem;
+	font-size: 1.2rem; color: #555; text-align: center; line-height: 50px;}
+
+/*x값이동치 y값이동치 번짐정도 (부피크기) 색상*/
+/* 부피크기까지 설정하면 패딩에서 box-sizing 안한 느낌 */
+.sample li:nth-child(1) {box-shadow: 1rem 1rem 0.5rem 0.5rem #057;} 
+.sample li:nth-child(2) {box-shadow: 0.5rem 0.5rem #057;} 
+.sample li:nth-child(3) {box-shadow: 0.5rem 0.5rem 0.2rem rgba(0, 0, 0, 0.3)} 
+.sample li:nth-child(4) {box-shadow:0.5rem 1rem #047 inset;} /*내부 그림자*/ 
+.sample li:nth-child(5) {box-shadow:0.5rem 1rem #047,	-0.5rem -0.5rem  #acf, 1rem  2rem #777;} /*중복 그림자도 가능하다. 예)밤하늘의 은하수 같은 */  
+
+
+.sample_02 ul {}
+.sample_02 li {
+	font-size: 2rem; font-weight: 900;
+	color: #aaa;}
+
+	/* box-shadow와 다르게 부피크기 속성값은 없다. inset 속성값도 없다.  */
+.sample_02 li:nth-child(1) {text-shadow: 0.3rem 0.3rem #333;}
+.sample_02 li:nth-child(2) {text-shadow: 0.3rem 0.3rem 0.5rem #adf;}
+.sample_02 li:nth-child(3) {text-shadow: 0 0 0.2rem #fff,-0.05rem -0.05rem 0.05rem #333, 0.5rem 0.5rem 0.5rem #798; color: transparent} /* 중복 그림자 가능 */

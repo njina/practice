@@ -1,0 +1,94 @@
+@charset "utf-8";
+
+/* transform.css */
+/* transform 속성 이해하기 */
+
+h1 {
+	/* width: 100%; height: auto; */
+	padding: 1rem; background-color: #0ad;
+	color: #fff; font-size: 3rem; text-align: center;
+	margin-bottom: 2rem;
+}
+.sample {
+	width: 800px; height: auto;
+	margin: auto; margin-bottom: 2rem;
+	border: 2px solid #777;}
+
+.sample h2 {
+	padding:  0.5rem; background-color: #fa0; 
+	border-bottom: 2px solid #057;}
+
+.sample div {
+	width: 200px; height: 100px;
+	margin-bottom: 2rem;
+	padding: 0.2rem; box-sizing: border-box;
+	background-color: #acc;
+	font-size: 1.2rem; color: #333; 
+	border: 1px solid #333;
+}
+
+/* transform 의 기능
+		1. 이동(translate)
+		2. 크기변경(scale)
+		3. 회전(rotate)
+		4. 기울이기(skew)
+	단위
+		*이동의 경우, px | rem | % ... 다 적용됨
+		*크기변경의 경우, 1==100% , 0.5==50% , 3==300%
+		*회전의 경우, deg(각도,degree의 약어). 시계방향으로 돈다.
+	조건
+		*block 요소여야한다. float 속성을 적용했을 경우에는 일부 동작 안 되는 것도 있음.
+	축
+		*x | y | z
+		*대부분의 축은 x축을  기본으로 처리(회전은 z축을 기본으로 한다)
+*/
+ 
+/* 원근법 적용하는 방법: perspective 속성 */
+/*.translate {perspective: 50px;} */
+
+.translate > div:nth-of-type(1) {transform: translate(100px,200px);} /*콤마 주의*/
+.translate > div:nth-of-type(2) {transform: translate(0, 100px);} 
+.translate > div:nth-of-type(3) {transform: translateX(-100px);} 
+.translate > div:nth-of-type(4) {transform: translateX(-100px) translateY(50px);}
+
+/* ============================================= */
+
+.scale > div:nth-of-type(1) {transform:scale(1.3);}
+.scale > div:nth-of-type(2) {transform:scale(-1);}  /* 음수값 주면 항상 뒤집힌다 좌우반전+위아래반전*/
+.scale > div:nth-of-type(3) {transform:scaleX(1.5) scaleY(1.1);}
+.scale > div:nth-of-type(4) {transform:scaleX(1.5 1.1);}
+
+/* ============================================= */
+
+.rotate > div:nth-of-type(1) {transform: rotate(-45deg);}
+.rotate > div:nth-of-type(2) {transform: rotateX(45deg);}
+.rotate > div:nth-of-type(3) {transform: rotateY(20deg);}
+.rotate > div:nth-of-type(4) {transform: rotateX(40deg);} /*중복 적용 별 소용없음*/
+
+/* ============================================= */
+
+.skew > div:nth-of-type(1) {transform: skewX(20deg)} /*기본이 x축*/
+.skew > div:nth-of-type(2) {transform: skewY(-20deg)}
+.skew > div:nth-of-type(3) {transform-origin: 0 0; transform: skew(15deg, 20deg)} /*콤마 주의*/
+/* transform-origin: 0 0 (왼쪽상단 기준)
+100% 0 (오른쪽상단 기준)
+0 100%(오른쪽상단 기준)
+100% 100%(오른쪽하단 기준) 
+*미세하게 오차가 날 수 있다. */
+.skew > div:nth-of-type(4){transform: skew(15deg, 20deg)}
+.skew > div:nth-of-type(4)>span {display: block; transform: skew(-15deg, -20deg)} /*안먹음 why? span은 block이 아니라서. 그래서 block을 줘야돼*/
+
+/* ============================================= */
+
+.per_wrap {position: relative; perspective: 300px; height: 350px;}
+.per_wrap > div {position: absolute; top:0; left:0; bottom:0; right:0; margin:auto;}
+.per_wrap > div:nth-of-type(1) {transform:translateX(-400px) rotateY(80deg);}
+.per_wrap > div:nth-of-type(2) {transform:translateX(-250px) rotateY(40deg);}
+.per_wrap > div:nth-of-type(3) {transform:translateX(50px) rotateY(-10deg);}
+.per_wrap > div:nth-of-type(4) {transform:translateX(300px) rotateY(-30deg);}
+
+/* ============================================= */
+
+.pers > div:nth-of-type(1) {transform: perspective(500px) rotateY(45deg);}
+.pers > div:nth-of-type(2) {transition: all 1000ms;}
+.pers > div:nth-of-type(2):hover {transform: perspective(800px) translate(200px) rotateX(90deg) ;}
