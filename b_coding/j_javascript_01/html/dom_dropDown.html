@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<!-- dom_dropDown.html -->
+<html lang="ko-KR">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=3.0, minimum-scale=0.5">
+
+	 <!-- link -->
+	<link rel="stylesheet" href="../css/base/reset.css">
+	<link rel="stylesheet" href="../css/base/common.css">
+	<link rel="stylesheet" href="../css/src/dom_dropDown.css">
+
+	<!--[if IE]>
+		<script src="../ie/html5shiv/dist/html5shiv.min.js"></script>
+		<script src="../ie/pie/PIE.js"></script>
+		<script src="../ie/resond/dest/respond.min.js"></script>
+	<![endif]-->
+
+	<title>js 기능이해하기</title>
+
+</head>
+<body>
+	<!-- layout -->
+	<h1>js 기능 이해하기</h1>
+	<hr>
+	<h2>드롭다운 메뉴 만들기</h2>
+	<p>
+		주의
+		1. dt나 dd를 선택할 수 없으므로 변수로
+		2. 각각 기재하는 거 보다, 반복문
+		3. 반복문보다 함수문으로 처리
+		
+		결론
+		1. js는 선택자가 복잡하다
+		2. 기능을 진짜 하나하나 처리해줘야돼
+		3.
+		4. 함수를 이용하면 복잡한 식이,코딩의 양이 조금은 줄어든다
+	</p>
+	
+	<div class="drop_menu">
+		<ul class="clearfix">
+			<li>
+				<dl>
+					<dt>linkTitle_01</dt>
+					<dd>
+						<a href="#">sub_link_01</a>
+						<a href="#">sub_link_02</a>
+						<a href="#">sub_link_03</a>
+						<a href="#">sub_link_04</a>
+					</dd>
+				</dl>
+			</li>
+			<li>
+				<dl>
+					<dt>linkTitle_02</dt>
+					<dd>
+						<a href="#">sub_link_05</a>
+						<a href="#">sub_link_06</a>
+						<a href="#">sub_link_07</a>
+						<a href="#">sub_link_08</a>
+					</dd>
+				</dl>
+			</li>
+			<li>
+				<dl>
+					<dt>linkTitle_03</dt>
+					<dd>
+						<a href="#">sub_link_09</a>
+						<a href="#">sub_link_10</a>
+						<a href="#">sub_link_11</a>
+						<a href="#">sub_link_12</a>
+					</dd>
+				</dl>
+			</li>
+			<li>
+				<dl>
+					<dt>linkTitle_04</dt>
+					<dd>
+						<a href="#">sub_link_13</a>
+						<a href="#">sub_link_14</a>
+						<a href="#">sub_link_15</a>
+						<a href="#">sub_link_16</a>
+					</dd>
+				</dl>
+			</li>
+		</ul>
+
+	</div>
+
+	<!-- script -->
+	<script src="../js/dom_dropDown.js"></script>
+</body>
+</html>
