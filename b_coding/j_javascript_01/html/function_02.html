@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!-- function_02.html -->
+<html lang="ko-KR">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=3.0, minimum-scale=0.5">
+
+	<!--[if IE]>
+		<script src="../ie/html5shiv/dist/html5shiv.min.js"></script>
+		<script src="../ie/pie/PIE.js"></script>
+		<script src="../ie/resond/dest/respond.min.js"></script>
+	<![endif]-->
+
+	<title>함수 호출 이해하기</title>
+
+</head>
+<body>
+	<!-- layout -->
+	<h1><a href="../index.html">javascript 기초 문법 이해하기</a></h1>
+	
+	<h2>function 호출 이해하기</h2>
+	CDN(contents delivery network)
+	로컬에 다운로드 하지 않고, 웹에서 이어갖다붙이는 거
+	예시) 구글 폰트에서 웹폰트를 갖다붙이는거
+
+	script의 위치
+	script의 위치에 따라 웹페이지의 속도가 좀 달라진다. 요즘은,  body 마지막 부분에 위치시킨다.
+	
+
+	<!-- script -->
+	<!-- jQuery 이해하기 -->
+	<script src="https://unpkg.com/jquery@3.5.1/dist/jquery.js"></script>
+	<script>
+		// 예전 호출식
+		// $(document)ready(function(){});
+		//요즘 호출식
+		$(function($){
+			var body = $('body');
+
+			body.css({'backgroundColor':'#acc'});
+			
+			// body.on('click',function({
+			// 	body.animate({'backgroundColor':'#fac'});
+			// }))
+
+		})(jQuery);
+
+	</script>
+</body>
+</html>

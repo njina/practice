@@ -1,5 +1,264 @@
 @charset "utf-8";
 
 /* transition.css */
-/* transition 속성 이해하기 */
+/* transition 속성 이해하기 
+-  transition은 단회성, animation은 연속성
+  - 단회성: 특정한 조건이 줬을 때, 한번에 한 기능을 처리한다.
+- 쉽다면 transition이 쉽지
+*/
 
+
+h1{text-align: center;}
+
+.sample {
+	width: 800px; height: auto;
+	margin: auto; border: 1px solid #777;}
+
+.sample h2 {}
+
+.sample > ul {width: 100%; height: auto;}
+
+.sample li {
+	width: 6.25rem; height: 6.25rem; 
+	margin: 1rem;
+	background-color: #acf; 
+	border: 2px solid #035; border-radius: 0.5rem; }
+
+/* .sample li:nth-child(1) {width: 500px;} */
+.sample li:nth-child(1):hover {
+	width: 500px; height:300px; background-color: aquamarine;
+	transition-property: all; /*몇몇 브라우저는 property기재 안했을때 안 먹을수도 있으므로 기재하는 것을 권장함*/
+	transition-duration: 300ms;  /*0.3초동안 기능을 하게하겠다*/
+}
+
+.sample li:nth-child(2) {
+	transition-property: background-color; 
+	transition-duration: 1000ms;}
+
+.sample li:nth-child(2):hover {
+	background-color: blueviolet;
+	transition-duration: 1000ms;
+}
+.sample li:nth-child(2):active {
+	background-color: rgb(39, 152, 228);
+	transition-duration: 500ms;
+}
+.sample li:nth-child(3) > span {
+	display: block; width: 100%; height:100%;
+	background-color: bisque;
+	transition-duration: 500ms;
+}
+.sample li:nth-child(3) > span:hover {
+	transform: translate(250px) scale(1.4);
+}
+
+.sample li:nth-child(4) {
+	transition-property: all;
+	transition-duration: 1000ms;
+	transition-timing-function: linear;
+	transition-delay: 1000ms;
+}
+
+.sample li:nth-child(4):hover {
+	background-color: #555;
+	color: #fff;
+	width: 700px;
+}
+
+/* ============================================ */
+
+.sample2 {
+	width: 100%; height: 1000px;
+	margin:auto; 
+	border:1px solid #333;}
+
+.sample2 > h2 {
+	width: 100%; height: 50px;
+	background-color: #06f;
+	color: #fff;
+}
+
+.sample2 ul {
+	width: 800px; height: auto;
+	margin-top: 1rem;
+	background-color: #ddd;
+}
+
+.sample2 li {
+	width: 3.125rem; height: 3.125rem;
+	margin-top: 1rem;
+	background-color: #aca; 
+	color: #fff; line-height: 50px; font-weight: bold;
+	transition-property: all;
+	transition-duration: 2000ms;
+}
+
+.sample2 li:nth-child(1) {transition-timing-function:not;}
+.sample2 li:nth-child(2) {transition-timing-function:ease;}
+.sample2 li:nth-child(3) {transition-timing-function:ease-in;}
+.sample2 li:nth-child(4) {transition-timing-function:ease-out;}
+.sample2 li:nth-child(5) {transition-timing-function:ease-in-out;}
+.sample2 li:nth-child(6) {transition-timing-function:linear;}
+.sample2 li:nth-child(7) {transition-timing-function:cubic-bezier(.29,1.24,.65,-0.4);}
+.sample2 li:nth-child(8) {transition-timing-function:cubic-bezier(.18,.3,.65,-0.4);}
+
+.sample2:hover li:nth-child(1) {width: 800px; background-color: #96a;}
+.sample2:hover li:nth-child(2) {width: 800px; background-color: #1236da;}
+.sample2:hover li:nth-child(3) {width: 800px; background-color: #ff61bb;}
+.sample2:hover li:nth-child(4) {width: 800px; background-color: #1fddaa;}
+.sample2:hover li:nth-child(5) {width: 800px; background-color: #1b3b4b;}
+.sample2:hover li:nth-child(6) {width: 800px; background-color: #9d8d5a;}
+.sample2:hover li:nth-child(7) {width: 800px; background-color: #5c1cff;}
+.sample2:hover li:nth-child(8) {width: 800px; background-color: #5c1cff;}
+
+
+/* transition할 때 주의 할 점이, transition 주기 전 속성에도 변경하고자 하는 속성을 부여해주어야 한다. */
+
+/* ============================================ */
+
+.ex {width: 800px; height: auto; margin: 200px;}
+.ex li {position: relative; width: 200px; height: 200px; background-color: #aca}
+.ex li div {
+	transition-property: all; 
+	transition-duration: 500ms;
+	transition-timing-function: ease;
+}
+.ex li div:nth-child(1) {
+	position: absolute; top: 0; left: 0;
+	width: 1px; height: 20px; transition-delay: 3000ms;}
+.ex li div:nth-child(2) {
+	position: absolute; top: 0; right: 0;
+	width: 20px; height: 0px; 
+	transition-delay: 2000ms;}
+.ex li div:nth-child(3) {
+	position: absolute; right: 0; bottom:0; 
+	width: 0px; height: 20px;
+	transition-delay: 1000ms;}
+.ex li div:nth-child(4) {
+	position: absolute; left: 0; bottom: 0;
+	width: 20px; height: 0px;
+	transition-delay: 0ms;
+}
+
+.ex li:hover div {background-color: blue;}
+.ex li:hover div:nth-child(1) {width: 200px; height: 20px; transition-delay: 0ms}
+.ex li:hover div:nth-child(2) {width: 20px; height: 200px; transition-delay: 1000ms}
+.ex li:hover div:nth-child(3) {width: 200px; height: 20px; transition-delay: 2000ms}
+.ex li:hover div:nth-child(4) {width: 20px; height: 180px; transition-delay: 3000ms}
+
+/* ===============\================== */
+
+.ex_result {
+	width: 960px; width: 250px; 
+	margin: auto; 
+	background-color: #ddd;
+}
+
+.test_01 {
+	position: relative;
+	float: left; 
+	width: 250px; height: 250px; 
+	padding: 2rem; box-sizing: border-box;
+	background-color: #aaa;
+}
+
+.test_01 a {display: block; width: 100%; height: 100%;}
+.test_01 span {
+	display: block;
+	position: absolute; 
+	background-color: blue;
+	transition-property: all;
+	transition-duration: 1000ms;
+	transition-timing-function: linear;
+}
+
+.line_01 {
+	width: 0; height: 1rem; 
+	top: 0; left:0;
+	transition-delay: 0ms;}
+.line_02 {
+	width: 1rem; height: 0; 
+	top:0; right:0;
+	transition-delay: 3000ms;}
+.line_03 {
+	width: 0; height: 1rem; 
+	bottom:0; right:0;
+	transition-delay: 2000ms;}
+.line_04 {
+	width: 1rem; height: 0; 
+	bottom: 0; left:0;
+	transition-delay: 1000ms;}
+
+.test_01 a:hover .line_01 {width:100%; transition-delay: 0;}
+.test_02 a:hover .line_02 {height:100%; transition-delay: 1000ms;}
+.test_03 a:hover .line_03 {width:100%; transition-delay: 2000ms;}
+.test_04 a:hover .line_04 {height:100%; transition-delay: 3000ms;}
+
+.test_01 a:before {
+	content: " "; display: block;
+	position: absolute; top: 0; left: 0;
+	width: 100%; height: 100%;
+	background-color: cornsilk;
+}
+.test_01 a {
+	background-image: url('../../img/pengsoo.jpg');
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-size: 100% auto;
+	color: crimson;
+}
+
+.test_01 a {transition: all 500ms ease;}
+.test_01 a:hover:before {background-color: darkmagenta;}
+.test_01 a:hover {background-size: 130% auto;}
+
+/* ====================아래는 선생님하신거======================== */
+.test {
+	width: 960px; height: 250px;
+	margin:auto; 
+	margin-top:1rem; margin-bottom: 10rem;
+	background-color: #ddd;
+}
+
+.test_02 {
+	position: relative;
+	float: left;
+	width: 250px; height: 250px;
+	padding:2rem; box-sizing: border-box;
+	background-color: #0ac;
+}
+.test_02 a {
+	display: block; 
+	width: 100%; height: 100%;
+}
+
+.test_02  span {
+	display: block;
+	position: absolute;
+	background-color: #fa0;
+	transition-property:all;
+	transition-duration:500ms;
+	transition-timing-function:linear;
+}
+
+.test_02 .line_01 {
+	width:0; height:1rem; top: 0; left: 0;
+  transition-delay:1500ms;
+}
+.test_02 .line_02 {
+	width: 1rem; height: 0; top:0; right: 0; 
+  transition-delay:1000ms;
+}
+.test_02 .line_03 {
+	width: 0; height: 1rem; bottom: 0; right: 0;
+  transition-delay:500ms;
+}
+.test_02 .line_04 {
+	width: 1rem; height:0; bottom: 0; left: 0;
+  transition-delay:1ms;
+}
+
+.test_02 a:hover .line_01 {	width:100%;  transition-delay:1ms;}
+.test_02 a:hover .line_02 {	height:100%; transition-delay:500ms;}
+.test_02 a:hover .line_03 {	width:100%;  transition-delay:1000ms;}
+.test_02 a:hover .line_04 {	height:100%; transition-delay:1500ms;}
