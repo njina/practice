@@ -1,0 +1,110 @@
+@charset "utf-8";
+
+/* 02_dropDown.css */
+/* 포트폴리오 평가- 드롭다운 메뉴 */
+
+#wrap {
+	width: 960px; height: auto; 
+	margin: auto; 
+	background-color: #ddd
+}
+
+#headBox {
+	width: 90%; min-width: 960px; max-width: 1850px;
+	height: 90px;
+	padding: 10px; box-sizing: border-box;
+	background-color: rgb(73, 58, 58); 
+}
+
+h1 {
+	float: left; 
+	width: 50px; height: 50px; 
+	margin-top: 10px;
+	background-color: #ddd;}
+
+#nav_area {
+	float: right;
+	width: 600px; height: 100%;
+}
+
+.gnb {
+	position: relative;
+	float: left;
+	width: 450px; height: 100%;
+	margin-right: 10px;
+	/* background-color: #ddd; */
+}
+
+.gnb dt {
+	float: left;
+	width: 24%; height: 50px;
+	margin-top: 10px;
+	margin-right: 1%;	
+	/* background-color: aliceblue; */
+}
+.gnb dt:last-of-type {margin-right: 0}
+.gnb dt button {
+	width: 100%; height: 50%; 
+	margin-top: 10px;
+	border-right: 1px solid #fff;
+	color: #fff;
+	font-size: 1.3rem;
+}
+.gnb dt button:hover {color: rgb(233, 233, 24)}
+.gnb dt:last-of-type button {border-right: 0;}
+
+.gnb dd {
+	display: none; 
+	position: absolute; top: 80px; left: 0;
+	/* float: left; */
+	width: 25%; height: 230px;
+	background-color: #fdd;}
+.gnb dd a {
+	display:block; 
+	width: 100%; height: 20px;
+	margin-top: 20px;
+	text-align: center;
+}
+.gnb dd a:hover {color: #ff3355;}
+
+.gnb dd:nth-of-type(1) {}
+.gnb dd:nth-of-type(2) {left: 112px;}
+.gnb dd:nth-of-type(3) {left: 224px;}
+.gnb dd:nth-of-type(4) {left: 336px;}
+
+
+.unb{
+	position: relative;
+	float: right;
+	width: 140px; height: 100%;
+	/* background-color: #bbb; */
+}
+
+.unb dt {
+	float: left;
+	width: 50%; height: 50px; 
+	margin-top: 10px;
+}
+
+.unb dt:first-of-type button {
+	width: 80%;
+	border-right: 1px solid #fff;}
+.unb dt a, .unb dt button {
+	display: block;
+	margin-top: 10px;
+	font-size: 1.3rem; color: #fff;}
+.unb dt a:hover, .unb dt button:hover {color: rgb(233, 233, 24)}
+
+.unb dd {
+	display: none;
+	position: absolute; top: 80px; left: 15px;
+	width: 80%; height: 150px;
+	background-color: #fdd;
+}
+.unb dd a {
+	display: block;
+	width: 100%; height: 20px;
+	margin-top: 20px;
+	text-align: center;
+ }
+ .unb dd a:hover {color: #ff3355}
