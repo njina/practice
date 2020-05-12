@@ -1,0 +1,33 @@
+@charset "utf-8";
+
+/* '문서제목'.css */
+/* '문서세부내용' */	
+
+
+
+/* 예제=============================== */
+
+.example {
+	position: relative;
+	width: 960px; height: 2000px;
+	margin: auto;
+	background-color: lightgoldenrodyellow;
+}
+.title {
+	width: 100%; height: 100px; 
+	margin-bottom: 100px;
+	text-align: center;
+}
+.title span {
+	text-align: center; font-size: 3rem; font-weight: bold;
+}
+.senten {
+	float: left;
+	margin-left: 100px;
+	width: 200px; height: 200px; background-color: #fac
+}
+.image {
+	float: right; 
+	margin-right: 100px;
+	width: 400px; height: 400px; background-color: #adf;
+}
