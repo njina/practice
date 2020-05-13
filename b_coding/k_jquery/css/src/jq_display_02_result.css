@@ -1,0 +1,179 @@
+@charset "utf-8";
+
+/* jq_display_02_result.css */
+/* 어제 포폴 평가봤던 아코디언 메뉴, 네비게이션 메뉴 풀이 */
+
+
+#wrap {
+	width: 100%; min-width: 960px;
+	height: 100%; min-height: 700px;
+	margin: auto; 
+	background-color: #ddd;
+}
+
+/* #headBox =================================== */
+#headBox {
+	position: absolute; bottom:0; z-index: 1000; /*브라우저 하단에 붙어있음*/
+	width: 100%; height: 90px;
+	padding: 10px; box-sizing: border-box;
+	background-color: #057;
+}
+
+h1 {
+	float: left;
+	width: 120px; height: 100%;
+	background-color: #fff;
+	font-size: 1rem; text-align: center;
+}
+h1 > a {display: block; width: 100%; height: 100%;}
+
+#navBox {
+	float: right;
+	width: 800px; height: 100%; 
+	background-color: #fff;
+}
+
+.lang_login {
+	float: right;
+	width: 160px; height: 100%;
+	margin-left: 10px;
+	background-color: #caa;
+}
+.lang_login dl {
+	float: left;
+	width: 50%; height: auto;
+}
+.lang_login dt {width: 0; height: 0; overflow: hidden;}
+.lang_login dd {
+	width: 100%; height: auto;
+	line-height: 35px;
+	text-align: center;
+}
+.lang_login dd ul {width:100%; height: 100%;}
+.lang_login dd li {
+	display: none; 
+	width: 100%; height: 40px; 
+	background-color: rgba(255, 255, 255, 0.5);
+}
+.lang_login dd li:first-child {
+	display: block; 
+	height: 70px; line-height: 70px;
+	background-color: transparent;
+}
+.lang_login dd li.action {display: block;}
+
+.lang_login a {
+	display: block;
+	width: 100%; height: 35px;
+}
+
+
+/* .gnb_navi =========== */
+.gnb_navi {
+	float: left;
+	width: 630px; height: 100%;
+	background-color: #caa;
+}
+.gnb_navi >ul {
+	width: 100%; height: auto;
+}
+.gnb_navi >ul>li {
+	float:left;
+	width: 25%; height: auto;
+}
+.gnb_navi dl {width: 100%; height: auto; text-indent: 1rem;}
+.gnb_navi dt {
+	width: 100%; height: 70px; 
+	padding:5px; box-sizing: border-box;
+	line-height: 70px;
+}
+
+.gnb_navi dt a {position: relative;  height: 70px;}
+.gnb_navi dt.action a {color: #ff0}
+/* .gnb_navi dt a:before {content:;} */
+.gnb_navi dt a:after {
+	position: absolute; top: 70%; left: 0; right:0; 
+	margin:auto;
+	content: " "; display: block; 
+	width: 0; height: 2px;
+	background-color: aqua;
+	transition: all 300ms ease;
+}
+.gnb_navi dt a.action a:after {width: 90%;}
+
+.gnb_navi dd {width: 100%; height: auto;}
+
+.gnb_navi dd >ul{
+	width: inherit; height: inherit; 
+	padding-top: 15px;
+	background-color: rgba(255, 255, 255, 0.5);
+}
+.gnb_navi dd >li{width: 100%; height: 40px; line-height: 35px;}
+.gnb_navi dd >li.action {color: #ff0; font-weight: bold;}
+.gnb_navi a {display: block; width: 100%; height: 35px;}
+.gnb_navi dt a {height: 70px;}
+
+/* #viewBox =================================== */
+#viewBox {
+	width: 100%; height: 700px;
+	background-color: #bbb;
+}
+
+/* #conBox =================================== */
+#conBox {
+	width: 100%; min-width: 960px; max-width: 1600px;
+	height: auto; min-height: 2000px;
+	margin:auto;
+	padding: 100px 50px; box-sizing: border-box;
+	background-color: #fda;
+}
+#conBox > h2 {
+	margin-bottom: 10px;
+	color: #333;
+}
+
+.accor {
+	width: 90%; min-width: 800px; max-width: 1200px;
+	height: auto;
+	margin: auto;
+}
+
+.accor dl {
+	width: 100%; height: auto;
+	padding:8px; box-sizing: border-box;
+	border-radius: 5px;
+	background-color: #ca7;
+}
+.accor dt {
+	width: 100%; height: auto;
+	border-top: 1px solid #ca7;
+	background-color: #070;
+	text-align: left;
+	color: #fff; font-weight: bold; font-size: 1.2rem;
+}
+.accor dt:hover {background-color: #0a0}
+.accor dt button {
+	width: 100%; height: auto;
+	padding: 10px; box-sizing: border-box;
+	background-color: transparent;
+	text-align: inherit;
+	color: inherit; font-weight: inherit; font-size: inherit;
+}
+.accor dt button:focus {background-color: #0a9;}
+.accor dt i {
+	float: right;
+}
+
+.accor dd {
+	display: none;
+	width: 100%; height: auto;
+	padding: 10px; box-sizing: border-box;
+	background-color: #fff;
+}
+
+
+/* #footBox =================================== */
+#footBox {
+	width: 100%; height:300px;
+	background-color: #333;
+}
