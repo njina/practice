@@ -1,0 +1,112 @@
+//03_scroll.js
+//포폴평가 - 이미지슬라이드, 스크롤 등 같이
+/*
+1. @세로 길이를 브라우저의 100%로 하기
+2. 스크롤시 구현되는 기능  
+	@-1. 헤드박스 position: fixed
+3. 슬라이드배너
+	-1. 가로로 무한 이동
+	-2. 인디케이터 같이 이동
+	-3. 좌우버튼 클릭시 배너 이동
+4. 탑버튼
+	@-1. 300이상 스크롤되면 나타남
+	-2. 누르면 맨 상단으로
+
+*/
+
+(function($){
+	// jQuery 시작 
+
+var headBox = $('#headBox');
+var gnbBox = $('#gnbBox');
+var viewBox = $('#viewBox');
+
+//viewBox 세로를 브라우저에 꽉차게=============================
+var docHeight = $(window).height();
+// console.log(docHeight);
+viewBox.height( docHeight );
+
+var myScroll;
+//스크롤시 헤드박스 위치 설정 ===============================
+$(document).on('scroll', function(e){
+	myScroll = $(this).scrollTop();
+	e.preventDefault();
+	if( myScroll > 300 ){
+		headBox.css({'top':0, 'backgroundColor':'rgba(85,85,85,0.5)'});
+	} else {
+		headBox.removeAttr('style');
+	}
+});
+
+//탑버튼=============================================
+var topMv = $('.top_move');
+var topBtn = $('.top_btn');
+		//스크롤이동시 나타나게
+topMv.hide();
+$(document).on('scroll',function(e){
+	e.preventDefault();
+	if( myScroll >= 300 ){
+		topMv.fadeIn(300);
+	} else {
+		topMv.fadeOut(300);
+	}
+});
+		//클릭시 맨 상단으로
+topBtn.on('click',function(e){
+	e.preventDefault();
+	$('html,body').animate({scrollTop:0});
+});
+
+//슬라이드배너=============================================
+var viewUl = $('.view_wrap'); //ul
+var viewLi = viewUl.children('li');
+var indiBtn = $('.indi_btn').find('button');
+var next = $('.next_btn');
+var prev = $('.prev_btn');
+		//마지막 배너 복제
+		var viewLiLast = viewLi.eq(-1).clone(true);
+		viewUl.prepend( viewLiLast );
+		//배너 크기 조정
+		viewLi = viewUl.children('li');
+		viewUl.css({'width': viewLi.length * 100 + '%'});
+		viewLi.css({'width': 100 / viewLi.length + '%'});
+
+		//최초 보여지는 배너 위치 조정
+		viewUl.css({marginLeft: -100 + '%', position:'relative'});
+		//next버튼
+		var n = 0;
+		var check = true;
+		next.on('click',function(e){
+			e.preventDefault();
+			if(check){
+				check=false;
+				n+=1;
+				viewUl.stop().animate({left: -n * 100 + '%'},500,function(){
+					if( n >= viewLi.length-2 ){ n = -1; }
+					viewUl.css({left: -n * 100 + '%'});
+					check = true;
+				});
+			}
+		});
+		//prev버튼
+		prev.on('click',function(e){
+			e.preventDefault();
+			if(check){
+				check=false;
+				n-=1;
+				viewUl.stop().animate({left: -n * 100 + '%'},500,function(){
+					if( n <= -1 ){ n = viewLi.length-2; }
+					viewUl.css({left: -n * 100 + '%'});
+					check = true;
+				});
+			}
+		});
+	
+		
+		
+		
+
+
+
+	// jQuery 종료
+	})(jQuery);

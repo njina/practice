@@ -1,0 +1,135 @@
+@charset "utf-8";
+
+/* 03_scroll.css */
+/* 포폴평가 - 이미지슬라이드, 스크롤 등 같이 */
+
+#wrap {
+	width: 100%;  max-width: 1600px; 
+	height: auto; min-height: 300px;
+	margin: auto;
+	background-color: #ddd;
+}
+/* #headBox ================================ */
+#headBox {
+	position: fixed; top: 45px; left: 0; z-index: 1000;
+	width: 100%;height: 90px; 
+	margin: auto;
+	background-color: rgb(85, 85, 85);
+}
+#gnbBox {
+	width: 100%; height: 100%;
+	padding: 10px 20px; box-sizing: border-box;	
+}
+h1 {
+	float: left;
+	width: 130px; height: 100%; 
+	background-color: #fff;
+}
+h1>a {display: block; width: 100%; height: 100%}
+.navi {
+	float: right;
+	width: 700px; height:50px;
+	margin-top: 20px;
+	/* background-color: #fa0; */
+}
+.navi ul {
+	width: 100%; height: 100%;
+}
+.navi li {
+	float: left;
+	width: 25%; height: 100%;
+	text-align: center; font-weight: bold; line-height: 50px;
+	color: #fff;
+}
+.navi li a {display: block; width: 100%; height: 100%;}
+.navi li a:hover {background-color: rgb(255, 115, 0);}
+
+
+
+/* #viewBox ================================ */
+#viewBox {
+	overflow: hidden;
+	position: relative;
+	width: 100%; min-width: 960px; max-width: 1600px; height: 800px;
+	margin: auto;
+}
+
+.view_wrap {
+	position: absolute; top:0; left:0;
+	width: 500%; height: 100%;}
+.view_wrap > li {
+	float: left;
+	width: 20%; height: 100%;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	background-size: cover;
+}
+.view_wrap li.img_01 {background-image: url(../../img/dog_01.jpg);}
+.view_wrap li.img_02 {background-image: url(../../img/dog_02.jpg);}
+.view_wrap li.img_03 {background-image: url(../../img/dog_03.jpg);}
+.view_wrap li.img_04 {background-image: url(../../img/dog_04.jpg);}
+.view_wrap li.img_05 {background-image: url(../../img/dog_05.jpg);}
+
+.indicator_area {
+	position: absolute; right: 30px; bottom: 10px;
+	width: auto; height: auto;
+	padding: 4px 8px;
+	background-color: rgba(100, 100, 100, 0.6);
+	border-radius: 30px;
+}
+.indicator_area > ul {float: left;}
+.indi_dot {
+	width: auto; height: auto;
+	margin-right: 15px;
+}
+.indi_dot li {
+	float: left; width: 24px; height: 24px;
+	margin-right: 10px;
+	background-color: #fff;
+	border-radius: 100%;
+}
+.indi_dot li:last-child{margin-right: 0;}
+.indi_dot li a {display: block; width: 100%; height: 100%; border-radius: 100%;}
+.indi_dot li a:hover,.indi_dot li a:focus {background-color: rgb(255, 109, 24);}
+
+.indi_btn {width: auto; height: auto;}
+.indi_btn li {
+	float: left; 
+	width: 24px; height: 24px;
+}
+.indi_btn li.next {float: right;}
+.indi_btn button {
+	display: block;
+	width: 100%; height: 100%;
+	margin-right: 5px;
+	color: #fff; font-size: 1rem; text-align: center; line-height: 24px;
+}
+.indi_btn button:hover,.indi_btn button:focus	 {color: rgb(255, 109, 24);}
+
+
+
+/* #contBox===================================== */
+#contBox {
+	width: 100%; max-width: 960px; height: 800px;
+	margin: auto;
+	background-color: #fa9;
+}
+
+
+
+
+/* 탑버튼 ================================ */
+.top_move {
+	/* display: none; */
+	position: fixed; left: 50%; bottom: 0;
+	width: 100px; height: 100px; 
+	margin-left: 516px; 
+	background-color: #fa0;
+	border-radius: 30%;
+}
+.top_btn {
+	width: 100%; height: 100%;
+	text-align: center;
+	font-size: 3rem;
+	color: #fff;
+}
