@@ -29,11 +29,68 @@
 		<header id="headBox">
 			<nav id="gnbBox" class="clearfix">
 				<h1><span class="hidden">monkey coffee</span></h1>
-				<ul class="navi">
-					<li><a href="#"><span>story</span></a></li>
-					<li><a href="#"><span>menu</span></a></li>
-					<li><a href="#"><span>store</span></a></li>
-					<li><a href="#"><span>news</span></a></li>
+				<ul class="navi clearfix">
+					<li>
+						<dl>
+							<dt> 
+								<a href="#"><span>story</span></a>
+							</dt>
+							<dd>
+								<ul>
+									<li><a href="#"><span>submenu_1-01</span></a></li>
+									<li><a href="#"><span>submenu_1-02</span></a></li>
+									<li><a href="#"><span>submenu_1-03</span></a></li>
+								</ul>
+							</dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt> 
+								<a href="#"><span>menu</span></a>
+							</dt>
+							<dd>
+								<ul>
+									<li><a href="#"><span>submenu_01</span></a></li>
+									<li><a href="#"><span>submenu_02</span></a></li>
+									<li><a href="#"><span>submenu_03</span></a></li>
+									<li><a href="#"><span>submenu_04</span></a></li>
+									<li><a href="#"><span>submenu_05</span></a></li>
+								</ul>
+							</dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt> 
+								<a href="#"><span>store</span></a>
+							</dt>
+							<dd>
+								<ul>
+									<li><a href="#"><span>submenu_01</span></a></li>
+									<li><a href="#"><span>submenu_02</span></a></li>
+									<li><a href="#"><span>submenu_03</span></a></li>
+									<li><a href="#"><span>submenu_04</span></a></li>
+									<li><a href="#"><span>submenu_05</span></a></li>
+								</ul>
+							</dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt> 
+								<a href="#"><span>news</span></a>
+							</dt>
+							<dd>
+								<ul>
+									<li><a href="#"><span>submenu_01</span></a></li>
+									<li><a href="#"><span>submenu_02</span></a></li>
+									<li><a href="#"><span>submenu_03</span></a></li>
+									<li><a href="#"><span>submenu_04</span></a></li>
+								</ul>
+							</dd>
+						</dl>
+					</li>
 				</ul>
 			</nav>
 		</header>
@@ -166,20 +223,20 @@
 				</div>
 			</div>
 			<div class="material_icon">
-				<div>
-					<button type="button" class="next"></button>
-					<button type="button" class="prev"></button>
+				<div class="side_btn hidden_wrap">
+					<button type="button" class="next"><span>다음</span></button>
+					<button type="button" class="prev"><span>이전</span></button>
 				</div>
-				<div>
-					<ul class="material_icon_list">
-						<li></li>
-						<li></li>
-						<li></li>
-						<li></li>
-						<li></li>
-						<li></li>
-						<li></li>
-						<li></li>
+				<div class="material_icon_wrap">
+					<ul class="material_icon_list hidden_wrap clearfix">
+						<li><a href="#"><span>아이콘_01</span></a></li>
+						<li><a href="#"><span>아이콘_02</span></a></li>
+						<li><a href="#"><span>아이콘_03</span></a></li>
+						<li><a href="#"><span>아이콘_04</span></a></li>
+						<li><a href="#"><span>아이콘_05</span></a></li>
+						<li><a href="#"><span>아이콘_06</span></a></li>
+						<li><a href="#"><span>아이콘_07</span></a></li>
+						<li><a href="#"><span>아이콘_08</span></a></li>
 					</ul>
 				</div>
 			</div>
@@ -187,12 +244,40 @@
 		
 		<!-- #locationBox =============================== -->
 		<section id="locationBox">
-			<h2>몽키커피 위치 안내</h2>
+			<h2 class="hidden">몽키커피 위치 안내</h2>
+			<div class="location_area clearfix">
+				<div class="map"></div>
+				<div class="map_text"></div>
+		</div>
 		</section>
 		
 		<!-- #footBox =============================== -->
-		<footer id="footBox">
-			<h2>회사 정보</h2>
+		<footer id="footBox" class="clearfix">
+			<h2><span class="hidden">회사 정보</span></h2>
+			<div class="logo_foot"></div>
+			<div class="company_info_area">
+				<p>
+					몽피 &verbar; 주소지 &colon; 경기도 수원시 권선구 매산고 12-1 &verbar; tel &colon; 1777-7777 &verbar; 대표자 &colon; 이몽피 &verbar; 
+				</p>
+				<p>사업자등록번호 &colon; 144-00-0000 &verbar; 통신판매업신고 &colon; 제 2017-경기수원-00호 &verbar; 개인정보 취급방침
+				</p>
+				<p>
+					&ast;몽피커피 홈페이지는 IE10 이상의 브라우저 Chrome 브라우저 나눔고딕 글꼴에 최적화 되어 있습니다.
+				</p>
+				<p>	
+					Copyright&copy; 2017 몽피 All Rights Reserved.
+				</p>
+			</div>
+			<div class="sns_area">
+				<ul class="clearfix hidden_wrap">
+					<li><a href="#"><span>facebook</span></a></li>
+					<li><a href="#"><span>instagram</span></a></li>
+					<li><a href="#"><span>tweeter</span></a></li>
+					<li><a href="#"><span>blog</span></a></li>
+					<li><a href="#"><span>youtube</span></a></li>
+					<li><a href="#"><span>pinteret</span></a></li>
+				</ul>
+			</div>
 		</footer>
 	</div>
 
