@@ -1,0 +1,16 @@
+@charset "utf-8";
+
+/* monfee_result.css */
+/* 몽피 선생님 풀이 */
+
+
+@import url('../monfee/main/monfeeWrap.css');
+@import url('../monfee/common/monfeeHeadBox.css');
+
+@import url('../monfee/main/adBannerBox.css');
+@import url('../monfee/main/bestNewsBox.css');
+@import url('../monfee/main/issueBox.css');
+@import url('../monfee/main/contentBox.css');
+@import url('../monfee/main/locationBox.css');
+
+@import url('../monfee/common/monfeeFootBox.css');

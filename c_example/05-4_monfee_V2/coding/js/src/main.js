@@ -21,13 +21,13 @@ var submenuArea = gnbBox.children('.submenu_area');
 
 // 서브메뉴영역 나타나기
 mainMenuArea.on('mouseenter',function(){
-	submenuArea.slideDown();
+	submenuArea.stop().slideDown();
 	// $(this).find('a').css({'fontWeight':'bold'});
 });
 
 // 서브메뉴영역 사라지기
 gnbBox.on('mouseleave',function(){
-	submenuArea.slideUp();
+	submenuArea.stop().slideUp();
 });
 
 //서브메뉴에서 mouseenter시,
@@ -74,6 +74,38 @@ adNextBtn.on('click',function(e){
 		bool=true;
 	});
 });
+		//마우스 아이콘 위아래로 알아서 움직이게
+// var mouseIcon = $('.mouse_icon');
+// setInterval(function(){
+// 	console.log(mouseIcon.offset().top);
+// };
+var bestLiArr=[
+	{name: '딸바', content: '맛있다.'},
+	{name: '자두', content: '맛있다맛있다.'},
+	{name: '레몬에이드', content: '시다.'},
+	{name: '샹그리아', content: '달다.'},
+];
+
+
+var bestNewsBox = $('#bestNewsBox');
+var bestArea = bestNewsBox.find('.best_area');
+
+bestArea.append('<ul class="bestUl clearfix"></ul>');
+var bestUl = $('.bestUl');
+
+var i = 0;
+for(; bestLiArr.length; i++){
+	
+	bestUl.append('<li><div></div> <dl></dl></li>');
+	var bestLi = bestUl.find('li');
+	
+	for()
+	bestLi.find('dl').append('<dt></dt><dd></dd>');
+
+}
+
+
+
 
 
 

@@ -1,0 +1,100 @@
+@charset "utf-8";
+
+/* monfeeHeadBox.css */
+/* 헤드박스 영역 */
+.headBox_wrap{
+	box-shadow: 0 0.2rem 0.2rem rgba(51,51,51,.7);
+}
+
+#headBox {
+	width: 100%; height: 120px;
+	background-color: #fff;
+}
+
+h1 {
+	position: relative; z-index: 100;
+	float: left;
+	width: 220px; height: 100%;
+	background-color: #aa3300;
+}
+h1 > a{
+	display: block;
+	width: 100%; height: 100%; 
+	background-image: url('../../../img/monfee_svg_logo.svg');
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	background-size: 80% auto;
+}
+
+#gnbBox{
+	position: relative; z-index: 0; /*여기에서 z-index 써줘야함.기준이라서 */
+	float: right;
+	width: 636px; height: auto;
+	/* background-color:#ddd; */
+}
+
+#gnbBox:before,
+#gnbBox::before{
+	content:" ";
+	display: block;
+	z-index: -1;
+	position: absolute; top: 0; right:0;
+	width:940px; height: 120px;
+	background-color: #fff;
+}
+
+#gnbBox:after, 
+#gnbBox::after {
+	content:" ";
+	display: block;
+	z-index: -2;
+	position: absolute; top: 0; right:0;
+	width:940px; height: 100%;
+	background-color: rgba(170, 51, 0, 0.7);
+}
+
+/* 메인메뉴타이틀 보이는 영역 */
+.gnb_area {
+	width: 100%; height: auto; 
+	padding-top: 35px; box-sizing: border-box;
+	/* background-color: rgba(170, 51, 0, 0.7); */
+}
+.gnb_area > li {
+	float: left;
+	width: 25%; height: auto; 
+	padding: 0 5px; box-sizing: border-box;
+}
+.gnb_area > li dl {
+	width: 100%; height: 100%;
+}
+.gnb_area > li dl dt {
+	width:100%; height: 100%;
+	margin-bottom:20px;
+	text-align: center; 
+	font-size: 1.625rem; line-height: 64px;
+	cursor: pointer;
+}
+.gnb_area > li dl dt:focus {
+	border-bottom: 4px solid #aa3300;
+	font-weight: bold;
+} 
+.gnb_area > li dl dd {
+	width: 100%; height: auto;
+	padding: 1rem 0;
+	/* background-color: rgba(170, 51, 0, 0.7); */
+}
+
+/* 숨겨지는 서브메뉴 영역 */
+.gnb_sub {
+	width: 100%; height: auto;
+}
+.gnb_sub > li {
+	width: 100%; height: auto;
+	margin-bottom: 0.5rem;
+}
+.gnb_sub > li a {
+	display: block;
+	width: 100%; height:auto;
+	padding: 0.5rem 0; 
+	text-indent: 1rem; color: #fff;
+}

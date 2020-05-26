@@ -14,7 +14,7 @@
 /* #headBox =============================== */
 #headBox  {
 	position: fixed; top: 0; right: 0; left: 0; z-index: 1000;
-	width: 100%; max-width: 1600px; height: 80px;
+	width: 100%; min-width: 940px; max-width: 1600px; height: 80px;
 	margin: auto;
 	padding: 0 60px; box-sizing: border-box;
 	background-color: #ffffff;
@@ -465,3 +465,5 @@ h1 > a {display: block; width: 100%; height: 100%;}
 #footBox .sns_area li:last-child{margin-right: 0}
 
 
+
+aaa{transform:translateY(-30px)}

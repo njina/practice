@@ -1,0 +1,9 @@
+@charset "utf-8";
+
+/* contentBox.css */
+/* 컨텐트 박스 영역 */
+
+#contentBox {
+	width: 100%; height: auto;  min-height: 800px;
+	background-color: #ccc;
+}

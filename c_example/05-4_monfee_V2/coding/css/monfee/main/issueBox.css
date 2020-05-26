@@ -1,0 +1,10 @@
+@charset "utf-8";
+
+/* issueBox.css */
+/* 이슈박스  */
+
+#issueBox {
+	width: 100%; height: auto; min-height:1000px;
+	margin:auto;
+	background-color: #aca;
+}
