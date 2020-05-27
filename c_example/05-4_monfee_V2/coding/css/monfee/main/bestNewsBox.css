@@ -6,7 +6,7 @@
 #bestNewsBox{
 	width: 940px; height: auto; min-height: 800px;
 	margin:auto; padding-top: 185px; padding-bottom: 200px;
-	background-color: #ccc;
+	background-color: #fff;
 }
 
 #bestNewsBox h2 {
@@ -17,7 +17,7 @@
 	text-decoration-color:#0ac;
 }
 #bestNewsBox ul{
-	background-color: #aaccaa;
+	/* background-color: #aaccaa; */
 }
 #bestNewsBox li {
 	float: left;
