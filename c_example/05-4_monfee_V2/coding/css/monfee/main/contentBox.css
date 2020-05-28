@@ -4,6 +4,87 @@
 /* 컨텐트 박스 영역 */
 
 #contentBox {
+	position: relative;
 	width: 100%; height: auto;  min-height: 800px;
 	background-color: #ccc;
+	background-image: url(../../../img/black_board.png);
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	background-size: cover;
 }
+
+.content_text {
+	width:940px; height: 340px;
+	padding-top: 140px; padding-bottom: 110px; 
+	margin:auto;
+	color: #fff; text-align: center;
+}
+.content_text h3 {
+	font-size: 4.8125rem; text-transform: uppercase;
+	margin-bottom: 50px; 
+}
+.content_text p {
+	font-size:1.1rem;
+	text-align: justify;
+}
+
+
+.material_icon {
+	position: absolute; bottom: 0;
+	width: 100%; height: 200px;
+	padding:40px 0; box-sizing: border-box;
+	background-color: #a30;
+}
+.material_btn {
+	position: absolute; top:50%; left: 0; right: 0; z-index: 100;
+	margin:auto; margin-top: -60px;
+	width: 85%; min-width: 945px; height: 0;
+}
+.material_btn button {
+	width: 60px; height: 120px;
+	background-image: url(../../../img/material/material_btn.png);
+	background-repeat: no-repeat;
+	background-size: auto;
+
+}
+.material_btn .next {float:right; background-position: 100% 0;}
+.material_btn .prev {float:left; background-position: 0 0;}
+
+.material_btn button:hover, .material_btn button:focus {
+	background-position-y: 100%;
+}
+
+.material_area {
+	width: 55%; min-width: 73.2421875%;
+	height: 100%;
+	margin:auto;
+	background-color: #ccc;
+	/* overflow: hidden; */
+}
+.material_area ul {
+	width: 150%;  height: 100%;
+}
+.material_area li {
+	float: left;
+	width:10vw; height: 120px; 
+	margin-left: 5vw;
+	background-color: #11f;
+}
+.material_area li:first-child{margin-left:1vw;}
+.material_area a {
+	margin:auto;
+	background-image: url(../../../img/material/material_icon.png);
+	background-repeat: no-repeat;
+	background-size: auto;
+}
+/* 일일히 계산해야하는 작업 */
+.mat_01 a {background-position: 1% 0;}
+.mat_02 a {background-position: 26% 0;}
+.mat_03 a {background-position: 50% 0;}
+.mat_04 a {background-position: 74% 0;}
+.mat_05 a {background-position: 98% 0;}
+.mat_06 a {background-position: 1% 23%;}
+.mat_07 a {background-position: 26% 23%;}
+.mat_08 a {background-position: 50% 23%;}
+.mat_09 a {background-position: 74% 23%;}
+.mat_10 a {background-position: 98% 23%;}
