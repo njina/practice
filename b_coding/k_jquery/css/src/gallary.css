@@ -1,0 +1,126 @@
+@charset "utf-8";
+
+/* gallary.css */
+/* 갤러리 메뉴에 활용되는 기능 */
+
+#wrap{
+	width: 100%; max-width: 1400px;
+	height: auto; min-height: 700px;
+	margin:auto;
+}
+.part {
+	width: 90%; height: auto;
+	border:1px solid #ccc;
+	margin:auto; margin-top: 1rem; margin-bottom: 500px;
+	padding: 1rem; padding-bottom:5rem; box-sizing: border-box;
+}
+.big_rec{
+	width: 100%; height: 500px;
+	background-color: #999;
+	border-radius: 0.3rem;
+	margin-bottom: 1.5rem;
+}
+
+.part > ul {
+	width: 70%; min-width: 700px; height: auto;
+	margin: auto; 
+	text-align: center;
+}
+.part li {
+	position: relative;
+	display: inline-block; /*주목!! - li를 글씨처럼 인식해라*/
+	width: 100px; height: 100px;
+	margin: 0 1rem;
+}
+.part li > a {
+	display: block; width: 100%; height: 100%;
+	border-radius: 100%; background-color: #ccc;
+}
+.part li > a > span {
+	position: absolute; left: 0; right: 0; bottom:-3rem;
+	display: block;
+	height: auto; 
+	padding: 0.3rem; 
+	background-color: #acc;
+}
+.part .big_rec, .part li>a {
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 50% 50%;
+	transition: all 200ms ease;
+}
+
+.part_01 .big_rec {background-image: url('../../img/dog_gallery/big/dog_01.jpg');}
+.part_01 li:nth-child(1) > a {background-image: url('../../img/dog_gallery/thum/dog_01.jpg');}
+.part_01 li:nth-child(2) > a {background-image: url('../../img/dog_gallery/thum/dog_02.jpg');}
+.part_01 li:nth-child(3) > a {background-image: url('../../img/dog_gallery/thum/dog_03.jpg');}
+.part_01 li:nth-child(4) > a {background-image: url('../../img/dog_gallery/thum/dog_04.jpg');}
+.part_01 li:nth-child(5) > a {background-image: url('../../img/dog_gallery/thum/dog_05.jpg');}
+
+.part li a span {display: block;}
+.part li a:hover span {display: block;}
+.part li a:hover {background-size: 240%;}
+
+
+/* ============ */
+.big_modal{
+	display: none;
+	position: fixed;  top: 0; left:0; z-index: 1500;
+	width: 100%; height: 100%;
+}
+
+.big_img {
+	position: absolute; left: 0; right: 0; bottom: 0; 
+	margin:auto;
+	width: 1200px; height: 600px;
+	border: 1rem solid #fff;
+	box-sizing: border-box;
+	background-color: #ddd;
+	border-radius: 0.7rem;
+}
+.close_btn {
+	position: absolute; right: -2rem; top:-2rem;
+	width: 4rem; height: 4rem;
+	border: 0.3rem solid #fff;	
+	border-radius: 100%;
+	box-sizing: border-box;
+	background-color: #333;
+	box-shadow: 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.8);
+}
+.close_btn button {
+	position: relative;
+	display: block;
+	width: 100%; height: 100%;
+	border-radius: 100%;
+}
+.close_btn> button:before,
+.close_btn> button:after {
+	position: absolute; 
+	top: 0; bottom:0; left:0; right:0;
+	margin: auto;
+	content: " "; display: block;
+	width: 70%; height: 4px;
+	background-color: #fff;
+	border-radius: 2px;
+	transition: transform 500ms ease;
+}
+
+.close_btn> button:before {
+	transform:rotate(45deg);
+}
+.close_btn> button:after {
+	transform:rotate(-45deg);
+}
+.close_btn> button:hover:before,
+.close_btn> button:focus:before {
+	transform:rotate(0deg);
+}
+.close_btn> button:hover:after,
+.close_btn> button:focus:after {
+	transform:rotate(-270deg);
+}
+
+.big_bg {
+	width: 100%; height: 100%;
+	background-color: rgba(0, 0, 0, 0.3);
+}

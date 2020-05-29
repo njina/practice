@@ -1,0 +1,85 @@
+@charset "utf-8";
+
+/* resize_02.css */
+/* 브라우저 크기에 따른 js 기능 처리 */
+/* 반응형은 px 사용 안해서 다 rem */
+
+#wrap {
+	width:100%; height: auto; min-height: 31.25rem;
+	background-color: #ddd;
+}
+#headBox {
+	position: relative; z-index: 1000;
+	width: 100%; height: 7.5rem;
+	padding: 1rem; box-sizing: border-box;
+	background-color: rgba(255, 255, 255, 0.8);
+	transition: all 500ms linear;
+}
+h1{
+	float: left; 
+	width: 8.75rem; height: 100%;
+	background-color: #fff; 
+	text-align: center;
+}
+h1 > a{display: block; width: 100%; height: 100%;}
+#gnbBox {
+	float: right;
+	width: 37.5rem; height: 3.125rem;  
+	background-color: #fff;
+	border-bottom: 0.0625rem solid #333;
+}
+.gnb_view_btn {
+	width: 1.875rem; height: 1.875rem; 
+	margin:auto; 
+	border-radius: 0.3rem; 
+	background-color: #fa0;
+}
+.gnb_view_btn button {width: 100%; height: 100%;}
+
+.gnb_list {
+	width: 100%; height: 100%; background-color: #0af;
+}
+
+#viewBox {
+	width: 100%; max-width: 75rem; height: 50rem; 
+	margin: auto; 
+	background-color: #ccc;
+}
+
+
+
+
+/* 반응형 =====================================================*/
+/* media screen은 px 으로 써주는 게 좋담 */
+/* 최대 700=========================== */
+@media screen and (max-width:700px){
+	#wrap {background-color: #caa;}
+	#headBox{height: 5.625rem; background-color: #171717;}
+	h1{float: none; height: 1.5625rem; margin:auto; margin-bottom: 1rem; border-radius: 0.2rem; font-size:1rem;}
+	#gnbBox {float: none; width: 90%; min-width: 17.5rem; margin: auto; border: 0; background-color: transparent;}
+	.gnb_view_btn {margin-bottom: 1rem;}
+	.gnb_list {display: none;}
+}
+
+/* 최소 701에서 최대 1400 ======================= */
+@media screen and (min-width:701px) and (max-width: 1400px){
+	#wrap {	background-color: #cac;	}
+	#headBox{padding: 0.7rem;}
+	h1 {background-color: #055; border-radius: 0.5rem; }
+	#gnbBox {width: 70%; min-width: 25rem; max-width: 37.5rem;}
+	.gnb_view_btn {display: none;}
+	.gnb_list.action {height: 25rem;}
+}
+
+/* 최소 1401================================== */
+@media screen and (min-width:1401px){
+	#wrap {	background-color: #fca;	}
+	#headBox{ max-width: 75rem; margin: auto;}
+	h1 {border:0.3125rem solid #0ff; box-sizing: border-box;}
+	.gnb_view_btn {display: none;}
+	.gnb_list.action {height: 18.75rem; background-color: #0fc;}
+}
+
+
+
+
