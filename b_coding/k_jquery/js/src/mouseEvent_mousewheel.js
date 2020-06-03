@@ -50,7 +50,7 @@ mw.on('mousewheel DOMMouseScroll',function(e){
 		});
 
 		//마우스휠하면 가로스크롤되면서 ... 
-		mwUl.stop().animate({marginLeft: n*-100+'%'},500,'easeInCirc'
+		mwUl.stop().animate({marginLeft: n*-100+'%'},500,'easeOutCubic'
 		,function(){
 			mouseOk = true;
 		});
