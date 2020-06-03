@@ -1,0 +1,112 @@
+@charset "utf-8";
+
+/* parallax.css */
+/* parallax 기능 익히기 */
+
+#wrap{
+	width: 100%; height: 100%;
+
+}
+#introBox {
+	position: relative;
+	width:100%; height: 100%; min-height: 600px;
+	background-color: #ccc;
+	background-image: url(../../img/firewatch/keyart-mobile.jpg);
+	background-repeat: no-repeat;
+	background-position: 50% 0;
+	/* background-size: 100% auto; */
+}
+#introBox > div {
+	position: absolute; top: 0; left:0;
+	width: 100%; height: 100%;
+	background-repeat: no-repeat;
+	background-position-x: 50%;
+}
+.parallax_00 {background-image: url(../../img/firewatch/parallax0.png);}
+.parallax_01 {background-image: url(../../img/firewatch/parallax1.png);}
+.parallax_02 {background-image: url(../../img/firewatch/parallax2.png);}
+.parallax_03 {background-image: url(../../img/firewatch/parallax3.png);}
+.parallax_04 {background-image: url(../../img/firewatch/parallax4.png);}
+.parallax_05 {background-image: url(../../img/firewatch/parallax5.png);}
+.parallax_06 {background-image: url(../../img/firewatch/parallax6.png);}
+.parallax_07 {background-image: url(../../img/firewatch/parallax7.png);}
+.parallax_08 {background-image: url(../../img/firewatch/parallax8.png);}
+
+
+
+
+
+#bestBox {
+	width:100%; height: 1500px;
+	margin:auto;
+	background-color: #200003;
+}
+
+
+
+#conBox {
+	width:100%; height: auto; min-height: 2000px;
+	padding-bottom: 4rem; 
+	background-image: linear-gradient(#fa0,#200003);
+}
+#conBox h2 {
+	width: 70%;
+	padding-top: 2rem; 
+	margin: auto; margin-bottom:1rem;
+	border-bottom: 3px solid #fff;
+	text-transform: uppercase; text-align: center;
+	color:#fff; font-size: 2rem;
+}
+.con_area {
+	width: 80%; max-width: 1600px; height: auto;
+	margin:auto;
+}
+.img_layout {
+	position: relative;
+	width: 100%; height: 500px;
+	margin-bottom: 5rem;
+	border: 1px solid #fff;
+}
+
+.img_layout .img {
+	width: 40%; height: 100%; 
+	background-color: #fff;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	background-size:250%;
+}
+.img_layout p {
+	position: absolute; top : 150px; z-index: 100;
+	width: 70%; height: 300px;
+	padding: 1rem; box-sizing: border-box;
+	background-color:#fda;
+	color: #333; font-size: 2rem;
+}
+
+.img_layout:nth-of-type(2n+1) .img {float: left;}
+.img_layout:nth-of-type(2n+2) .img {float: right;}
+
+.img_layout:nth-of-type(2n+1) p {right:0;}
+.img_layout:nth-of-type(2n+2) p {left:0;}
+
+
+.img_set_01 {background-image: url(../../img/dog_gallery/big/dog_04.jpg);}
+.img_set_02 {background-image: url(../../img/dog_gallery/big/dog_05.jpg);}
+.img_set_03 {background-image: url(../../img/dog_gallery/big/dog_06.jpg);}
+.img_set_04 {background-image: url(../../img/dog_gallery/big/dog_07.jpg);}
+
+
+
+
+/* #footBox  ====================== */
+#footBox {
+	width:100%; height: 300px;
+	background-color: #333;
+}
+
+
+/* 반응형 ============= */
+@media screen and (max-width:640px){
+	#introBox {display: block;}
+	#introBox > div{display: none;}
+}
