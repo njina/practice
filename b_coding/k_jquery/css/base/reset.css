@@ -42,3 +42,9 @@ select {border: 1px solid #777; box-sizing:border-box; margin: 0; padding: 0; -w
   -o-appearance: button; 
   -ms-appearance: button;
   appearance: button;} 
+
+select::-ms-expand{
+  /* display: none; */
+  background-color:transparent;
+  border:0;
+}
