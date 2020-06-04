@@ -1,0 +1,70 @@
+@charset "utf-8";
+
+/* login.css */
+/* 로그인페이지 */
+
+#wrap {
+	width: 1200px; height: 900px;
+	margin:auto; 
+	padding-top: 180px; box-sizing: border-box;
+	background-image: linear-gradient(45deg,#4257ce,#c94ec0);
+}
+#loginBox {
+	width: 1080px; height: 540px;
+	margin:auto; 
+	padding: 100px; box-sizing: border-box;
+	border-radius: 1rem;
+	background-color: #fff;
+}
+
+.img {
+	float: left;
+	width: 270px; height: 100%;
+	background-color: #aaa;
+}
+.login {
+	float:right;
+	width: 370px; height: 100%;
+	/* background-color: #aaa; */
+}
+.login h1 {
+	width: 100%; height: auto;
+	margin-bottom: 30px;
+	text-align: center;
+	font-size: 1.875rem; font-weight: normal;
+}
+.login form {
+	width: 100%; height: auto;
+	margin-bottom: 28px;
+}
+
+form p {
+	width: 100%; height: 68px;
+	margin-bottom: 12px;
+	padding: 20px; box-sizing: border-box;
+	border-radius: 1.5rem;
+	background-color: #eee;
+}
+form p input {
+	width: 80%; height: 100%;
+	border: 0;
+	outline: 0;
+	background-color: transparent;
+	font-size: 1.1875rem;
+	color: #333;
+}
+
+form p.submit {
+	text-align: center;
+	margin-top: 7px;
+	background-color: #59b747;
+}
+form p.submit input {
+	background-color: transparent;
+	color: #fff;
+}
+p.forgot_id {
+	text-align: center;
+	font-size: 1rem;
+	color:#333;
+}
