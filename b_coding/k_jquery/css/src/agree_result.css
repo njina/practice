@@ -1,0 +1,109 @@
+@charset "utf-8";
+
+/* agree_result.css */
+/* 약관동의 - 선생님 풀이 */
+
+#wrap{
+	width: 100%; height: auto;
+	padding-top: 40px; box-sizing: border-box;
+	background-color: #f5f6f7;
+}
+
+h1{
+	width: 300px; height:56px;
+	text-align:center; margin:auto;
+}
+
+#formBox {
+	width: 460px; height:auto;
+	margin:auto;
+}
+
+fieldset {
+	width:100%; height: auto; min-height: 20px;
+	margin-bottom:25px;
+	/* background-color:#fff; */
+}
+
+
+/* 체크박스를 안 보이게 하는 방법. 
+체크박스는 디자인이 안됨... */
+input[type="checkbox"]{
+	position: absolute; z-index:-1; width:0; height:0; overflow:hidden;
+}
+
+input[type="checkbox"]:focus + .check_area>label{
+	outline:2px dotted #00c850;
+}
+
+input[type="checkbox"].check + .check_area > label:before{color:#f07;}
+
+
+.check_area {
+	width: 100%; height: auto; min-height: 28px;
+	font-size: 1rem; color:#333;
+	word-break: keep-all;
+}
+.check_area label{
+	position: relative;
+	width: 100%; height: auto;
+	min-height: 28px;
+	padding-left: 1.875rem; 
+	box-sizing:border-box;
+	font-weight: bold;
+	cursor: pointer;
+	text-decoration: underline;
+}
+.check_area label:before{
+	position: absolute; top:1px; left:0;
+	content:"\f058";
+	font-family: "Font Awesome 5 free";
+	font-weight: 900;
+	font-size: 1.2rem;
+	color:rgba(51, 51, 51, 0.3)
+
+}
+
+/* 개별========= */
+
+.all_check label {
+	display: block;
+	padding-left: 2rem; 
+ }
+.all_check label:before{ 
+	top:0.5rem;
+	font-size: 1.4rem;
+}
+
+
+.require_check .check_area strong{
+	font-size: 0.8rem; color: #00c850; font-weight: normal;
+}
+
+.option_check .check_area strong {
+	font-size: 0.8rem; color: #aaa; font-weight: normal;
+}
+
+.send_cancel {}
+
+
+/* ============== */
+
+/* 약관 길게 있는 영역 */
+/* 옛날에는 textarea로 썼다. 근데 지금은 아니라는. */
+.terms {
+	width: 100%; height:90px;
+	overflow: auto;
+	overflow-x: hidden;
+	margin-bottom: 26px; margin-top: 10px;
+	padding: 12px; box-sizing: border-box;
+	border:2px solid #dadada;
+	background-color: #fff;	
+	font-size:13px;
+	word-break: keep-all;
+}
+.terms dt,.terms em {
+	font-style: normal;
+	font-weight: bold;
+	margin: 5px 0; margin-top: 8px;
+}

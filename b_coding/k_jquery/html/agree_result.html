@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<!-- agree_result.html -->
+<html lang="ko-KR">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=3.0, minimum-scale=0.5">
+
+	 <!-- link -->
+	 <link rel="stylesheet" href="../fonts/fontawesome-free-5.13.0-web/css/all.css">
+	<link rel="stylesheet" href="../css/base/reset.css">
+	<link rel="stylesheet" href="../css/base/common.css">
+	<link rel="stylesheet" href="../css/src/agree_result.css">
+
+	<!--[if IE]>
+		<script src="../ie/html5shiv/dist/html5shiv.min.js"></script>
+		<script src="../ie/pie/PIE.js"></script>
+		<script src="../ie/resond/dest/respond.min.js"></script>
+	<![endif]-->
+
+	<title>약관동의(풀이)</title>
+
+</head>
+<body>
+	<!-- layout -->
+	<div id="wrap">
+		<h1>네이버 약관</h1>
+		<div id="formBox">
+			<form action="#" method="POST">
+				
+				<fieldset class="all_check">
+					<legend>전체 동의 확인</legend>
+					<input type="checkbox" name="allCheck" id="allCheck" value="전체동의">
+					<div class="check_area">
+						<label for="allCheck">
+						이용약관, 개인정보 수집 및 이용, 위치정보 이용약관<span>(선택)</span>,<br> 프로모션 안내 메일 수신<span>(선택)</span>에 모두 동의합니다.
+						</label>
+					</div>
+				</fieldset>
+				
+
+				<fieldset class="require_check">
+					<legend>필수 동의 확인</legend>
+					<input type="checkbox" name="termService" id="termService" value="네이버 이용약관 동의 확인">
+					<div class="check_area">
+						<label for="termService">
+							네이버 이용약관 동의<strong>(필수)</strong>
+						</label>
+					</div>
+					<div class="terms">
+						
+					</div>
+
+					<input type="checkbox" name="termPrivacy" id="termPrivacy" value="개인정보 수집 및 이용 동의 확인">
+					<div class="check_area">
+						<label for="termPrivacy">
+							개인정보 수집 및 이용에 대한 안내<strong>(필수)</strong>
+						</label>
+					</div>
+					<div class="terms"></div>
+				</fieldset>
+				
+
+				<fieldset class="option_check">
+					<legend>선택 동의 확인</legend>
+					<input type="checkbox" name="userLocation" id="userLocation" value="위치정보 이용약관 동의 확인">
+					<div class="check_area">
+						<label for="userLocation">
+							위치정보 이용약관 동의<strong>(선택)</strong>
+						</label>
+					</div>
+					<div class="terms"></div>
+
+					<input type="checkbox" name="promotionalEmail" id="promotionalEmail" value="이벤트 등 프로모션 알림 메일 수신 확인">
+					<div class="check_area">
+						<label for="promotionalEmail">
+							이벤트 등 프로모션 알림 메일 수신<strong>(선택)</strong>
+						</label>
+					</div>
+				</fieldset>
+				
+				<fieldset class="send_cancel">
+					<legend>전송 또는 취소</legend>
+					<button type="reset">취소</button>
+					<button type="submit">확인</button>
+				</fieldset>
+			</form>
+		</div>
+	</div>
+
+
+
+
+	<!-- script -->
+	<script src="../js/base/jquery-3.5.1.min.js"></script>
+	<script src="../js/base/jquery-ui.min.js"></script>
+
+	<script src="../js/src/agree_result.js"></script>
+</body>
+</html>
