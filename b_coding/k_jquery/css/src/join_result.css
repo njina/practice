@@ -37,10 +37,10 @@ h1{
 .joinBox dl:last-of-type  {margin-bottom: 0;}
 
 .joinBox dl.error .end_icon,
-.joinBox dl.error .confirm_text {color: #fe1a1a;}
+.joinBox dl.error .confirm_text {display:block; color: #fe1a1a;}
 
 .joinBox dl.success .end_icon,
-.joinBox dl.success .confirm_text {color: #04db09;}
+.joinBox dl.success .confirm_text {display:block; color: #04db09;}
 
 
 .joinBox dt {
@@ -122,12 +122,16 @@ h1{
 }
 .end_icon i {margin-left: 0.5rem; color:inherit}
 
+[for="certiNum"]{
+	display:block; width: 100%; height: 100%; opacity: 0.3;
+}
+#certiNum{display: none;}
 
 /* ------- */
 .confirm_text {
 	display: none;
 	width: 100%; height: 25px;
-	font-size: 0.875rem; color: #777;
+	font-size: 0.875rem; 
 }
 /* ------- */
 
