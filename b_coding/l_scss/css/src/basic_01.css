@@ -1,0 +1,96 @@
+@charset "UTF-8";
+/* css에서도 사용하던 여러줄 주석 */
+/*
+@import url("   ");
+쿼리문을 이용해서 가져올 경우, css파일까지 영향을 미친다. 그러나 url 을 빼고 작성할 경우 참고용으로만 가져오게 된다.
+파일명 앞의 _ 없고, 같은 확장자명(scss)이면 확장자 안 써도 불러온다.
+*/
+#wrap {
+  width: 100%;
+  height: 100%;
+  background-color: #990000;
+  color: #6666ff;
+  border: 1px solid #333;
+}
+
+#headBox {
+  width: 7.8125vw;
+  background-color: rgba(255, 0, 0, 0.5);
+}
+
+/*
+#gnb{ }
+#gnb > h2{ }
+#gnb > h2 a { }
+#gnb > h2 a span { }
+*/
+#gnb {
+  width: 100%;
+  height: 100%;
+}
+#gnb > h2 {
+  width: 100px;
+  height: 100px;
+}
+#gnb > h2 > a {
+  display: block;
+}
+#gnb > h2 > a > span {
+  text-align: center;
+}
+#gnb > h2 > a:hover > span {
+  color: #a3d;
+}
+
+/*
+첫번째방법
+.list > li:nth-child(1){	background-position-x: 0; }
+.list > li:nth-child(2){	background-position-x: 20; }
+.list > li:nth-child(3){	background-position-x: 40; }
+.list > li:nth-child(4){	background-position-x: 80; }
+.list > li:nth-child(5){	background-position-x: 120; }
+.list > li:nth-child(6){	background-position-x: 150; }
+
+두번째방법
+.list > li:nth-child(1){	background-position-x: nth($size,1); }
+.list > li:nth-child(2){	background-position-x: nth($size,2); }
+.list > li:nth-child(3){	background-position-x: nth($size,3); }
+.list > li:nth-child(4){	background-position-x: nth($size,4); }
+.list > li:nth-child(5){	background-position-x: nth($size,5); }
+.list > li:nth-child(6){	background-position-x: nth($size,6); }
+*/
+.list > li:nth-child(1) {
+  background-position-x: 0;
+}
+
+.list > li:nth-child(2) {
+  background-position-x: 20;
+}
+
+.list > li:nth-child(3) {
+  background-position-x: 40;
+}
+
+.list > li:nth-child(4) {
+  background-position-x: 80;
+}
+
+.list > li:nth-child(5) {
+  background-position-x: 120;
+}
+
+.list > li:nth-child(6) {
+  background-position-x: 150;
+}
+
+.graph_coffee {
+  color: #fac;
+}
+
+.apple_coffee {
+  color: #fac;
+}
+
+.tomato_coffee {
+  color: #fac;
+}

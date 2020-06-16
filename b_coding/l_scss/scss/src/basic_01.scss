@@ -1,0 +1,84 @@
+// scss 한줄 주석- css파일에 반영되지 않는다.
+/* css에서도 사용하던 여러줄 주석 */
+
+//변수 선언하는 기능
+//UI 가이드를 미리 변수로 선언하고 작업을 하면 더욱 효율적이겠지?
+// $primary : #fa0;
+// $white : #fff;
+// $black : #333;
+// $baseLine : 1px solid $black;
+@import "../setting/variable";
+
+/*
+@import url("   ");
+쿼리문을 이용해서 가져올 경우, css파일까지 영향을 미친다. 그러나 url 을 빼고 작성할 경우 참고용으로만 가져오게 된다.
+파일명 앞의 _ 없고, 같은 확장자명(scss)이면 확장자 안 써도 불러온다.
+*/
+
+//===============
+
+#wrap{
+	width: 100%; height: 100%;	background-color: darken($primary, 20%);
+	color:lighten($sub1, 20%);
+	border: $baseLine;
+}
+
+#headBox {
+	width: (150px / 1920px * 100)+vw;
+	background-color:rgba($primary, 0.5)
+}
+
+/*
+#gnb{ }
+#gnb > h2{ }
+#gnb > h2 a { }
+#gnb > h2 a span { }
+*/
+
+#gnb { width: 100%; height: 100%;
+	>h2 {width: 100px; height: 100px;
+		>a {display:block;
+			>span {text-align:center;}
+			&:hover > span {color:#a3d;}
+		} //a
+	} //h2
+} //#gnb
+//중첩기능시 주의사항: 4단계 이상은 사용하지 말자
+//시인성이 떨어지면 사용하지 말자
+//끝나는 곳엔 반드시 주석으로 표기하자
+//왜냐?? 보기 어려우니까~~~~ 다음에 찾을라면 못찾아
+
+
+//lists 함수
+$size : (0, 20, 40, 80, 120, 150);
+
+/*
+첫번째방법
+.list > li:nth-child(1){	background-position-x: 0; }
+.list > li:nth-child(2){	background-position-x: 20; }
+.list > li:nth-child(3){	background-position-x: 40; }
+.list > li:nth-child(4){	background-position-x: 80; }
+.list > li:nth-child(5){	background-position-x: 120; }
+.list > li:nth-child(6){	background-position-x: 150; }
+
+두번째방법
+.list > li:nth-child(1){	background-position-x: nth($size,1); }
+.list > li:nth-child(2){	background-position-x: nth($size,2); }
+.list > li:nth-child(3){	background-position-x: nth($size,3); }
+.list > li:nth-child(4){	background-position-x: nth($size,4); }
+.list > li:nth-child(5){	background-position-x: nth($size,5); }
+.list > li:nth-child(6){	background-position-x: nth($size,6); }
+*/
+@for $i from 1 through 6 {
+	.list > li:nth-child(#{$i}){	background-position-x: nth($size, $i); }
+}
+
+//선택자에는 변수의 이름이 그대로 들어갈 수가 없다.
+//값에 들어가는 거에는 들어가도 상관없다.
+//그래서 interpolation 기법(보간법)을 이용하여 처리한다.
+//앞에 # 붙이고 {} 로 감싸면 된다. #{  }
+
+$li : ('graph', 'apple', 'tomato');
+@for $i from 1 through length($li){
+    .#{nth($li, $i)}_coffee {color:#fac;}
+}
