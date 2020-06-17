@@ -1,5 +1,12 @@
 @charset "UTF-8";
 /* css에서도 사용하던 여러줄 주석 */
+#gnb {
+  font-family: "myriad pro", "arial", "malgun gothic", "noto sans", sans-serif;
+  font-size: 3rem;
+  background-image: linear-gradient(45deg, #fa0);
+  border-radius: 0.5rem;
+}
+
 /*
 @import url("   ");
 쿼리문을 이용해서 가져올 경우, css파일까지 영향을 미친다. 그러나 url 을 빼고 작성할 경우 참고용으로만 가져오게 된다.

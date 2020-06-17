@@ -88,59 +88,69 @@ stT01_Img.css({position:'absolute',top:0, left:0, width:'100%', height:'auto'});
 		}
 	});
 
- //is기법- 한줄에 이미지 여러개(4x11)
- var arr2 = [ [], [] ];
- //x값 위치(가로 429px 간격)
- for(var i=0; i<4; i++){	arr2[0][i] = 429 * -i;  }
- //y값위치(세로 378px 간격)
- for(var j=0; j<11; j++){ arr2[1][j] = 378 * -j;  }
- console.log( arr2 );
 
- 	var split_text_02 = $('.split_text_02');
- 	var splitText02_offset = split_text_02.offset().top;
+
+// 행/열 방식으로 이미지를 배치한 경우
+
+// x,y값에 따른 배치
+var arr2 = [ [], [] ];  
+// x값 위치(가로 429px 간격)
+for(var i=0; i<4; i++){	arr2[0][i] = 429 * -i;  }
+
+// y값 위치(세로 378px 간격)
+for(var j=0; j<11; j++){ arr2[1][j] = 378 * -j;  }
+
+var split_text_02 = $('.split_text_02');
+var splitText02Img = split_text_02.find('img');
+
+var splitText02_offset = split_text_02.offset().top;
+
+var s2 = (arr2[0].length * arr2[1].length) -2;
+
+var count = 0;
  
-	var s2 = 0;
-	var s2_01 = 0;
-	var s2_02 = 0;
-	
-	var forFn = function(){
-		for(; s2_01 < 11 ; s2_01+= 1 ){
+var scroll2Bool = true;
+var scroll2Go;
 
-			for(; s2_02 < 4 ; s2_02 += 1 ){
-				console.log(s2_02, s2_01);
-			}
-		}
-	}; 
-	forFn();
-
-
-	var scroll2Bool = true;
-	var scroll2Go;
-	var set2Interval = function(){
-		if( scroll2Bool ){
-			scroll2Bool = false;
-			scroll2Go = setInterval( function(){
-				s2 += 1;
-				console.log(s2);
-				if( s2 > 15 ){
-					clearInterval( scroll2Go );
-				}
-			},30);
-		}
-	};
+var Set2Interval = function(){
+	if(scroll2Bool){
+		scroll2Bool = false;
+		scroll2Go = setInterval(function(){
+			var l = parseInt(count / 4);
+			var l2 = parseInt(count % 4);
+			count += 1;
+			// 나누기 4를 통해 몫과, 나머지값을 구하고, 
+			// 나머지값을 이용하여 x값의 위치를 처리 후
+			// 몫의 값을 이용하여  y값의 위치를 처리
+			// console.log(l2, l);
+			splitText02Img.css({left:arr2[0][l2] + 'px', top:arr2[1][l] + 'px'});
+			if(count >= s2){	clearInterval(scroll2Go);		}
+		}, 30);
+	}
+};
 
 
- win.on('scroll',function(){
-	 var thisScroll = win.scrollTop();
-	 var thisScrollPlus = thisScroll + (winH/3*2);
-	 if( thisScrollPlus > splitText02_offset ){
-		set2Interval();
-	 } else if( thisScroll-1000 < splitText02_offset ){
-		clearInterval( scroll2Go );
-		s2 = 0;
+
+win.on('scroll', function(){
+	var thisScroll = win.scrollTop();
+	var thisScrollPlus = thisScroll + (winH/3*2);
+	if(thisScrollPlus > splitText02_offset){
+
+		Set2Interval();
+
+	}else if( (thisScroll-1000) < splitText02_offset ){
+
+		clearInterval(scroll2Go);
+		count = 0;
+		splitText02Img.css({
+			left: arr2[0][0] + 'px',
+			top: arr2[1][0] + 'px'
+		});
 		scroll2Bool = true;
-	 }
- });
+
+	}
+
+});
 
 
 

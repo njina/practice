@@ -6,3 +6,51 @@ $white : #fff;
 $black : #333;
 $baseLine : 1px solid $black;
 
+
+//map 만들기
+$color : #adf;
+$colorList : (#adf, #fac, #aaf, #fa8, #fa0);
+
+$colorMap : (blue:#0cf,  yellow:#fa0, red:#a00);
+
+$baseColor: (yellow:#ff0, gray:#aaa, black:#333);
+$natureColor: (yellow:#a70, gray:#777, black:#171717);
+$fontColor: (yellow:#fc0, gray:#ccc, 
+							black: darken(map-get($natureColor,black),5%) );
+
+$sampleColor : ( yellow:map-get($fontColor, yellow), gray:map-get($natureColor, gray) );
+
+//---------------
+$url: "../../img/";
+
+//---------------
+//폰트---------------
+//font-family
+$fontLink : "http://font.google.com/font.woff";
+$english :  'myriad pro', 'arial';
+$korean  : 'malgun gothic', 'noto sans';
+$otherFont : sans-serif;
+$fontFamily: $english, $korean, $otherFont;
+
+//font-size
+$h1 : 3rem;
+$h2 : 2.5rem;
+$h3 : 2.2rem;
+$h4 : 2rem;
+$h5 : 1.5rem;
+$h6 : 1.3rem;
+$p : $h6;
+
+//font-size
+$gr_01 : linear-gradient(45deg, nth($colorList,5));
+$shadow_01 : 1rem 1rem 1rem $black;
+$radius_01 : 0.5rem;
+
+#gnb {
+	font-family:  $fontFamily;
+	font-size: $h1;
+	background-image: $gr_01;
+	border-radius: $radius_01;
+}
+
+//---------------

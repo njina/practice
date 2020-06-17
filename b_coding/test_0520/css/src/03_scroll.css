@@ -89,6 +89,8 @@ h1>a {display: block; width: 100%; height: 100%}
 	border-radius: 100%;
 }
 .indi_dot li:last-child{margin-right: 0;}
+.indi_dot li.action{background-color: rgb(255, 0, 64)}
+
 .indi_dot li a {display: block; width: 100%; height: 100%; border-radius: 100%;}
 .indi_dot li a:hover,.indi_dot li a:focus {background-color: rgb(255, 109, 24);}
 
@@ -113,6 +115,18 @@ h1>a {display: block; width: 100%; height: 100%}
 	width: 100%; max-width: 960px; height: 800px;
 	margin: auto;
 	background-color: #fa9;
+}
+/* #newsBox===================================== */
+#newsBox {
+	width: 100%; max-width: 960px; height: 800px;
+	margin: auto;
+	background-color: #dd1;
+}
+/* #saleBox===================================== */
+#saleBox {
+	width: 100%; max-width: 960px; height: 800px;
+	margin: auto;
+	background-color: #00d01f;
 }
 
 

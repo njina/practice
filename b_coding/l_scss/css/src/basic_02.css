@@ -1,0 +1,116 @@
+@charset "UTF-8";
+/* basid_02.scss */
+#gnb {
+  font-family: "myriad pro", "arial", "malgun gothic", "noto sans", sans-serif;
+  font-size: 3rem;
+  background-image: linear-gradient(45deg, #fa0);
+  border-radius: 0.5rem;
+}
+
+/*
+$color : #adf;
+$colorList : (#adf, #fac, #aaf, #fa8, #fa0);
+
+$colorMap : (blue:#0cf,  yellow:#fa0, red:#a00);
+
+$baseColor: (yellow:#ff0, gray:#aaa, black:#333);
+$natureColor: (yellow:#a70, gray:#777, black:#171717);
+$fontColor: (yellow:#fc0, gray:#ccc, 
+							black: darken(map-get($natureColor,black),5%) );
+	// 컬러를 그룹으로 묶어서 사용하면 편리하다.
+$sampleColor : ( yellow:map-get($fontColor, yellow), gray:map-get($natureColor, gray) );
+	//위에 처럼 쓰면 가능은하되, 가끔 에러가 뜬다.
+*/
+#wrap {
+  background-color: #0cf;
+  color: #0a0a0a;
+}
+
+.apple_juice {
+  background-color: #ff0000;
+}
+
+.mango_juice {
+  background-color: #fa0;
+}
+
+.grape_juice {
+  background-color: #8f2;
+}
+
+.orange_juice {
+  background-color: #fc1;
+}
+
+.slide_event {
+  background-image: url("../../img/eventMain.jpg");
+}
+
+.slide_best {
+  background-image: url("../../img/bestCut.jpg");
+}
+
+.slide_info {
+  background-image: url("../../img/infoMessage.jpg");
+}
+
+.slide_guide {
+  background-image: url("../../img/guideThum.jpg");
+}
+
+#headBox {
+  width: 100px;
+  height: 200px;
+  background-color: #ddd;
+}
+
+#sectionBox {
+  width: 100%;
+  height: 300px;
+  background-color: #ccc;
+}
+
+#conBox {
+  width: 100%;
+  height: 300px;
+  background-color: #bbb;
+}
+
+.box_01 {
+  width: 26.0416666667vw;
+  height: 5.2083333333vw;
+}
+
+.box_02 {
+  width: 100;
+  height: 6.25rem;
+  border-radius: 2.0833333333rem;
+}
+
+#fnb {
+  background-color: #fff;
+  color: #333;
+}
+
+#footBox {
+  background-color: #333;
+  color: #fff;
+}
+
+h4 {
+  border: 1px solid #fff;
+}
+
+h1, h3, h2 {
+  font-size: 1rem;
+}
+
+#size {
+  width: 50px;
+  width: 3.125rem;
+  height: 50px;
+  height: 50rem;
+  border-radius: 0.78125px;
+  border-radius: 3.125rem;
+}
+

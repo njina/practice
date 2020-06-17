@@ -1,0 +1,178 @@
+/* basid_02.scss */
+
+
+//다른 파일에 있는 변수 가져오기
+@import "../setting/variable";
+
+
+// map ---------------
+/*
+$color : #adf;
+$colorList : (#adf, #fac, #aaf, #fa8, #fa0);
+
+$colorMap : (blue:#0cf,  yellow:#fa0, red:#a00);
+
+$baseColor: (yellow:#ff0, gray:#aaa, black:#333);
+$natureColor: (yellow:#a70, gray:#777, black:#171717);
+$fontColor: (yellow:#fc0, gray:#ccc, 
+							black: darken(map-get($natureColor,black),5%) );
+	// 컬러를 그룹으로 묶어서 사용하면 편리하다.
+$sampleColor : ( yellow:map-get($fontColor, yellow), gray:map-get($natureColor, gray) );
+	//위에 처럼 쓰면 가능은하되, 가끔 에러가 뜬다.
+*/
+// -------------------
+
+
+
+#wrap {
+	background-color: map-get($colorMap, blue);
+	color: map-get($fontColor, black);
+}
+
+
+$juice : ('apple', 'mango', 'kiwi', 'grape', 'orange');
+$juiceC : #ff0000, #acc,  #faa, #faf, #fa0;
+//1
+// @for $i from 1 through length($juice){
+// 	.#{nth($juice,$i)}_juice {
+// 		color:nth($juiceC, $i);
+// 	}
+// }
+
+//2 : 해당 값이 선택자와 동일한 경우에 사용.
+// @each $j in $juice {
+// 	.#{$j}_juice{
+// 		background-color: nth($juiceC, $juice);
+// 	}
+// }
+
+//3
+$myJuice : (
+	'apple': #ff0000,
+	'mango' : #fa0,
+	'grape' : #8f2,
+	'orange' : #fc1,
+	);
+
+	//$key, $val는 임의의 변수인데, 이 둘의 순서를 바꾸면, 바뀌어서 나타난다. 순서에 유의해야한다. 
+	@each $key, $val in $myJuice  {
+		.#{$key}_juice { background-color: $val; }
+	}
+
+	//응용예시-슬라이드배너
+	$mainSlide : (
+		'event' : 'eventMain.jpg',
+		'best' : 'bestCut.jpg',
+		'info' : 'infoMessage.jpg',
+		'guide' : 'guideThum.jpg',
+		);
+
+	@each $sel, $img in $mainSlide {
+		.slide_#{$sel} {
+			background-image: url($url + $img);
+		}
+	}
+
+$color : ( #ddd, #ccc, #bbb );
+$wire : (
+	('#headBox', 100px, 200px, nth($color, 1)),
+	('#sectionBox', 100%, 300px, nth($color,2)),
+	('#conBox', 100%, 300px, nth($color,3)),
+);
+
+@each $select, $width, $height, $color in $wire {
+	#{$select} {
+		width: $width; height: $height; background-color:$color;
+	}
+}
+
+
+//function ---------------
+// $device : (640, 1280, 1920);
+$device : (
+	mob : 640,
+	tab : 1024,
+	labtop : 1600,
+	pcfull : 1920
+);
+
+@function Mob ($val){
+	$convert : $val / map-get($device, mob) * 100;
+	@return $convert + vw;
+};
+@function Tab ($val){
+	$convert : $val / map-get($device, tab) * 100;
+	@return $convert + vw;
+};
+@function Pc ($val){
+	$convert : $val / map-get($device, labtop) * 100;
+	@return $convert + vw;
+};
+@function Pc ($val){
+	$convert : $val / map-get($device, pcfull) * 100;
+	@return $convert + vw;
+};
+
+@mixin Rec ($s){
+	width: $s; height:($s/16)+rem; 
+	border-radius:($s/3/16)+rem;
+}
+
+.box_01 {
+	width: Pc(500); height: Pc(100);
+}
+
+.box_02 {
+	@include Rec(100);
+}
+// -------------------
+
+#fnb {
+	background-color:#fff;
+	color:#333;
+}
+
+$b : #333;
+@function IfColor ($color){
+	@if $color == #333 {
+		@return #fff;
+	} @else if $color == #fff {
+		@return #333;
+	} @else {
+		@return #676767;
+	}
+}
+
+@mixin MyColor($c){
+	background-color:$c;
+	color:IfColor($c);
+}
+
+#footBox {
+	@include MyColor(#333);
+}
+
+// -----------------------
+//extend
+
+%Select {
+	border: 1px solid #fff; 
+}
+
+h1 {font-size: 1rem;}
+h2 {@extend h1;}
+h3 {@extend h1;}
+h4 {@extend %Select;}
+
+
+// -----------------------
+
+@mixin Rem( $s ){
+	width: $s + px; width: $s/16 + rem;
+	height: $s + px; height: $s + rem;
+	border-radius: ($s/4/16)+px; border-radius: ($s/16) + rem;
+}
+
+#size {
+	@include Rem(50);
+}
