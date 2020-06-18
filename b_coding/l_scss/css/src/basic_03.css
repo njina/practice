@@ -1,0 +1,46 @@
+/* basic_03.css */
+h1 {
+  background-image: url("../../img/main/logo.png");
+  background-repeat: repeat-x;
+  background-position: 50% 50%;
+  background-size: contain;
+}
+
+#headBox {
+  width: 100px;
+  width: 6.25rem;
+  height: 400px;
+  height: 25vw;
+}
+
+.conBox {
+  display: block;
+}
+.conBox > span {
+  opacity: 0.5;
+  width: 100px;
+  height: 100px;
+}
+
+#wrap {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+}
+@media screen and (max-width: 640) {
+  #wrap {
+    width: 90%;
+    max-width: 620px;
+  }
+}
+@media screen and (min-width: 641) and (max-width: 1024) {
+  #wrap {
+    width: 80%;
+    max-width: 960px;
+    background-color: #faf;
+  }
+}
+
+#test {
+  width: vw(10, "mob");
+}
