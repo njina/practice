@@ -1,0 +1,42 @@
+// main.scss
+/* main.css */
+
+//기본적인 세팅 불러오기
+// function -> mixin 순서로 불러온다
+@import "../set/_function";
+@import "../set/_variable";
+@import "../set/_mixin";
+
+
+//-----------------------------------
+h2 { font-size: $titleFont; }
+h3 { font-size: $titleFont2; }
+h1, h2, h3, h4, h5, h6, p, div, ul, li, ol, dl, dt, dd { font-family:$fontFamily; }
+
+
+//-----------------------------------
+//공통적인 wrap 영역 
+#wrap {
+	width: 100%; min-width: 1500px;
+	height:auto; min-height:900px;
+	margin:auto;
+	overflow: visible; overflow-x:hidden;
+	background-color: $sample;
+}
+//wrap
+
+
+//각 파트별 불러오기
+//popup
+@import "../parts/popup";
+
+//design layout
+@import "../parts/headBox";
+@import "../parts/viewBox";
+@import "../parts/trendOn";
+@import "../parts/keyword";
+@import "../parts/bestItem";
+@import "../parts/hotDeal";
+@import "../parts/category";
+@import "../parts/sns";
+@import "../parts/footBox";
