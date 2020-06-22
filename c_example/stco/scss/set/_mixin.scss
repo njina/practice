@@ -7,11 +7,78 @@
 	@content;
 }
 
-//css문서 기준
+//bg 공통
+	//css문서 기준
 $url : '../../img/stco/stcoImg/';
 @mixin bg($i, $r:no-repeat, $p: 0 0, $s:auto auto){
 	background-image: url($url + $i);
 	background-repeat: $r;
 	background-position: $p;
 	background-size: $s;
+}
+
+//슬라이드 버튼
+@mixin centerBtn ($fw:100, $w:50, $h:56){
+	position: absolute; top: 50%;
+	transform:translateX(-50%);
+	margin-top: -$h/2 + px; 
+	margin-left: 50%; 
+	width: 1400 + $fw + px;
+	height: 0;
+	>button {
+		float:left;
+		width: $w + px; height: $h + px; 
+		@content;
+
+		&:first-child {float:right}
+	}
+}
+
+// 글자 숨기기
+@mixin hidden(){
+	position: absolute; z-index: -1;
+	display:block; width:0; height:0; overflow: hidden;
+}
+
+// a태그 꽉차게
+@mixin full($c){
+	display:block; width: 100%; height:100%;
+	background-color:$c;
+	@content;
+	>span {@include hidden();}
+}
+
+//마지막 li margin-right 제거
+@mixin lastMargin0(){
+	float:left;
+	@content;
+	&:last-child{margin-right:0;}
+}
+
+//슬라이드 indicator 전체
+$count : 1;
+@mixin indicator($c:10, $w:10, $mr:16, $h:10, $b:33){
+	position: absolute; 
+		left: 50%; bottom: $b + px; z-index: 500;
+		transform:translateX(-50%);
+		width: rem($c*($w + $mr) - $mr); height: rem($h); 
+	
+		>ul {
+			width:100%; height: 100%;
+			>li {
+				@include lastMargin0(){
+					width: rem($w); height: 100%;
+					margin-right: rem($mr);
+					padding: 1px; box-sizing: border-box;
+				};
+			}
+
+			a {
+				@include full($indicator);
+				border-radius:100%;
+			}
+			li.active a {
+				background-color:$indiPoint;
+			}
+		}
 }
