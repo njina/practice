@@ -1,0 +1,177 @@
+// apple.scss
+/* apple.css */
+
+@import "./setting";
+body {
+	width: 100%; 
+	overflow-x: hidden; overflow-y: visible;
+}
+
+#wrap {
+	width: 1400px; height: auto; min-height: 3000px;
+	margin:auto; padding-top: 90px;
+	background-image: linear-gradient(#dfdfdf, #afafaf);
+}
+#headBox {
+	position: fixed; top:0; left:0; z-index: 1500;
+	width: 100%; height: 90px; 
+	background-color:#fff;
+	border-bottom:  1px solid #333;
+}
+
+#openLaptop {
+	position: fixed; top: 0; left:0; right:0;
+	width: $baseWidth;
+	height: 2000px;
+	margin:auto;
+	transform: translateY(100px);
+	> h2 {
+		position: relative; z-index: 500;
+		width: 100%; height: auto;
+		margin-bottom: 1rem;
+		padding-top: 2rem;
+		text-align: center; 
+		font-size: 4.5rem; font-weight: bold;
+		> span {
+			font-size: 0.5em;
+		}
+	}
+	> .macbook {
+		position: relative;
+		width: $baseWidth - 300px; height: 400px;
+		margin:auto; margin-bottom: 3rem;
+		background-color:#fff;
+		> img {
+			position: absolute; bottom:0; left:0; right:0;
+			margin:auto;
+			width: 100%; height: auto;
+		}
+	}
+
+	p {
+		@include content();
+	}
+
+	.movie_link {
+		width: $baseWidth; font-size: 2rem;
+	}
+//#openLaptop
+}
+
+
+
+
+
+
+
+
+#laptopSize {
+	margin-top:2000px;
+	width:$baseWidth; height: 1000px;
+	margin-bottom: 5rem;
+	background-color:#faf;
+
+	> .macbook{
+		position: relative;
+		width:100%; height: 600px; 
+		background-color: rgba(255,255,255,0.5);
+
+		.macbook_option {
+			position: absolute; top:0; left:0; right:0; z-index: 500;
+			width: 80%; 
+			padding-top:2rem;
+			margin:auto;
+
+			> div {
+				width: 30%; height: auto;
+				font-size: 1.3rem; font-weight: bold;
+			dl {
+				width: 100%; height: 90px; 
+				border-bottom: 1px solid #777;
+				padding-bottom: 2rem; padding-top: 2rem;
+				dt {color:$black;}
+				dd {color:lighten($black, 30%)};
+				&:last-of-type{border-bottom: none; padding-bottom:0;}
+			}
+			}
+			> .option_part_01 {
+				float:left;
+			}
+			> .option_part_02 {
+				float:right;
+			}
+		}
+		.macbook_video {
+			position: absolute; top:0; left:0;
+			width: 100%;
+			> video {
+				width: 100%; height: auto;
+			}
+		}
+		//.macbook종료
+	}
+	//#laptopSize종료
+}
+
+
+
+
+
+#retinaDisplay {
+	width:$baseWidth; height: 5000px;
+	margin-bottom: 5rem;
+	background-color:#dcf;
+	
+	> h2 {
+		width: 80%; height:auto; margin:auto;
+		color:$black;
+		margin-bottom: 5rem;
+		font-size:4rem; line-height: 1.2;
+		> em {
+			font-style:normal;
+			color:lighten($black, 40%);
+		}
+	}
+
+	.retina_image{
+		position: relative;
+		left:50%; right: 0; z-index: 500;
+		transform: translateX(-50%);
+		// margin:auto;
+		width:$baseWidth; height:auto; min-height: 600px;
+		// background-color:#acf;
+		
+		>div{
+			position: absolute; top:0; left:0;
+			width: 100%; height:100%;
+			&.people { z-index: 10; 
+				background-color:#0a0;
+				background-image:url(../img/display_pro__9ci00tik8gyi_large.jpg);
+				background-position: 50% 0%;
+				background-size: cover;
+				background-repeat: no-repeat;
+			};
+			&.artwork { z-index: 5;  
+				background-color:#a8c;
+				background-image:url(../img/display_hero_screen__eik3891ojtoy_large.jpg);
+				background-position: 50% 0%;
+				background-size: cover;
+				background-repeat: no-repeat;
+			};
+		}
+	}
+	p { 
+		@include content(); 
+		opacity: 1;
+		top:0;
+		span {color:$black};
+	}
+}
+
+
+
+#dermi {
+	width:$baseWidth; height: 1000px;
+	margin-bottom: 5rem; margin-top: 2000px;
+	background-color:#aaf;
+}

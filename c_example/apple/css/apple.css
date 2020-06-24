@@ -1,0 +1,221 @@
+/* apple.css */
+body {
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: visible;
+}
+
+#wrap {
+  width: 1400px;
+  height: auto;
+  min-height: 3000px;
+  margin: auto;
+  padding-top: 90px;
+  background-image: linear-gradient(#dfdfdf, #afafaf);
+}
+
+#headBox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1500;
+  width: 100%;
+  height: 90px;
+  background-color: #fff;
+  border-bottom: 1px solid #333;
+}
+
+#openLaptop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 1400px;
+  height: 2000px;
+  margin: auto;
+  transform: translateY(100px);
+}
+#openLaptop > h2 {
+  position: relative;
+  z-index: 500;
+  width: 100%;
+  height: auto;
+  margin-bottom: 1rem;
+  padding-top: 2rem;
+  text-align: center;
+  font-size: 4.5rem;
+  font-weight: bold;
+}
+#openLaptop > h2 > span {
+  font-size: 0.5em;
+}
+#openLaptop > .macbook {
+  position: relative;
+  width: 1100px;
+  height: 400px;
+  margin: auto;
+  margin-bottom: 3rem;
+  background-color: #fff;
+}
+#openLaptop > .macbook > img {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 100%;
+  height: auto;
+}
+#openLaptop p {
+  width: 1100px;
+  height: auto;
+  margin: auto;
+  font-size: 2rem;
+  color: #777;
+  opacity: 0;
+  font-weight: bold;
+  word-break: keep-all;
+}
+#openLaptop .movie_link {
+  width: 1400px;
+  font-size: 2rem;
+}
+
+#laptopSize {
+  margin-top: 2000px;
+  width: 1400px;
+  height: 1000px;
+  margin-bottom: 5rem;
+  background-color: #faf;
+}
+#laptopSize > .macbook {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+#laptopSize > .macbook .macbook_option {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 500;
+  width: 80%;
+  padding-top: 2rem;
+  margin: auto;
+}
+#laptopSize > .macbook .macbook_option > div {
+  width: 30%;
+  height: auto;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+#laptopSize > .macbook .macbook_option > div dl {
+  width: 100%;
+  height: 90px;
+  border-bottom: 1px solid #777;
+  padding-bottom: 2rem;
+  padding-top: 2rem;
+}
+#laptopSize > .macbook .macbook_option > div dl dt {
+  color: #333;
+}
+#laptopSize > .macbook .macbook_option > div dl dd {
+  color: gray;
+}
+#laptopSize > .macbook .macbook_option > div dl:last-of-type {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+#laptopSize > .macbook .macbook_option > .option_part_01 {
+  float: left;
+}
+#laptopSize > .macbook .macbook_option > .option_part_02 {
+  float: right;
+}
+#laptopSize > .macbook .macbook_video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+#laptopSize > .macbook .macbook_video > video {
+  width: 100%;
+  height: auto;
+}
+
+#retinaDisplay {
+  width: 1400px;
+  height: 5000px;
+  margin-bottom: 5rem;
+  background-color: #dcf;
+}
+#retinaDisplay > h2 {
+  width: 80%;
+  height: auto;
+  margin: auto;
+  color: #333;
+  margin-bottom: 5rem;
+  font-size: 4rem;
+  line-height: 1.2;
+}
+#retinaDisplay > h2 > em {
+  font-style: normal;
+  color: #999999;
+}
+#retinaDisplay .retina_image {
+  position: relative;
+  left: 50%;
+  right: 0;
+  z-index: 500;
+  transform: translateX(-50%);
+  width: 1400px;
+  height: auto;
+  min-height: 600px;
+}
+#retinaDisplay .retina_image > div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+#retinaDisplay .retina_image > div.people {
+  z-index: 10;
+  background-color: #0a0;
+  background-image: url(../img/display_pro__9ci00tik8gyi_large.jpg);
+  background-position: 50% 0%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#retinaDisplay .retina_image > div.artwork {
+  z-index: 5;
+  background-color: #a8c;
+  background-image: url(../img/display_hero_screen__eik3891ojtoy_large.jpg);
+  background-position: 50% 0%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#retinaDisplay p {
+  width: 1100px;
+  height: auto;
+  margin: auto;
+  font-size: 2rem;
+  color: #777;
+  opacity: 0;
+  font-weight: bold;
+  word-break: keep-all;
+  opacity: 1;
+  top: 0;
+}
+#retinaDisplay p span {
+  color: #333;
+}
+
+#dermi {
+  width: 1400px;
+  height: 1000px;
+  margin-bottom: 5rem;
+  margin-top: 2000px;
+  background-color: #aaf;
+}

@@ -1,0 +1,15 @@
+// _setting.scss
+
+$baseWidth: 1400px;
+
+$black: #333;
+
+@mixin content(){
+	width: $baseWidth - 300px; height:auto;
+	margin:auto;
+	font-size: 2rem; 
+	color:#777; opacity: 0;
+	font-weight: bold;
+	word-break: keep-all;
+	@content;
+}
