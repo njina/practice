@@ -1,0 +1,82 @@
+@charset "utf-8";
+
+/* zoom.css */
+/* 마우스오버시 확대되서 보이는 기능 */
+
+#wrap {
+	width: 1400px; height: 700px;
+	padding:1rem; 
+	margin:auto;
+	border-radius: 0.5rem;
+	border: 1px solid #777;
+	background-color:#dfdfdf;
+}
+h1 {
+	margin-bottom: 1rem;
+	padding: 0.5rem;
+	text-align: center; color: #777;
+	font-size: 1.5rem; font-weight: bold;
+	border-bottom: 1px solid #777;
+}
+.product {	width: 100%; height: auto; }
+.product:after, .product::after { content:""; display:block; clear:both; }
+	.gallery {
+		float:left;
+		width: 49%; height: 600px; 
+	}
+		.big { 
+			width: 100%; height: 500px; 
+			border: 2px solid #777; box-sizing: border-box; 
+			background-repeat: no-repeat;
+			background-position: 50% 50%;
+			background-size: cover;
+		}
+		.thum {
+			width: 100%; height: 100px;
+			padding: 1rem; box-sizing: border-box;
+		}	
+		.thum >ul {width: 100%; height: auto;}
+		.thum >ul:after {content:""; display:block; clear:both; }
+		.thum li {
+			float:left;
+			width: 70px; height: 70px; 
+			margin-right: 1rem;
+		}
+		.thum a {
+			display: block; width: 100%; height: 100%;
+			border-radius: 1rem;
+			background-color:#caa;
+			background-size: 100% auto;
+			background-position: 50% 50%;
+			background-repeat: no-repeat;
+			transition: all 300ms ease;
+			transform: scale(1);
+			/* filter: blur(1); */
+		}
+		.thum a:hover, .thum a:focus {
+			transform: scale(1.3);
+			background-size: 120% auto;
+		}
+		.thum span {display: block; overflow: hidden; position: absolute; z-index: -1; width: 0; height: 0;}
+	
+	
+		.zoom {
+		display:none;
+		float:right;
+		width: 48%; height: 600px;
+		background-color:#fa0;
+		background-repeat: no-repeat;
+		background-size: 200% auto;
+	}
+
+	.zoom2 {
+		display: none;
+		position: fixed; 
+		width: 200px; height: 200px;
+		border-radius: 50px;
+		border: 5px solid #ccc;
+		box-shadow: 0.1rem 0.1rem 0.1rem rgba(51, 51, 51, 0.5);
+		background-color:#fff;
+		background-repeat: no-repeat;
+		background-size: 500% auto;
+	}
