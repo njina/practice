@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<!-- slideMulti.html -->
+<!-- 복합적인 슬라이드 -->
+<html lang="ko-KR">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=3.0, minimum-scale=0.5">
+
+	<!-- link -->
+	<link rel="stylesheet" href="../fonts/fontawesome-free-5.13.0-web/css/all.css">
+	<link rel="stylesheet" href="../css/base/reset.css">
+	<link rel="stylesheet" href="../css/base/common.css">
+	<link rel="stylesheet" href="../css/src/slideMulti.css">
+
+	<!--[if IE]>
+	<script src="../ie/html5shiv/dist/html5shiv.min.js"></script>
+	<script src="../ie/pie/PIE.js"></script>
+	<script src="../ie/respond/dest/respond.min.js"></script>
+	<![endif]-->
+
+	<title>slide multi</title>
+</head>
+<body>
+<!-- layout -->
+	<div id="wrap">
+		<h1><a href="./content.html">jQuery 기능 이해하기</a></h1>
+
+		<div class="viewBox">
+			<h2>복합적인 슬라이드 배너 고급기법</h2>
+			<div class="slide_banner">
+		
+			<!-- 좌우버튼 -->
+			<div class="btn hidden_wrap">
+				<button type="button" class="next">
+					<span>다음내용</span><i class="fas fa-chevron-right"></i>
+				</button>
+				<button type="button" class="prev"><i class="fas fa-chevron-left"></i>
+					<span>이전내용</span>
+				</button>
+			</div>
+			
+			<!-- 슬라이드배너 -->
+				<ul>
+					<li class="banner_01">
+						<p>
+							<span class="con_01">highlands</span>
+							<span class="con_02">scotland</span>
+							<span class="con_03">the mountains are calling</span>
+						</p>
+					</li>
+					<li class="banner_02">
+						<p>
+							<span class="con_01">machu pichu</span>
+							<span class="con_02">peru</span>
+							<span class="con_03">adventure is never far away</span>
+						</p>
+					</li>
+					<li class="banner_03">
+						<p>
+							<span class="con_01">chamonix</span>
+							<span class="con_02">francs</span>
+							<span class="con_03">let your dreams come true</span>
+						</p>
+					</li>
+				</ul>
+			
+				<!-- 이미지 -->
+				<div class="back_img"></div>
+			</div>
+		</div>
+	</div>
+
+<!-- script -->
+	<script src="../js/base/jquery-3.5.1.min.js"></script>
+	<script src="../js/base/jquery-ui.min.js"></script>
+
+	<script src="../js/src/slideMulti.js"></script>
+</body>
+</html>
