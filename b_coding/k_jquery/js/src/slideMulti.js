@@ -98,7 +98,7 @@ btn.on('click',function(e){
 // 카드에 마우스 올렸을 때 움직임 처리하는거 -------------
 console.log(q);
 
-slideLi.eq(q).on('mousemove',function(e){
+slideLi.on('mousemove',function(e){
 	console.log(e.originalEvent.offsetX);
 	//마우스 위치파악
 	var mouseX = e.originalEvent.offsetX;
@@ -112,7 +112,7 @@ slideLi.eq(q).on('mousemove',function(e){
 	}
 });
 
-slideLi.eq(q).on('mouseleave',function(e){
+slideLi.on('mouseleave',function(e){
 	$(this).css({transform:'rotateY(0)', transition: 'all 500ms ease'});
 });
 
