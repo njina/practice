@@ -6,7 +6,7 @@
 
 var slideBanner = $('.slide_banner');
 var btn = $('.btn').find('button');
-var slideUl = slideBanner.children('ul');
+var slideUl = slideBanner.find('.slide_card');
 var slideLi = slideUl.children('li');
 
 // -----------
@@ -16,6 +16,19 @@ var slideLi = slideUl.children('li');
 slideLi.eq(-1).prependTo(slideUl);
 slideLi = slideUl.children('li');
 slideLi.eq(1).addClass('active');
+
+// 뒷배경 슬라이드
+var backImg = $('.back_img');
+var backImgUl = backImg.children('ul');
+var backLi = backImgUl.find('li');
+backLi.eq(-1).prependTo(backImgUl);
+backLi = backImgUl.find('li');
+backLi.css({filter:'blur(5px)',opacity:0.5});
+// -----------
+//-//var
+
+
+
 
 var hasActive;
 var q;
@@ -67,6 +80,14 @@ btn.on('click',function(e){
 			btnTrue = true;
 		},500)
 
+		//뒷배경 슬라이드 이동하기
+		backImgUl.animate({marginLeft:-200+'%'},function(){
+			backLi.eq(0).appendTo(backImgUl);
+			backLi = backImgUl.find('li');
+			backImgUl.css({marginLeft:-100+'%'});
+		});
+
+
 	} else if ( btnTrue ){
 		//prev버튼 클릭시
 
@@ -89,6 +110,13 @@ btn.on('click',function(e){
 			slideLi.removeClass('up');
 			btnTrue = true;
 		},500)
+
+		//뒷배경 슬라이드 이동하기
+		backImgUl.animate({marginLeft:0},function(){
+			backLi.eq(-1).prependTo(backImgUl);
+			backLi = backImgUl.find('li');
+			backImgUl.css({marginLeft:-100+'%'});
+		});
 	}
 
 });
@@ -96,10 +124,10 @@ btn.on('click',function(e){
 // --------------------------------
 
 // 카드에 마우스 올렸을 때 움직임 처리하는거 -------------
-console.log(q);
+// console.log(q);
 
 slideLi.on('mousemove',function(e){
-	console.log(e.originalEvent.offsetX);
+	// console.log(e.originalEvent.offsetX);
 	//마우스 위치파악
 	var mouseX = e.originalEvent.offsetX;
 	var cardHalfWdith = $(this).outerWidth() / 2;
@@ -115,6 +143,10 @@ slideLi.on('mousemove',function(e){
 slideLi.on('mouseleave',function(e){
 	$(this).css({transform:'rotateY(0)', transition: 'all 500ms ease'});
 });
+
+
+// -----------
+
 
 
 
