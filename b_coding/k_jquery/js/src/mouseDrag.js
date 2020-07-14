@@ -83,6 +83,24 @@
 		touchDrag();
 	});
 // =================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // =================================================
 // 2. 실시간으로 드래그 할때 이미지 움직이도록===========================
 // 터치/드래그 이동시 처리
@@ -93,20 +111,47 @@ var p02Width = part02.find('.slide_wrap').outerWidth();
 var part02MinWidth = part02.find('.slide_wrap').children('div').eq(0).outerWidth();
 
 var startPosX;
+var touchOn = false; //mousemove때문에 만드는 변수
+var doubleClick = true;
+
+//e.which : 마우스의 버튼에 따른 key. 왼버튼 오른버튼 같은.. 
 
 //최초위치(marginLeft) - (터치첫지점 - 터치이동지점 * -1)
 //터치 시작
-part02.on('touchstart',function(e){
-	var start = e.touches[0].pageX;
-	var part02Left = parseInt(part02Wrap.css('marginLeft')); //순서가 핵심!!!
+part02.on('touchstart mousedown',function(e){
+	var start;
+	var part02Left;
+	var eType = e.type;
+
+	if(eType == 'touchstart'){
+		start = e.touches[0].pageX;
+	} else if (eType == 'mousedown' && e.which == 1 && doubleClick){
+		start = e.originalEvent.pageX;
+		touchOn = true;
+		doubleClick = false;
+	}
+	// console.log(start);
+
+	part02Left = parseInt(part02Wrap.css('marginLeft')); //순서가 핵심!!!
 	startPosX = part02Left - start;
 });
 
 //터치 움직임
-part02.on('touchmove',function(e){
-	var nowPosX = e.changedTouches[0].pageX;
-	var nowMoveX = startPosX - nowPosX * -1;
-	// console.log(nowMoveX);
+part02.on('touchmove mousemove',function(e){
+	var nowPosX;
+	var nowMoveX;
+	var eType = e.type;
+	// console.log(e)
+	
+	// -------두가지 이벤트 나눠서..하기
+	if(eType == 'touchmove'){
+		nowPosX = e.changedTouches[0].pageX;
+	} else if(eType == 'mousemove' && touchOn == true){
+		nowPosX = e.originalEvent.pageX;
+	}
+	nowMoveX = parseInt(startPosX - nowPosX * -1);
+	console.log(nowMoveX);
+// ----------
 	if(nowMoveX > 0){
 		nowMoveX = 0;
 	} else if (nowMoveX <= -(p02Width - part02MinWidth)){
@@ -116,9 +161,116 @@ part02.on('touchmove',function(e){
 	}
 });
 
+//드래그 끝났을 때
+part02.on('touchend mouseup',function(e){
+	e.preventDefault();
+	touchOn = false;
+	doubleClick = true;
+});
 
 
 
+
+
+
+
+
+
+
+
+
+
+// ----------------------------
+// 3번째----------------------------
+var part03 = $('.part_03');
+var p03Wrap = part03.children('.slide_wrap');
+var p03List = p03Wrap.children('div');
+var p03MarginLeft = [];
+var i = 0;
+for(; i < p03List.length ; i++){
+	p03MarginLeft[i] = p03List.eq(i).offset().left - p03List.eq(0).offset().left;
+}
+
+var beforePoint; //마우스 시작하기 전 margin-left값
+
+var startPoint; //마우스 클릭시 위치값(pageX)
+var movePoint; //마우스 이동시 위치값(pageX)
+var endPoint; 
+
+
+p03Wrap.css({position:'relative'});
+var l = 0;
+var p03True = true; //마우스 수행에 따라서 중복처리 막기위한. 만약에 터치를 두손가락으로 각각하면 첫번째 터치만 먹어야되잖아. 그거를 위한 거.
+var p03MoveOn = false; //mousedown하는 도중에만 mousemove 수행되게 하는 거
+
+//시작
+part03.on('touchstart mousedown',function(e){
+	if(p03True){
+		p03True = false;
+
+		var eType = e.type;
+		var posX;	
+		
+		if(eType == 'touchstart'){
+			posX = e.touches[0].pageX;
+		} else if(eType == 'mousedown'){
+			p03MoveOn = true;
+			posX = e.originalEvent.pageX;
+		}
+		
+		startPoint = posX;
+	}
+});
+
+//중간
+part03.on('touchmove mousemove',function(e){
+	var eType = e.type;
+	var posX;
+
+	if(eType == 'touchmove'){
+		posX = e.changedTouches[0].pageX;
+	} else if(eType == 'mousemove' && p03MoveOn == true){
+		posX = e.originalEvent.pageX;
+	}
+	
+	movePoint = startPoint - posX;
+	p03Wrap.css({left: -movePoint + 'px'});
+});
+
+var myMarginLeft = parseInt(p03Wrap.css('marginLeft'));
+
+//끝
+part03.on('touchend mouseup',function(e){
+	if(movePoint > 300 && l < p03List.length-1){
+		l += 1;
+	} else if(movePoint < -300 && l > 0){
+		l -= 1;
+	} else {
+ 		l = l;
+	}
+
+	p03MoveOn = false;
+	p03Wrap.animate( {left:0, marginLeft: -p03MarginLeft[l]}, 300, function(){
+		p03True = true;
+	});
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+//추가적으로 다른 이벤트 메소드
+//선택자.on('event')
+//선택자.one('event')
+//선택자.off('event')
 
 
 
