@@ -1,0 +1,122 @@
+[
+	{
+		"thumb":{
+			"img":{"src":"dog_08.jpg", "alt": "첫번째 이미지 설명", "narr" : "강아지 이미지 상세설명"},
+			"title" : "card 01 제목",
+			"content" : "card 01 요약설명" 
+		},
+		"gallery" : {
+			"image" : "dog_08.jpg",
+			"title" : "gallery 01 title",
+			"content" : "gallery 01 상세설명"
+		},
+		"detail": {
+			"img" : ["dog_08.jpg"],
+			"title" : "detail title 01",
+			"point" : "detail Point",
+			"content" : "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus atque cumque at animi odit, ipsa ad optio praesentium iste mollitia. Necessitatibus quis provident ea libero quas tempore sit odio quibusdam.loremt consectetur adipisicing elit. Repellendus atque cumque at animi odit, ipsa ad optio praesentium iste mollitia. Necessitatibus quis provident ea libero quas tempore sit odio quibusdam.lorem",
+			"link" : "./content.html",
+			"more" : "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat eum quam vitae blanditiis, dolor maxime perferendis at veniam voluptas ea labore sunt nihil nesciunt minus qui tempora architecto! Repudiandae quam voluptas quae ratione ut eius nesciunt aperiam sit enim placeat! Quae perferendis inventore quas ipsam sapiente neque quod et? Corrupti!"
+		}
+	},
+	{
+		"thumb":{
+			"img":{"src":"dog_07.jpg", "alt": "첫번째 이미지 설명", "narr" : "강아지 이미지 상세설명"},
+			"title" : "card 02 제목",
+			"content" : "card 02 요약설명" 
+		},
+		"gallery" : {
+			"image" : "dog_08.jpg",
+			"title" : "gallery 02 title",
+			"content" : "gallery 02 상세설명"
+		},
+		"detail": {
+			"img" : ["dog_07.jpg"],
+			"title" : "detail title 02",
+			"point" : "detail Point",
+			"content" : "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus atque cumque at animi odit, ipsa ad optio praesentium iste mollitia. Necessitatibus quis provident ea libero quas tempore sit odio quibusdam.loremt consectetur adipisicing elit. Repellendus atque cumque at animi odit, ipsa ad optio praesentium iste mollitia. Necessitatibus quis provident ea libero quas tempore sit odio quibusdam.lorem",
+			"link" : "./content.html",
+			"more" : "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat eum quam vitae blanditiis, dolor maxime perferendis at veniam voluptas ea labore sunt nihil nesciunt minus qui tempora architecto! Repudiandae quam voluptas quae ratione ut eius nesciunt aperiam sit enim placeat! Quae perferendis inventore quas ipsam sapiente neque quod et? Corrupti!"
+		}
+	},
+	{
+		"thumb":{
+			"img":{"src":"dog_06.jpg", "alt": "첫번째 이미지 설명", "narr" : "강아지 이미지 상세설명"},
+			"title" : "card 03 제목",
+			"content" : "card 03 요약설명" 
+		},
+		"gallery" : {
+			"image" : "dog_08.jpg",
+			"title" : "gallery 03 title",
+			"content" : "gallery 03 상세설명"
+		},
+		"detail": {
+			"img" : ["dog_06.jpg"],
+			"title" : "detail title 03",
+			"point" : "detail Point",
+			"content" : "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus atque cumque at animi odit, ipsa ad optio praesentium iste mollitia. Necessitatibus quis provident ea libero quas tempore sit odio quibusdam.loremt consectetur adipisicing elit. Repellendus atque cumque at animi odit, ipsa ad optio praesentium iste mollitia. Necessitatibus quis provident ea libero quas tempore sit odio quibusdam.lorem",
+			"link" : "./content.html",
+			"more" : "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat eum quam vitae blanditiis, dolor maxime perferendis at veniam voluptas ea labore sunt nihil nesciunt minus qui tempora architecto! Repudiandae quam voluptas quae ratione ut eius nesciunt aperiam sit enim placeat! Quae perferendis inventore quas ipsam sapiente neque quod et? Corrupti!"
+		}
+	},
+	{
+		"thumb":{
+			"img":{"src":"dog_05.jpg", "alt": "첫번째 이미지 설명", "narr" : "강아지 이미지 상세설명"},
+			"title" : "card 04 제목",
+			"content" : "card 04 요약설명" 
+		},
+		"gallery" : {
+			"image" : "dog_08.jpg",
+			"title" : "gallery 04 title",
+			"content" : "gallery 04 상세설명"
+		},
+		"detail": {
+			"img" : ["dog_05.jpg"],
+			"title" : "detail title 04",
+			"point" : "detail Point",
+			"content" : "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus atque cumque at animi odit, ipsa ad optio praesentium iste mollitia. Necessitatibus quis provident ea libero quas tempore sit odio quibusdam.loremt consectetur adipisicing elit. Repellendus atque cumque at animi odit, ipsa ad optio praesentium iste mollitia. Necessitatibus quis provident ea libero quas tempore sit odio quibusdam.lorem",
+			"link" : "./content.html",
+			"more" : "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat eum quam vitae blanditiis, dolor maxime perferendis at veniam voluptas ea labore sunt nihil nesciunt minus qui tempora architecto! Repudiandae quam voluptas quae ratione ut eius nesciunt aperiam sit enim placeat! Quae perferendis inventore quas ipsam sapiente neque quod et? Corrupti!"
+		}
+	},
+	{
+		"thumb":{
+			"img":{"src":"dog_04.jpg", "alt": "첫번째 이미지 설명", "narr" : "강아지 이미지 상세설명"},
+			"title" : "card 05 제목",
+			"content" : "card 05 요약설명" 
+		},
+		"gallery" : {
+			"image" : "dog_08.jpg",
+			"title" : "gallery 05 title",
+			"content" : "gallery 05 상세설명"
+		},
+		"detail": {
+			"img" : ["dog_04.jpg"],
+			"title" : "detail title 05",
+			"point" : "detail Point",
+			"content" : "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus atque cumque at animi odit, ipsa ad optio praesentium iste mollitia. Necessitatibus quis provident ea libero quas tempore sit odio quibusdam.loremt consectetur adipisicing elit. Repellendus atque cumque at animi odit, ipsa ad optio praesentium iste mollitia. Necessitatibus quis provident ea libero quas tempore sit odio quibusdam.lorem",
+			"link" : "./content.html",
+			"more" : "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat eum quam vitae blanditiis, dolor maxime perferendis at veniam voluptas ea labore sunt nihil nesciunt minus qui tempora architecto! Repudiandae quam voluptas quae ratione ut eius nesciunt aperiam sit enim placeat! Quae perferendis inventore quas ipsam sapiente neque quod et? Corrupti!"
+		}
+	},
+	{
+		"thumb":{
+			"img":{"src":"dog_03.jpg", "alt": "첫번째 이미지 설명", "narr" : "강아지 이미지 상세설명"},
+			"title" : "card 06 제목",
+			"content" : "card 06 요약설명" 
+		},
+		"gallery" : {
+			"image" : "dog_08.jpg",
+			"title" : "gallery 06 title",
+			"content" : "gallery 06 상세설명"
+		},
+		"detail": {
+			"img" : ["dog_03.jpg"],
+			"title" : "detail title 06",
+			"point" : "detail Point",
+			"content" : "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus atque cumque at animi odit, ipsa ad optio praesentium iste mollitia. Necessitatibus quis provident ea libero quas tempore sit odio quibusdam.loremt consectetur adipisicing elit. Repellendus atque cumque at animi odit, ipsa ad optio praesentium iste mollitia. Necessitatibus quis provident ea libero quas tempore sit odio quibusdam.lorem",
+			"link" : "./content.html",
+			"more" : "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat eum quam vitae blanditiis, dolor maxime perferendis at veniam voluptas ea labore sunt nihil nesciunt minus qui tempora architecto! Repudiandae quam voluptas quae ratione ut eius nesciunt aperiam sit enim placeat! Quae perferendis inventore quas ipsam sapiente neque quod et? Corrupti!"
+		}
+	}
+]

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<!-- my_totalSlide.html -->
+<html lang="ko-KR">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=3.0, minimum-scale=0.5">
+
+	 <!-- link -->
+	 <link rel="stylesheet" href="../fonts/fontawesome-free-5.13.0-web/css/all.css">
+	<link rel="stylesheet" href="../css/base/reset.css">
+	<link rel="stylesheet" href="../css/base/common.css">
+	<link rel="stylesheet" href="../css/src/my_totalSlide.css">
+
+	<!--[if IE]>
+		<script src="../ie/html5shiv/dist/html5shiv.min.js"></script>
+		<script src="../ie/pie/PIE.js"></script>
+		<script src="../ie/resond/dest/respond.min.js"></script>
+	<![endif]-->
+
+	<title>my_totalSlide</title>
+
+</head>
+<body>
+	<!-- layout -->
+	<div id="wrap">
+		<header id="headBox">
+		<h1>복합 슬라이드</h1>
+		</header>
+
+		<section id="viewBox">
+			<div class="slide_area">
+				<ul class="slide_wrap hidden_wrap">
+					<li class="slide_01"><a href="#"><span>배너1</span></a></li>
+					<li class="slide_02"><a href="#"><span>배너2</span></a></li>
+					<li class="slide_03"><a href="#"><span>배너3</span></a></li>
+					<li class="slide_04"><a href="#"><span>배너4</span></a></li>
+					<li class="slide_05"><a href="#"><span>배너5</span></a></li>
+				</ul>
+			</div>	
+			<div class="btn_area">
+				<button type="button" class="next"> > </button>
+				<button type="button" class="prev"> < </button>
+			</div>
+			<div class="indi_area">
+				<ul class="indicator_wrap hidden_wrap">
+					<li class="active"><a href="#"><span>배너1</span></a></li>
+					<li><a href="#"><span>배너2</span></a></li>
+					<li><a href="#"><span>배너3</span></a></li>
+					<li><a href="#"><span>배너4</span></a></li>
+					<li><a href="#"><span>배너5</span></a></li>
+				</ul>
+			</div>
+		</section>
+		
+		<footer id="footBox"></footer>
+	</div>
+
+	<!-- script -->
+	<script src="../js/base/jquery-3.5.1.min.js"></script>
+	<script src="../js/base/jquery-ui.min.js"></script>
+
+	<script src="../js/src/my_totalSlide.js"></script>
+</body>
+</html>

@@ -134,6 +134,7 @@ part02.on('touchstart mousedown',function(e){
 
 	part02Left = parseInt(part02Wrap.css('marginLeft')); //순서가 핵심!!!
 	startPosX = part02Left - start;
+	// startPosX = start;
 });
 
 //터치 움직임

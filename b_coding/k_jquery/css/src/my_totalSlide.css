@@ -1,0 +1,101 @@
+@charset "utf-8";
+
+/* my_totalSlide.css */
+/* 슬라이드-인디케이터, 버튼, 터치 */
+
+#wrap {
+	width: 100%; height: 100%;
+	margin:auto;
+}
+
+
+
+
+/* headBox ----------------------------- */
+#headBox {
+	position: absolute; top:0; left:0; right:0; z-index: 1000;
+	width: 100%; height: 50px;
+	margin:auto;
+	background-color:#fa1;
+}
+h1 {
+	font-size: 2rem;
+	text-align: center;
+}
+
+
+/* viewBox ----------------------------- */
+#viewBox {
+	position: relative;
+	width: 100%; height: 100%;
+	background-color:#add;
+	padding: 100px 50px; box-sizing: border-box;
+}
+
+/* 슬라이드배너 ----------- */
+.slide_area {
+	/* overflow: hidden; */
+	width: 100%; height: 100%;
+	background-color:#faa;
+}
+.slide_wrap {width: 500%; height: 100%; margin:auto;}
+.slide_wrap li { 
+	float:left;
+	width: 20%; height: 100%; 
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 50% 50%;
+}
+.slide_01 {background-image: url(../../img/dumi/image_01.jpg); }
+.slide_02 {background-image: url(../../img/dumi/image_02.jpg); }
+.slide_03 {background-image: url(../../img/dumi/image_03.jpg); }
+.slide_04 {background-image: url(../../img/dumi/image_04.jpg); }
+.slide_05 {background-image: url(../../img/dumi/image_05.jpg); }
+
+/* 좌우버튼 ----------- */
+.btn_area {
+	position: absolute; bottom: 160px; left: 80px;
+	width: auto; height: auto;
+}
+.btn_area  > button {
+	width: 40px; height: 40px;
+	background-color:#daa;
+	font-size: 1.5rem; font-weight: bold;
+	color:#fff;
+}
+.btn_area .next {float:right;}
+
+.btn_area .prev {float:left; margin-right: 10px;}
+
+
+/* 인디케이터 ----------- */
+.indi_area {
+	position: absolute; bottom: 130px; left: 80px;
+	width: auto; height: auto;
+}
+.indicator_wrap {
+	width: auto; height: auto;
+}
+.indicator_wrap li {
+	float:left;
+	width: 15px; height: 15px;
+	margin-right: 10px;
+	background-color:#ddd;
+	border-radius: 100%;
+
+}
+.indicator_wrap li.active {
+	background-color:#111;
+}
+
+
+
+
+
+/* footBox ----------------------------- */
+#footBox {
+	position: absolute; bottom:0; left:0; right:0;
+	width: 100%; height: 50px;
+	margin:auto;
+	background-color:#faf;
+}
