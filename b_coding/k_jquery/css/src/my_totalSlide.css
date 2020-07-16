@@ -28,7 +28,7 @@ h1 {
 #viewBox {
 	position: relative;
 	width: 100%; height: 100%;
-	background-color:#add;
+	background-color:rgb(248, 218, 149);
 	padding: 100px 50px; box-sizing: border-box;
 }
 
@@ -36,30 +36,31 @@ h1 {
 .slide_area {
 	/* overflow: hidden; */
 	width: 100%; height: 100%;
-	background-color:#faa;
 }
 .slide_wrap {width: 500%; height: 100%; margin:auto;}
 .slide_wrap li { 
 	float:left;
 	width: 20%; height: 100%; 
+	border: 20px solid #fff; box-sizing:border-box;
+	border-radius: 1rem;
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: 50% 50%;
 }
-.slide_01 {background-image: url(../../img/dumi/image_01.jpg); }
-.slide_02 {background-image: url(../../img/dumi/image_02.jpg); }
-.slide_03 {background-image: url(../../img/dumi/image_03.jpg); }
-.slide_04 {background-image: url(../../img/dumi/image_04.jpg); }
-.slide_05 {background-image: url(../../img/dumi/image_05.jpg); }
+.slide_01 {background-image: url(../../img/landscape/image_01.jpg); }
+.slide_02 {background-image: url(../../img/landscape/image_02.jpg); }
+.slide_03 {background-image: url(../../img/landscape/image_03.jpg); }
+.slide_04 {background-image: url(../../img/landscape/image_04.jpg); }
+.slide_05 {background-image: url(../../img/landscape/image_05.jpg); }
 
 /* 좌우버튼 ----------- */
 .btn_area {
-	position: absolute; bottom: 160px; left: 80px;
+	position: absolute; bottom: 180px; left: 80px;
 	width: auto; height: auto;
 }
 .btn_area  > button {
 	width: 40px; height: 40px;
-	background-color:#daa;
+	background-color:rgba(0, 0, 0, 0.3);
 	font-size: 1.5rem; font-weight: bold;
 	color:#fff;
 }
@@ -70,7 +71,7 @@ h1 {
 
 /* 인디케이터 ----------- */
 .indi_area {
-	position: absolute; bottom: 130px; left: 80px;
+	position: absolute; bottom: 150px; left: 80px;
 	width: auto; height: auto;
 }
 .indicator_wrap {
@@ -80,14 +81,36 @@ h1 {
 	float:left;
 	width: 15px; height: 15px;
 	margin-right: 10px;
-	background-color:#ddd;
+	background-color:rgba(0, 0, 0, 0.3);
 	border-radius: 100%;
-
+	
 }
 .indicator_wrap li.active {
-	background-color:#111;
+	background-color:#fff;
 }
 
+
+/* 게이지 ----------- */
+.gauge_area {
+	position: absolute; bottom: 130px; left: 80px;
+	width: 100px; height: 8px;
+}
+.gauge_bg {
+	position: absolute; top:0; left:0;
+	width: 100%; height: 100%;
+	border-radius: 10px;
+	background-color:rgba(0, 0, 0, 0.5)
+}
+.gauge_moving {
+	position: absolute; top:0; left:0;
+	width:0; height: 100%;
+	border-radius: 10px;
+	background-color:#fff;
+	transition: 500ms all ease;
+}
+.gauge_moving.active {
+	width: 100%;
+}
 
 
 
